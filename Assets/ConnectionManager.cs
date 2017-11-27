@@ -37,10 +37,6 @@ public class ConnectionManager : Photon.PunBehaviour
 
     public override void OnJoinedRoom()
     {
-        if (PhotonNetwork.isMasterClient)
-        {
-            startButton.gameObject.SetActive(true);
-        }
         PhotonNetwork.player.NickName = "DupaMaster";
         serverNameText.text = "Server Name: " + PhotonNetwork.room.Name;
         serverName.gameObject.SetActive(false);
@@ -69,6 +65,10 @@ public class ConnectionManager : Photon.PunBehaviour
         foreach (PhotonPlayer pp in PhotonNetwork.playerList)
         {
             playerList.text += pp.NickName + "\n";
+        }
+        if (PhotonNetwork.isMasterClient)
+        {
+            startButton.gameObject.SetActive(true);
         }
     }
 }
