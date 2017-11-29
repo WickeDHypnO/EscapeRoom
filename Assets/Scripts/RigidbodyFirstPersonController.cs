@@ -20,6 +20,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
         public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
         [HideInInspector] public float CurrentTargetSpeed = 8f;
 
+
 #if !MOBILE_INPUT
         private bool m_Running;
 #endif
@@ -81,7 +82,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
     public MovementSettings movementSettings = new MovementSettings();
     public MouseLook mouseLook = new MouseLook();
     public AdvancedSettings advancedSettings = new AdvancedSettings();
-
+    public bool testMode = false;
 
     private Rigidbody m_RigidBody;
     private CapsuleCollider m_Capsule;
@@ -120,7 +121,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
 
     private void Start()
     {
-        if (!photonView.isMine)
+        if (!photonView.isMine && !testMode)
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(this);
@@ -133,7 +134,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
 
     private void Update()
     {
-        if (!photonView.isMine)
+        if (!photonView.isMine && !testMode)
             return;
         RotateView();
 
@@ -146,7 +147,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
 
     private void FixedUpdate()
     {
-        if (!photonView.isMine)
+        if (!photonView.isMine && !testMode)
             return;
         GroundCheck();
         Vector2 input = GetInput();
