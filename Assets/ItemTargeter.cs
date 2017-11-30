@@ -4,13 +4,4 @@ using UnityEngine;
 
 public class ItemTargeter : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

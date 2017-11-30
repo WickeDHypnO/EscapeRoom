@@ -123,7 +123,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
     {
         if (!photonView.isMine && !testMode)
         {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
+            GetComponentInChildren<Camera>().enabled = false;
             Destroy(this);
         }
         m_RigidBody = GetComponent<Rigidbody>();
