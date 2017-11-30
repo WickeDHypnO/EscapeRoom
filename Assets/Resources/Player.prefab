@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 124974662832534732}
   - component: {fileID: 114676398490226420}
   - component: {fileID: 114035785831936866}
+  - component: {fileID: 114163664053062458}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -267,6 +268,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 257
   itemPickupDistance: 2
+--- !u!114 &114163664053062458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767936979939556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!114 &114312890226758964
 MonoBehaviour:
   m_ObjectHideFlags: 1

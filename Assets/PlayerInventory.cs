@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInventory : MonoBehaviour {
+public class PlayerInventory : Photon.PunBehaviour {
 
     public List<Item> items;
     public List<Image> itemImages;
@@ -12,8 +12,7 @@ public class PlayerInventory : MonoBehaviour {
         items.Add(item);
         itemImages[items.IndexOf(item)].sprite = item.itemImage;
         itemImages[items.IndexOf(item)].enabled = true;
-        item.transform.parent = transform;
-        item.GetComponent<MeshRenderer>().enabled = false;
+        item.HideItem(photonView.viewID);
 	}
 
     public void RemoveItem(Item item)
@@ -22,5 +21,4 @@ public class PlayerInventory : MonoBehaviour {
         itemImages[items.IndexOf(item)].enabled = false;
         items.Remove(item);
     }
-
 }

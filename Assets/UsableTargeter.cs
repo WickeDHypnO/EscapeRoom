@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UsableTargeter : MonoBehaviour
+public class UsableTargeter : Photon.PunBehaviour
 {
 
     public LayerMask raycastMask;
@@ -11,7 +11,7 @@ public class UsableTargeter : MonoBehaviour
     GameObject targetedItem;
     GameObject pickedUpItem;
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 50f, raycastMask))
         {
@@ -37,18 +37,17 @@ public class UsableTargeter : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyUp(KeyCode.E) && pickedUpItem)
+        {
+            pickedUpItem.GetComponent<DraggableItem>().DetachFromPlayer();
+            pickedUpItem = null;
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && targetedItem.GetComponent<DraggableItem>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
         {
             pickedUpItem = targetedItem;
-            pickedUpItem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            pickedUpItem.transform.SetParent(transform);
-        }
-
-        if (Input.GetKeyUp(KeyCode.E) && pickedUpItem)
-        {
-            pickedUpItem.transform.SetParent(null);
-            pickedUpItem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            pickedUpItem = null;
+            pickedUpItem.GetComponent<DraggableItem>().ChangeOwner(photonView.owner.ID);
+            pickedUpItem.GetComponent<DraggableItem>().AttachToPlayer(photonView.viewID);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && targetedItem.GetComponent<Item>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
