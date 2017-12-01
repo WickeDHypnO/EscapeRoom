@@ -14,6 +14,7 @@ public class ConnectionManager : Photon.PunBehaviour
     public GameObject playerPrefab;
     public GameObject connectionUI;
     public Text playerList;
+    public List<Transform> playerStarts;
 
     private void Start()
     {
@@ -54,7 +55,7 @@ public class ConnectionManager : Photon.PunBehaviour
     [PunRPC]
     void RpcCreatePlayer()
     {
-        PhotonNetwork.Instantiate(playerPrefab.name, PhotonNetwork.isMasterClient ? Vector3.zero : Vector3.forward * 2, Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(playerPrefab.name, PhotonNetwork.isMasterClient ? playerStarts[0].position : playerStarts[1].position, Quaternion.identity, 0);
         gameObject.SetActive(false);
     }
 
