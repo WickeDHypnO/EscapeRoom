@@ -126,6 +126,11 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
             GetComponentInChildren<Camera>().enabled = false;
             Destroy(this);
         }
+        if(testMode)
+        {
+            PhotonNetwork.offlineMode = true;
+            PhotonNetwork.CreateRoom("Offline");
+        }
         m_RigidBody = GetComponent<Rigidbody>();
         m_Capsule = GetComponent<CapsuleCollider>();
         mouseLook.Init(transform, cam.transform);
