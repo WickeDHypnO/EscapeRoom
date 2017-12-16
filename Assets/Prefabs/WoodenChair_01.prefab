@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4570941544348472}
   - component: {fileID: 33838394745110254}
   - component: {fileID: 23621569352409774}
-  - component: {fileID: 65827476401230720}
+  - component: {fileID: 64613497137348664}
   m_Layer: 0
   m_Name: WoodenChair_01
   m_TagString: Untagged
@@ -83,8 +83,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262267802676104}
   m_Mesh: {fileID: 4300000, guid: 9c93c5f4d29955c4586c5d1a55905dd6, type: 3}
---- !u!65 &65827476401230720
-BoxCollider:
+--- !u!64 &64613497137348664
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -93,5 +93,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.62488014, y: 1.075, z: 0.61786884}
-  m_Center: {x: 0, y: 0.5375, z: 0.008934408}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 9c93c5f4d29955c4586c5d1a55905dd6, type: 3}
