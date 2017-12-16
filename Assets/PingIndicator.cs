@@ -9,7 +9,7 @@ public class PingIndicator : MonoBehaviour
     public Vector2 cameraFrustum;
     public float minAngle;
     public float safeEdgesWidth;
-    float timer = 10f;
+    float timer = 0;
     float showingDuration;
 
     public void StartShowing(float duration)
@@ -22,10 +22,25 @@ public class PingIndicator : MonoBehaviour
     void Start()
     {
         cameraFrustum = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
+       // StartCoroutine(GetOtherPlayerPing());
+    }
+
+    IEnumerator GetOtherPlayerPing()
+    {
+        yield return new WaitForSeconds(1f);
+        foreach(PingDissapear pd in FindObjectsOfType<PingDissapear>())
+        {
+            if(!pd.photonView.isMine)
+            {
+                ping = pd.transform;
+            }
+        }
     }
 
     void Update()
     {
+        if (!ping)
+            return;
         timer -= Time.deltaTime;
         indicator.GetComponent<CanvasGroup>().alpha = timer/showingDuration;
         if(timer <= 0)

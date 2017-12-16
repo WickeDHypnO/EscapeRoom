@@ -123,7 +123,9 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
     {
         if (!photonView.isMine && !testMode)
         {
+            GetComponentInChildren<Pinger>().enabled = false;
             GetComponentInChildren<Camera>().enabled = false;
+            GetComponentInChildren<AudioListener>().enabled = false;
             Destroy(this);
         }
         if(testMode)

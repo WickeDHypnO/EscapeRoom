@@ -12,33 +12,25 @@ public class PingDissapear : Photon.PunBehaviour {
     public float scaleFactor = 0.25f;
     public PingIndicator indicator;
     public Color firstPlayerColor;
+    public Material firstPlayerMaterial;
     public Color secondPlayerColor;
+    public Material secondPlayerMaterial;
     public bool debugSecondPlayer;
 
-    public void Restart()
+    public void OnEnable()
     {
-        photonView.RPC("RpcShowPing", PhotonTargets.All);
+        if (photonView.isMine)
+        {
+            photonView.RPC("RpcShowPing", PhotonTargets.All);
+        }
     }
 
-    private void OnEnable()
+    private void SetColor()
     {
-        if(debugSecondPlayer)
+        if(!PhotonNetwork.isMasterClient && !debugSecondPlayer)
         {
-            foreach(Image i in indicator.GetComponentsInChildren<Image>(true))
-            {
-                i.color = secondPlayerColor;
-            }
-            pingElements[0].GetComponent<Renderer>().sharedMaterial.SetColor("_Color", secondPlayerColor);
+            debugSecondPlayer = true;
         }
-        else
-        {
-            foreach (Image i in indicator.GetComponentsInChildren<Image>(true))
-            {
-                i.color = firstPlayerColor;
-            }
-            pingElements[0].GetComponent<Renderer>().sharedMaterial.SetColor("_Color", firstPlayerColor);
-        }
-        Restart();
         dissapear = true;
     }
 
@@ -58,7 +50,9 @@ public class PingDissapear : Photon.PunBehaviour {
                     go.GetComponent<Renderer>().sharedMaterial.SetFloat("_Alpha", 0);
                 }
                 dissapear = false;
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                if(photonView.isMine)
+                PhotonNetwork.Destroy(this.gameObject);
             }
         }
 	}
@@ -66,12 +60,27 @@ public class PingDissapear : Photon.PunBehaviour {
     [PunRPC]
     void RpcShowPing()
     {
+        Show();
+    }
+
+    public void Show()
+    {
+        indicator = FindObjectOfType<Pinger>().indicator;
+        if (photonView.owner.IsMasterClient)
+        {
+            pingElements[0].GetComponent<Renderer>().sharedMaterial = firstPlayerMaterial;
+        }
+        else
+        {
+            pingElements[0].GetComponent<Renderer>().sharedMaterial = secondPlayerMaterial;
+        }
         timer = 0;
         foreach (GameObject go in pingElements)
         {
             go.GetComponent<Renderer>().sharedMaterial.SetFloat("_Alpha", 1);
         }
         transform.localScale = Vector3.zero;
+        dissapear = true;
         indicator.StartShowing(dissapearTime);
     }
 }
