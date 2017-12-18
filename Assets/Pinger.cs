@@ -30,11 +30,15 @@ public class Pinger : Photon.PunBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 100f))
             {
                 timer = 0;
-                PhotonNetwork.Instantiate(ping.name, hit.point, Quaternion.LookRotation(hit.normal), 0);
+                var instPing = PhotonNetwork.Instantiate(ping.name, hit.point, Quaternion.LookRotation(hit.normal), 0);
+                instPing.GetComponent<PingDissapear>().lineStartPosition = new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z);
+                instPing.GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z));
+                instPing.GetComponent<LineRenderer>().SetPosition(1, instPing.transform.position);
+                instPing.GetComponent<LineRenderer>().enabled = true;
                 canPing = false;
-                GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z));
-                GetComponent<LineRenderer>().SetPosition(1, hit.point);
-                GetComponent<LineRenderer>().enabled = true;
+                //GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z));
+                //GetComponent<LineRenderer>().SetPosition(1, hit.point);
+                //GetComponent<LineRenderer>().enabled = true;
             }
         }
     }
