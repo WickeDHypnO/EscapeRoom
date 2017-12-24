@@ -46,6 +46,8 @@ public class UsableTargeter : Photon.PunBehaviour
         if (Input.GetKeyDown(KeyCode.E) && targetedItem.GetComponent<DraggableItem>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
         {
             pickedUpItem = targetedItem;
+            Debug.Log(pickedUpItem);
+            Debug.Log(photonView.owner.ID);
             pickedUpItem.GetComponent<DraggableItem>().ChangeOwner(photonView.owner.ID);
             pickedUpItem.GetComponent<DraggableItem>().AttachToPlayer(photonView.viewID);
         }

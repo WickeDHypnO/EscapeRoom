@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DraggableItem : Photon.PunBehaviour {
+public class DraggableItem : Photon.PunBehaviour
+{
+
+    public bool freeMovement = true;
 
     public void ChangeOwner(int playerID)
     {
@@ -22,14 +25,29 @@ public class DraggableItem : Photon.PunBehaviour {
     [PunRPC]
     void RpcAttachToPlayer(int viewID)
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        transform.SetParent(PhotonView.Find(viewID).transform);
+        if (freeMovement)
+        {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            transform.SetParent(PhotonView.Find(viewID).transform);
+        }
+        else
+        {
+            GetComponent<ConfigurableJoint>().connectedBody = PhotonView.Find(viewID).GetComponent<Rigidbody>();
+        }
     }
 
     [PunRPC]
     void RpcDetachFromPlayer()
     {
-        transform.SetParent(null);
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+        if (freeMovement)
+        {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            transform.SetParent(null);
+        }
+        else
+        {
+            GetComponent<ConfigurableJoint>().connectedBody = null;
+        }
     }
 }
