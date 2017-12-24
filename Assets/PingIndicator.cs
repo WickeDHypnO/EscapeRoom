@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PingIndicator : MonoBehaviour
 {
@@ -12,28 +13,26 @@ public class PingIndicator : MonoBehaviour
     float timer = 0;
     float showingDuration;
 
-    public void StartShowing(float duration)
+    public void StartShowing(float duration, Color indicatorColor)
     {
-        showingDuration = duration;
-        timer = duration;
-        enabled = true;
+        if (ping)
+        {
+            foreach (Image i in indicator.GetComponentsInChildren<Image>())
+            {
+                i.color = indicatorColor;
+            }
+            showingDuration = duration;
+            timer = duration;
+            enabled = true;
+        }
     }
 
     void Start()
     {
         cameraFrustum = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
-       // StartCoroutine(GetOtherPlayerPing());
-    }
-
-    IEnumerator GetOtherPlayerPing()
-    {
-        yield return new WaitForSeconds(1f);
-        foreach(PingDissapear pd in FindObjectsOfType<PingDissapear>())
+        if(!GetComponent<PhotonView>().isMine)
         {
-            if(!pd.photonView.isMine)
-            {
-                ping = pd.transform;
-            }
+            gameObject.SetActive(false);
         }
     }
 
@@ -42,8 +41,8 @@ public class PingIndicator : MonoBehaviour
         if (!ping)
             return;
         timer -= Time.deltaTime;
-        indicator.GetComponent<CanvasGroup>().alpha = timer/showingDuration;
-        if(timer <= 0)
+        indicator.GetComponent<CanvasGroup>().alpha = timer / showingDuration;
+        if (timer <= 0)
         {
             indicator.GetComponent<CanvasGroup>().alpha = 0;
             enabled = false;
@@ -77,7 +76,7 @@ public class PingIndicator : MonoBehaviour
                 pos.x = safeEdgesWidth;
             }
         }
-        indicator.GetComponent<RectTransform>().position = new Vector3(pos.x , cameraFrustum.y/2, 0);
+        indicator.GetComponent<RectTransform>().position = new Vector3(pos.x, cameraFrustum.y / 2, 0);
     }
 
     private void OnDrawGizmos()

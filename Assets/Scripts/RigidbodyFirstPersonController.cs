@@ -126,6 +126,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
             GetComponentInChildren<Pinger>().enabled = false;
             GetComponentInChildren<Camera>().enabled = false;
             GetComponentInChildren<AudioListener>().enabled = false;
+            GetComponentInChildren<UsableTargeter>().enabled = false;
             Destroy(this);
         }
         if(testMode)

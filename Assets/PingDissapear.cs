@@ -74,7 +74,6 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
             line.SetPosition(0, lineStartPosition);
             line.SetPosition(1, transform.position);
         }
-        indicator = FindObjectOfType<Pinger>().indicator;
         if (photonView.owner.IsMasterClient)
         {
             foreach (GameObject go in pingElements)
@@ -91,6 +90,14 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
             }
             line.material = secondPlayerMaterial;
         }
+        foreach (PingIndicator pi in FindObjectsOfType<PingIndicator>())
+        {
+            if (pi.GetComponent<PhotonView>().owner != photonView.owner)
+            {
+                pi.ping = transform;
+                pi.StartShowing(dissapearTime, line.material.color);
+            }
+        }
         timer = 0;
         foreach (GameObject go in pingElements)
         {
@@ -99,7 +106,6 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
         line.material.SetFloat("_Alpha", 1);
         transform.localScale = Vector3.zero;
         dissapear = true;
-        indicator.StartShowing(dissapearTime);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
