@@ -15,6 +15,7 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
     public Color firstPlayerColor;
     public Material firstPlayerMaterial;
     public Color secondPlayerColor;
+    public LineRenderer line;
     public Material secondPlayerMaterial;
     public bool debugSecondPlayer;
     public Vector3 lineStartPosition;
@@ -43,17 +44,17 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
             timer += Time.deltaTime;
             foreach (GameObject go in pingElements)
             {
-                go.GetComponent<Renderer>().sharedMaterial.SetFloat("_Alpha", 1 - timer / dissapearTime);
+                go.GetComponent<Renderer>().material.SetFloat("_Alpha", 1 - timer / dissapearTime);
             }
+            line.material.SetFloat("_Alpha", 1 - timer / dissapearTime);
             transform.localScale = new Vector3(timer / dissapearTime * scaleFactor, timer / dissapearTime * scaleFactor, timer / dissapearTime * scaleFactor);
             if (timer / dissapearTime >= 1)
             {
                 foreach (GameObject go in pingElements)
                 {
-                    go.GetComponent<Renderer>().sharedMaterial.SetFloat("_Alpha", 0);
+                    go.GetComponent<Renderer>().material.SetFloat("_Alpha", 0);
                 }
                 dissapear = false;
-                //gameObject.SetActive(false);
                 if (photonView.isMine)
                     PhotonNetwork.Destroy(this.gameObject);
             }
@@ -68,7 +69,6 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
 
     public void Show()
     {
-        LineRenderer line = GetComponent<LineRenderer>();
         if (!photonView.isMine)
         {
             line.SetPosition(0, lineStartPosition);
@@ -79,7 +79,7 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
         {
             foreach (GameObject go in pingElements)
             {
-                go.GetComponent<Renderer>().sharedMaterial = firstPlayerMaterial;
+                go.GetComponent<Renderer>().material = firstPlayerMaterial;
             }
             line.material = firstPlayerMaterial;
         }
@@ -87,15 +87,16 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
         {
             foreach (GameObject go in pingElements)
             {
-                go.GetComponent<Renderer>().sharedMaterial = secondPlayerMaterial;
+                go.GetComponent<Renderer>().material = secondPlayerMaterial;
             }
             line.material = secondPlayerMaterial;
         }
         timer = 0;
         foreach (GameObject go in pingElements)
         {
-            go.GetComponent<Renderer>().sharedMaterial.SetFloat("_Alpha", 1);
+            go.GetComponent<Renderer>().material.SetFloat("_Alpha", 1);
         }
+        line.material.SetFloat("_Alpha", 1);
         transform.localScale = Vector3.zero;
         dissapear = true;
         indicator.StartShowing(dissapearTime);
@@ -112,7 +113,6 @@ public class PingDissapear : Photon.PunBehaviour, IPunObservable
             lineStartPosition = (Vector3)stream.ReceiveNext();
             if (lineStartPosition != Vector3.zero && !photonView.isMine)
             {
-                LineRenderer line = GetComponent<LineRenderer>();
                 if (line.GetPosition(0) != lineStartPosition)
                 {
                     line.SetPosition(0, lineStartPosition);

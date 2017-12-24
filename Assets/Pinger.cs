@@ -36,9 +36,6 @@ public class Pinger : Photon.PunBehaviour
                 instPing.GetComponent<LineRenderer>().SetPosition(1, instPing.transform.position);
                 instPing.GetComponent<LineRenderer>().enabled = true;
                 canPing = false;
-                //GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z));
-                //GetComponent<LineRenderer>().SetPosition(1, hit.point);
-                //GetComponent<LineRenderer>().enabled = true;
             }
         }
     }
