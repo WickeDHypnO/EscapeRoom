@@ -23,7 +23,7 @@ MonoBehaviour:
   VoiceServerPort: 5055
   JoinLobby: 1
   EnableLobbyStatistics: 1
-  PunLogging: 0
+  PunLogging: 1
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
@@ -48,4 +48,5 @@ MonoBehaviour:
   - RpcShowPing
   - TaggedPlayer
   - RpcSwitchFlashlight
+  - RpcLoadRoom
   DisableAutoOpenWizard: 1
