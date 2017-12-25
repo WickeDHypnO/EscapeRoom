@@ -50,13 +50,6 @@ public class UIController : Photon.PunBehaviour
     {
         if (PhotonNetwork.isMasterClient)
             PhotonNetwork.LoadLevel(int.Parse(roomNumber.text));
-        //photonView.RPC("RpcLoadRoom", PhotonTargets.All, );
-    }
-
-    [PunRPC]
-    void RpcLoadRoom(int room)
-    {
-        SceneManager.LoadScene(room);
     }
 
     IEnumerator GetPlayerListDelayed()

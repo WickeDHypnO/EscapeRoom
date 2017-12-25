@@ -50,7 +50,7 @@ public class ConnectionManager : Photon.PunBehaviour
         ro.MaxPlayers = 2;
         ro.IsOpen = true;
         ro.IsVisible = true;
-        PhotonNetwork.JoinOrCreateRoom("asd", ro, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("asd" + Random.Range(0, 20), ro, TypedLobby.Default);
         PhotonNetwork.player.NickName = "Master";
     }
 
