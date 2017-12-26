@@ -9,6 +9,7 @@ public class UIController : Photon.PunBehaviour
     public GameObject lobby;
     public GameObject mainMenu;
     public GameObject optionsMenu;
+    public GameObject startGameButton;
     public List<Text> playerNames;
     public ConnectionManager connectionManager;
     public Text roomNumber;
@@ -38,6 +39,10 @@ public class UIController : Photon.PunBehaviour
         lobby.SetActive(true);
         mainMenu.SetActive(false);
         StartCoroutine(GetPlayerListDelayed());
+        if (!PhotonNetwork.isMasterClient)
+        {
+            startGameButton.SetActive(false);
+        }
         PhotonNetwork.automaticallySyncScene = true;
     }
 
