@@ -89,7 +89,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
     private float m_YRotation;
     private Vector3 m_GroundContactNormal;
     private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-
+    public bool mouseEnabled;
 
     public Vector3 Velocity
     {
@@ -144,6 +144,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
     {
         if (!photonView.isMine && !testMode)
             return;
+        if(mouseEnabled)
         RotateView();
 
         if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)

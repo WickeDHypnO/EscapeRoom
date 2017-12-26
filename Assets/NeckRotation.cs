@@ -2,15 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NeckRotation : MonoBehaviour {
+public class NeckRotation : MonoBehaviour
+{
+    public Animator animator;
+    public Transform lookPoint;
+    public Transform camera;
 
-    public Transform neck;
-
-    void Update()
+    void OnAnimatorIK()
     {
-        if (transform.eulerAngles.x < 45 || transform.eulerAngles.x > 315)
+        if (lookPoint != null)
         {
-            neck.rotation = transform.rotation;
+            animator.SetLookAtWeight(0.3f);
+            animator.SetLookAtPosition(lookPoint.position);
         }
     }
+    //void Update()
+    //{
+    //    if (transform.eulerAngles.x < 45 || transform.eulerAngles.x > 315)
+    //    {
+    //        neck.rotation = transform.rotation;
+    //    }
+    //}
 }
