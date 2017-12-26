@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d224fbfa29c08ac4ca831476b39ebd59
-timeCreated: 1514236242
+timeCreated: 1514298675
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -19,96 +19,98 @@ ModelImporter:
     100022: EyeTarget.R_end
     100024: Foot.L
     100026: Foot.R
-    100028: Hand.L
-    100030: Hand.R
-    100032: HandGuide.L
-    100034: HandGuide.L_end
-    100036: HandGuide.R
-    100038: HandGuide.R_end
-    100040: HandPole.L
-    100042: HandPole.L_end
-    100044: HandPole.R
-    100046: HandPole.R_end
-    100048: Head
-    100050: Leg.L
-    100052: Leg.L_end
-    100054: Leg.R
-    100056: Leg.R_end
-    100058: LegConnect.L
-    100060: LegConnect.R
-    100062: LegGuide.L
-    100064: LegGuide.R
-    100066: LegPole.L
-    100068: LegPole.L_end
-    100070: LegPole.R
-    100072: LegPole.R_end
-    100074: Little1.L
-    100076: Little1.R
-    100078: Little2.L
-    100080: Little2.R
-    100082: Little3.L
-    100084: Little3.L_end
-    100086: Little3.R
-    100088: Little3.R_end
-    100090: //RootNode
-    100092: ManEye
-    100094: ManEyeLens
-    100096: ManHair
-    100098: ManHands
-    100100: ManHead
-    100102: ManJacket
-    100104: ManJeans
-    100106: ManRig
-    100108: ManShoes
-    100110: ManSocks
-    100112: Middle1.L
-    100114: Middle1.R
-    100116: Middle2.L
-    100118: Middle2.R
-    100120: Middle3.L
-    100122: Middle3.L_end
-    100124: Middle3.R
-    100126: Middle3.R_end
-    100128: Neck
-    100130: Palm.L
-    100132: Palm.R
-    100134: Point1.L
-    100136: Point1.R
-    100138: Point2.L
-    100140: Point2.R
-    100142: Point3.L
-    100144: Point3.L_end
-    100146: Point3.R
-    100148: Point3.R_end
-    100150: Ring1.L
-    100152: Ring1.R
-    100154: Ring2.L
-    100156: Ring2.R
-    100158: Ring3.L
-    100160: Ring3.L_end
-    100162: Ring3.R
-    100164: Ring3.R_end
-    100166: SightTarget
-    100168: Spine1
-    100170: Spine2
-    100172: Spine3
-    100174: Spine4
-    100176: Thumb1.L
-    100178: Thumb1.R
-    100180: Thumb2.L
-    100182: Thumb2.L_end
-    100184: Thumb2.R
-    100186: Thumb2.R_end
-    100188: ThumbGuide.L
-    100190: ThumbGuide.R
-    100192: Toes.L
-    100194: Toes.L_end
-    100196: Toes.R
-    100198: Toes.R_end
-    100200: UpperHand.L
-    100202: UpperHand.R
-    100204: UpperLeg.L
-    100206: UpperLeg.R
+    100028: FootM.L
+    100030: FootM.L_end
+    100032: FootM.R
+    100034: FootM.R_end
+    100036: Hand.L
+    100038: Hand.R
+    100040: HandGuide.L
+    100042: HandGuide.L_end
+    100044: HandGuide.R
+    100046: HandGuide.R_end
+    100048: HandPole.L
+    100050: HandPole.L_end
+    100052: HandPole.R
+    100054: HandPole.R_end
+    100056: Head
+    100058: Leg.L
+    100060: Leg.R
+    100062: LegConnect.L
+    100064: LegConnect.R
+    100066: LegGuide.L
+    100068: LegGuide.R
+    100070: LegPole.L
+    100072: LegPole.L_end
+    100074: LegPole.R
+    100076: LegPole.R_end
+    100078: Little1.L
+    100080: Little1.R
+    100082: Little2.L
+    100084: Little2.R
+    100086: Little3.L
+    100088: Little3.L_end
+    100090: Little3.R
+    100092: Little3.R_end
+    100094: //RootNode
+    100096: ManEye
+    100098: ManEyeLens
+    100100: ManHair
+    100102: ManHands
+    100104: ManHead
+    100106: ManJacket
+    100108: ManJeans
+    100110: ManRig
+    100112: ManShoes
+    100114: ManSocks
+    100116: Middle1.L
+    100118: Middle1.R
+    100120: Middle2.L
+    100122: Middle2.R
+    100124: Middle3.L
+    100126: Middle3.L_end
+    100128: Middle3.R
+    100130: Middle3.R_end
+    100132: Neck
+    100134: Palm.L
+    100136: Palm.R
+    100138: Point1.L
+    100140: Point1.R
+    100142: Point2.L
+    100144: Point2.R
+    100146: Point3.L
+    100148: Point3.L_end
+    100150: Point3.R
+    100152: Point3.R_end
+    100154: Ring1.L
+    100156: Ring1.R
+    100158: Ring2.L
+    100160: Ring2.R
+    100162: Ring3.L
+    100164: Ring3.L_end
+    100166: Ring3.R
+    100168: Ring3.R_end
+    100170: SightTarget
+    100172: Spine1
+    100174: Spine2
+    100176: Spine3
+    100178: Spine4
+    100180: Thumb1.L
+    100182: Thumb1.R
+    100184: Thumb2.L
+    100186: Thumb2.L_end
+    100188: Thumb2.R
+    100190: Thumb2.R_end
+    100192: ThumbGuide.L
+    100194: ThumbGuide.R
+    100196: Toes.L
+    100198: Toes.L_end
+    100200: Toes.R
+    100202: Toes.R_end
+    100204: UpperHand.L
+    100206: UpperHand.R
+    100208: UpperLeg.L
+    100210: UpperLeg.R
     400000: Arm.L
     400002: Arm.R
     400004: ArmConnect.L
@@ -123,96 +125,98 @@ ModelImporter:
     400022: EyeTarget.R_end
     400024: Foot.L
     400026: Foot.R
-    400028: Hand.L
-    400030: Hand.R
-    400032: HandGuide.L
-    400034: HandGuide.L_end
-    400036: HandGuide.R
-    400038: HandGuide.R_end
-    400040: HandPole.L
-    400042: HandPole.L_end
-    400044: HandPole.R
-    400046: HandPole.R_end
-    400048: Head
-    400050: Leg.L
-    400052: Leg.L_end
-    400054: Leg.R
-    400056: Leg.R_end
-    400058: LegConnect.L
-    400060: LegConnect.R
-    400062: LegGuide.L
-    400064: LegGuide.R
-    400066: LegPole.L
-    400068: LegPole.L_end
-    400070: LegPole.R
-    400072: LegPole.R_end
-    400074: Little1.L
-    400076: Little1.R
-    400078: Little2.L
-    400080: Little2.R
-    400082: Little3.L
-    400084: Little3.L_end
-    400086: Little3.R
-    400088: Little3.R_end
-    400090: //RootNode
-    400092: ManEye
-    400094: ManEyeLens
-    400096: ManHair
-    400098: ManHands
-    400100: ManHead
-    400102: ManJacket
-    400104: ManJeans
-    400106: ManRig
-    400108: ManShoes
-    400110: ManSocks
-    400112: Middle1.L
-    400114: Middle1.R
-    400116: Middle2.L
-    400118: Middle2.R
-    400120: Middle3.L
-    400122: Middle3.L_end
-    400124: Middle3.R
-    400126: Middle3.R_end
-    400128: Neck
-    400130: Palm.L
-    400132: Palm.R
-    400134: Point1.L
-    400136: Point1.R
-    400138: Point2.L
-    400140: Point2.R
-    400142: Point3.L
-    400144: Point3.L_end
-    400146: Point3.R
-    400148: Point3.R_end
-    400150: Ring1.L
-    400152: Ring1.R
-    400154: Ring2.L
-    400156: Ring2.R
-    400158: Ring3.L
-    400160: Ring3.L_end
-    400162: Ring3.R
-    400164: Ring3.R_end
-    400166: SightTarget
-    400168: Spine1
-    400170: Spine2
-    400172: Spine3
-    400174: Spine4
-    400176: Thumb1.L
-    400178: Thumb1.R
-    400180: Thumb2.L
-    400182: Thumb2.L_end
-    400184: Thumb2.R
-    400186: Thumb2.R_end
-    400188: ThumbGuide.L
-    400190: ThumbGuide.R
-    400192: Toes.L
-    400194: Toes.L_end
-    400196: Toes.R
-    400198: Toes.R_end
-    400200: UpperHand.L
-    400202: UpperHand.R
-    400204: UpperLeg.L
-    400206: UpperLeg.R
+    400028: FootM.L
+    400030: FootM.L_end
+    400032: FootM.R
+    400034: FootM.R_end
+    400036: Hand.L
+    400038: Hand.R
+    400040: HandGuide.L
+    400042: HandGuide.L_end
+    400044: HandGuide.R
+    400046: HandGuide.R_end
+    400048: HandPole.L
+    400050: HandPole.L_end
+    400052: HandPole.R
+    400054: HandPole.R_end
+    400056: Head
+    400058: Leg.L
+    400060: Leg.R
+    400062: LegConnect.L
+    400064: LegConnect.R
+    400066: LegGuide.L
+    400068: LegGuide.R
+    400070: LegPole.L
+    400072: LegPole.L_end
+    400074: LegPole.R
+    400076: LegPole.R_end
+    400078: Little1.L
+    400080: Little1.R
+    400082: Little2.L
+    400084: Little2.R
+    400086: Little3.L
+    400088: Little3.L_end
+    400090: Little3.R
+    400092: Little3.R_end
+    400094: //RootNode
+    400096: ManEye
+    400098: ManEyeLens
+    400100: ManHair
+    400102: ManHands
+    400104: ManHead
+    400106: ManJacket
+    400108: ManJeans
+    400110: ManRig
+    400112: ManShoes
+    400114: ManSocks
+    400116: Middle1.L
+    400118: Middle1.R
+    400120: Middle2.L
+    400122: Middle2.R
+    400124: Middle3.L
+    400126: Middle3.L_end
+    400128: Middle3.R
+    400130: Middle3.R_end
+    400132: Neck
+    400134: Palm.L
+    400136: Palm.R
+    400138: Point1.L
+    400140: Point1.R
+    400142: Point2.L
+    400144: Point2.R
+    400146: Point3.L
+    400148: Point3.L_end
+    400150: Point3.R
+    400152: Point3.R_end
+    400154: Ring1.L
+    400156: Ring1.R
+    400158: Ring2.L
+    400160: Ring2.R
+    400162: Ring3.L
+    400164: Ring3.L_end
+    400166: Ring3.R
+    400168: Ring3.R_end
+    400170: SightTarget
+    400172: Spine1
+    400174: Spine2
+    400176: Spine3
+    400178: Spine4
+    400180: Thumb1.L
+    400182: Thumb1.R
+    400184: Thumb2.L
+    400186: Thumb2.L_end
+    400188: Thumb2.R
+    400190: Thumb2.R_end
+    400192: ThumbGuide.L
+    400194: ThumbGuide.R
+    400196: Toes.L
+    400198: Toes.L_end
+    400200: Toes.R
+    400202: Toes.R_end
+    400204: UpperHand.L
+    400206: UpperHand.R
+    400208: UpperLeg.L
+    400210: UpperLeg.R
     4300000: ManHead
     4300002: ManHair
     4300004: ManJacket
@@ -222,6 +226,16 @@ ModelImporter:
     4300012: ManHands
     4300014: ManEyeLens
     4300016: ManEye
+    7400000: ManRigA
+    7400002: ManRigCarry_flashlight
+    7400004: ManRigIdle
+    7400006: ManRigPoseLib
+    7400008: ManRigRotate_left
+    7400010: ManRigRotate_right
+    7400012: ManRigRun_slow
+    7400014: ManRigSide_walk_left
+    7400016: ManRigSide_walk_right
+    7400018: ManRigWalk
     9500000: //RootNode
     13700000: ManEye
     13700002: ManEyeLens
@@ -259,22 +273,301 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Avatar creation failed:\n\tTransform 'Leg.L' is not an ancestor
-      of 'Foot.L'\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ManRigA
+      takeName: ManRig|A
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigCarry_flashlight
+      takeName: ManRig|carry_flashlight
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigIdle
+      takeName: ManRig|idle
+      firstFrame: 0
+      lastFrame: 640
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigPoseLib
+      takeName: ManRig|PoseLib
+      firstFrame: 0
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigRotate_left
+      takeName: ManRig|rotate_left
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigRotate_right
+      takeName: ManRig|rotate_right
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigRun_slow
+      takeName: ManRig|run_slow
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigSide_walk_left
+      takeName: ManRig|side_walk_left
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigSide_walk_right
+      takeName: ManRig|side_walk_right
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ManRigWalk
+      takeName: ManRig|walk
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -317,7 +610,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
