@@ -55,14 +55,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650784931271704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5202534, y: 1.4449999, z: -0.030602455}
-  m_LocalScale: {x: 0.55164444, y: 0.06860491, z: 0.22941993}
+  m_LocalRotation: {x: -0, y: 0.70708483, z: -0, w: 0.70712876}
+  m_LocalPosition: {x: 3.305, y: 1.33, z: 1.398}
+  m_LocalScale: {x: 1.4346282, y: 1.4346281, z: 1.4346281}
   m_Children:
   - {fileID: 4314324453485976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.996, z: 0}
 --- !u!4 &4314324453485976
 Transform:
   m_ObjectHideFlags: 1
@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1742714807374588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4305841923787362}
   m_RootOrder: 0
@@ -124,7 +124,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d1dfe8e940325974cafdc379697818d8, type: 2}
+  - {fileID: 2100000, guid: 1ed28643aa2b1b343914b6a6616f2216, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,14 +150,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650784931271704}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 7c1e35e6a6f3c34429535cd83d710ec6, type: 3}
 --- !u!33 &33935386081810150
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742714807374588}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 7c1e35e6a6f3c34429535cd83d710ec6, type: 3}
 --- !u!65 &65926359808643392
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -168,8 +168,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.06258502, y: 0.009656853, z: 0.1693229}
+  m_Center: {x: 0, y: 0, z: 0.041338556}
 --- !u!114 &114049199199560336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 21300000, guid: c0e5da6dbea4146439d4ca606136d1ab, type: 3}
+  flashlight: 0
 --- !u!114 &114926183653851754
 MonoBehaviour:
   m_ObjectHideFlags: 1

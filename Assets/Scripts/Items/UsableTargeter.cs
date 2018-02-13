@@ -59,6 +59,11 @@ public class UsableTargeter : Photon.PunBehaviour
             targetedItem.GetComponent<HighlightItem>().OutlineOff();
             targetedItem = null;
         }
+
+        if(Input.GetKeyDown(KeyCode.E) && targetedItem.GetComponent<LeverController>())
+        {
+            targetedItem.GetComponent<LeverController>().Use();
+        }
     }
 
 }
