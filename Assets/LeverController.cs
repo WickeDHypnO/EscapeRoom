@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LeverController : Photon.PunBehaviour, IPunObservable {
 
     public bool position;
     public bool canUse;
     public GameObject lever;
+    public bool standalone;
+    public UnityEvent onLeverDown;
 
 	public void Use () {
 		if(canUse)
@@ -23,6 +26,11 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
         }
 	}
 	
+    public void Reset()
+    {
+        StartCoroutine(MoveUp());
+    }
+
     IEnumerator MoveDown()
     {
         float currentRotation = lever.transform.localEulerAngles.x;
@@ -35,7 +43,9 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
         }
         canUse = true;
         position = true;
+        if(!standalone)
         FindObjectOfType<RoomController>().CheckLevers(this);
+        onLeverDown.Invoke();
     }
 
     public IEnumerator MoveUp()
