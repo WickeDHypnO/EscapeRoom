@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4674071210612038}
   - component: {fileID: 33891306077886756}
   - component: {fileID: 23885076684453782}
-  - component: {fileID: 65590756149907394}
+  - component: {fileID: 65484258187872500}
   m_Layer: 0
   m_Name: PlateFrame
   m_TagString: Untagged
@@ -37,6 +37,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4143531879217118}
+  - component: {fileID: 114320255465208858}
+  - component: {fileID: 65406289231906420}
   m_Layer: 0
   m_Name: PressurePlate_01
   m_TagString: Untagged
@@ -54,7 +56,7 @@ GameObject:
   - component: {fileID: 4704586233535872}
   - component: {fileID: 33544355144227356}
   - component: {fileID: 23794362227522862}
-  - component: {fileID: 65563015344964686}
+  - component: {fileID: 65251381936745438}
   m_Layer: 0
   m_Name: PressurePlate
   m_TagString: Untagged
@@ -69,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530550817855592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.579, y: 0.5, z: -2.844}
+  m_LocalScale: {x: 1.6091049, y: 1.6091045, z: 1.6091045}
   m_Children:
   - {fileID: 4674071210612038}
   - {fileID: 4704586233535872}
@@ -97,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864175035087628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4143531879217118}
@@ -185,7 +187,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445952998235308}
   m_Mesh: {fileID: 4300002, guid: ea4ebdf9b0f3f714d83039ebaaa27bab, type: 3}
---- !u!65 &65563015344964686
+--- !u!65 &65251381936745438
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -197,7 +199,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6700001, y: 0.03999999, z: 0.6700001}
   m_Center: {x: 0, y: 0.029999997, z: 0}
---- !u!65 &65590756149907394
+--- !u!65 &65406289231906420
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530550817855592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1, z: 0.7}
+  m_Center: {x: 0, y: -0.34, z: 0}
+--- !u!65 &65484258187872500
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -209,3 +223,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.049999993, z: 1}
   m_Center: {x: 0, y: 0.024999997, z: 0}
+--- !u!114 &114320255465208858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530550817855592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f2416f4be222a4cbfe2ce97d1a085e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neededWeight: 29
+  pressed: 0
+  plate: {fileID: 1864175035087628}
+  pressedHeightDelta: 0.03
