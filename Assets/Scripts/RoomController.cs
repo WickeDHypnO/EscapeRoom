@@ -56,21 +56,19 @@ public class RoomController : MonoBehaviour
         CheckIfRoomComplete();
     }
 
-    public void CheckPressurePlate(PressurePlateController plate)
+    public void PlatePressed()
     {
-        if(plate.pressed)
-        {
-            gem2.GetComponent<MeshRenderer>().material.color = Color.green;
-            gem2active = true;
-        }
-        else
-        {
-            gem2.GetComponent<MeshRenderer>().material.color = Color.white;
-            gem2active = false;
-        }
+        gem2.GetComponent<MeshRenderer>().material.color = Color.green;
+        gem2active = true;
         CheckIfRoomComplete();
     }
 
+    public void PlateReleased()
+    {
+        gem2.GetComponent<MeshRenderer>().material.color = Color.white;
+        gem2active = false;
+        CloseDoors();
+    }
     void CheckIfRoomComplete()
     {
         if(gem1active && gem2active)
@@ -84,6 +82,14 @@ public class RoomController : MonoBehaviour
         foreach(DoorController door in doors)
         {
             door.Open();
+        }
+    }
+
+    void CloseDoors()
+    {
+        foreach (DoorController door in doors)
+        {
+            door.Close();
         }
     }
 }

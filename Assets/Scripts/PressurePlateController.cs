@@ -13,6 +13,7 @@ public class PressurePlateController : MonoBehaviour
     public float pressedHeightDelta;
     float defaultHeight;
     public UnityEvent onPressed;
+    public UnityEvent onReleased;
 
     void Start()
     {
@@ -35,7 +36,6 @@ public class PressurePlateController : MonoBehaviour
             pressed = false;
         }
         ChangeVisualState(!pressed);
-        FindObjectOfType<RoomController>().CheckPressurePlate(this);
     }
 
     void OnTriggerExit(Collider col)
@@ -51,9 +51,9 @@ public class PressurePlateController : MonoBehaviour
         else
         {
             pressed = false;
+            onReleased.Invoke();
         }
         ChangeVisualState(!pressed);
-        FindObjectOfType<RoomController>().CheckPressurePlate(this);
     }
 
     void ChangeVisualState(bool up)
