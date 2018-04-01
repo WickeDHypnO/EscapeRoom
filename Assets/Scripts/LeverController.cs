@@ -43,7 +43,7 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
         }
         canUse = true;
         position = true;
-        if(!standalone)
+        //if(!standalone)
         //FindObjectOfType<RoomController>().CheckLevers(this);
         onLeverDown.Invoke();
     }
