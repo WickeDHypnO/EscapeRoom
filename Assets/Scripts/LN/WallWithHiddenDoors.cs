@@ -8,6 +8,8 @@ public class WallWithHiddenDoors : MonoBehaviour {
     public GameObject[] TilesToMoveRight;
     public float OpeningTime = 3.0f;
     public float OpeningDistance = 1.0f;
+    public float ZOffset = 0.3f;
+    public bool Opened = false;
     private float elapsedTime;
     private bool moving;
     private bool close;
@@ -25,18 +27,16 @@ public class WallWithHiddenDoors : MonoBehaviour {
             {
                 distance = (OpeningTime - elapsedTime) * OpeningDistance / OpeningTime;
                 moving = false;
+                Opened = !Opened;
+                if (!Opened) pullDoors(false);
             }
             foreach (GameObject tile in TilesToMoveLeft)
             {
-                Vector3 currentPos = tile.transform.position;
-                float x = currentPos.x + distance * (close ? 1.0f : -1.0f);
-                tile.transform.position = new Vector3(x, currentPos.y, currentPos.z);
+                moveTileOnX(tile, distance, -1.0f);
             }
             foreach (GameObject tile in TilesToMoveRight)
             {
-                Vector3 currentPos = tile.transform.position;
-                float x = currentPos.x + distance * (close ? -1.0f : 1.0f);
-                tile.transform.position = new Vector3(x, currentPos.y, currentPos.z);
+                moveTileOnX(tile, distance, 1.0f);
             }
             elapsedTime = time;
         }
@@ -44,17 +44,55 @@ public class WallWithHiddenDoors : MonoBehaviour {
 
     public void Open()
     {
-        if (moving) return;
+        if (moving || Opened) return;
         moving = true;
         close = false;
         elapsedTime = 0.0f;
+        pullDoors(true);
     }
 
     public void Close()
     {
-        if (moving) return;
+        if (moving || !Opened) return;
         moving = true;
         close = true;
         elapsedTime = 0.0f;
+    }
+
+    /*
+    *   direction:
+    *   -1 -> lewo
+    *   1 -> prawo
+    */
+    private void moveTileOnX(GameObject tile, float distance, float direction)
+    {
+        Vector3 currentPos = tile.transform.position;
+        float x = currentPos.x + distance * (close ? -1.0f * direction : 1.0f * direction);
+        tile.transform.position = new Vector3(x, currentPos.y, currentPos.z);
+    }
+
+    /*
+    *   direction:
+    *   -1 -> do kamery
+    *   1 -> od kamery
+    */
+    private void moveTileOnZ(GameObject tile, float distance, float direction)
+    {
+        Vector3 currentPos = tile.transform.position;
+        float z = currentPos.z + distance * direction;
+        tile.transform.position = new Vector3(currentPos.x, currentPos.y, z);
+    }
+
+    private void pullDoors(bool open)
+    {
+        float direction = (open ? 1.0f : -1.0f);
+        foreach (GameObject tile in TilesToMoveLeft)
+        {
+            moveTileOnZ(tile, ZOffset, direction);
+        }
+        foreach (GameObject tile in TilesToMoveRight)
+        {
+            moveTileOnZ(tile, ZOffset, direction);
+        }
     }
 }

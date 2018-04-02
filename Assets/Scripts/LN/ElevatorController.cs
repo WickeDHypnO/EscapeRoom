@@ -1,34 +1,33 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorController : MonoBehaviour {
-
+public class ElevatorController : Photon.PunBehaviour, IPunObservable
+{
     public float FloorHeight = 2.0f;
     public float MoveTime = 3.5f;
     public int FloorsCount = 3;
-    public int CurrentFloor = 2;
+    public int CurrentFloor = 1;
     public GameObject[] FloorsDoors;
     private bool moving;
     private float elapsedTime;
     private float moveDirection;
+    private float height;
+    private float totalMoveTime;
 
 	// Use this for initialization
-	void Start () {
-        moving = false;
-        elapsedTime = 0.0f;
-        moveDirection = 0.0f;
-    }
+	void Start () {}
 	
 	// Update is called once per frame
 	void Update () {
 		if (moving)
         {
             float time = elapsedTime + Time.deltaTime;
-            float distance = Time.deltaTime * FloorHeight / MoveTime;
-            if (time >= MoveTime)
+            float distance = Time.deltaTime * height / totalMoveTime;
+            if (time >= totalMoveTime)
             {
-                distance = (MoveTime - elapsedTime) * FloorHeight / MoveTime;
+                distance = (totalMoveTime - elapsedTime) * height / totalMoveTime;
                 moving = false;
                 openDoor();
             }
@@ -40,6 +39,19 @@ public class ElevatorController : MonoBehaviour {
         }
 	}
 
+    public void ChangeFloor(int floorNumber)
+    {
+        if (moving) return;
+        if ((floorNumber < 1) || (floorNumber > FloorsCount)) return;
+        if (floorNumber == CurrentFloor) return;
+        closeDoor();
+        int floorsDifference = Math.Abs(floorNumber - CurrentFloor);
+        height = floorsDifference * FloorHeight;
+        totalMoveTime = floorsDifference * MoveTime;
+        startMove(floorNumber > CurrentFloor ? 1.0f : -1.0f);
+        CurrentFloor = floorNumber;
+    }
+
     private void startMove(float direction)
     {
         moveDirection = direction;
@@ -47,7 +59,7 @@ public class ElevatorController : MonoBehaviour {
         moving = true;
     }
 
-    public void MoveUp()
+    /*public void MoveUp()
     {
         if (moving) return;
         if (CurrentFloor >= FloorsCount) return;
@@ -63,7 +75,7 @@ public class ElevatorController : MonoBehaviour {
         closeDoor();
         --CurrentFloor;
         startMove(-1.0f);
-    }
+    }*/
 
     private WallWithHiddenDoors getDoorForFloor(int floorNumber)
     {
@@ -86,5 +98,27 @@ public class ElevatorController : MonoBehaviour {
         WallWithHiddenDoors wd = getDoorForFloor(CurrentFloor);
         if (wd == null) return;
         wd.Close();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(CurrentFloor);
+            stream.SendNext(moving);
+            stream.SendNext(elapsedTime);
+            stream.SendNext(moveDirection);
+            stream.SendNext(height);
+            stream.SendNext(totalMoveTime);
+        }
+        else
+        {
+            CurrentFloor = (int)stream.ReceiveNext();
+            moving = (bool)stream.ReceiveNext();
+            elapsedTime = (float)stream.ReceiveNext();
+            moveDirection = (float)stream.ReceiveNext();
+            height = (float)stream.ReceiveNext();
+            totalMoveTime = (float)stream.ReceiveNext();
+        }
     }
 }

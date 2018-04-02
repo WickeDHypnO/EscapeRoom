@@ -8,7 +8,7 @@ public class ButtonController : Photon.PunBehaviour, IPunObservable
 {
     public GameObject buttonObject;
     public GameObject highlightObject;
-    public float MoveTime = 1.5f;
+    public float MoveTime = 1.0f;
     public float MoveDistance = 0.0099f;
     public UnityEvent onButtonPushed;
     private bool moving;
@@ -31,11 +31,12 @@ public class ButtonController : Photon.PunBehaviour, IPunObservable
     public void Use()
     {
         if (moving) return;
-        Push();
+        push();
     }
 
-    void Push()
+    private void push()
     {
+        GetComponent<HighlightItem>().OutlineOff();
         highlightObject.SetActive(false);
         setPosition(MoveDistance);
         elapsedTime = 0.0f;
