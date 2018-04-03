@@ -107,10 +107,11 @@ public class PhotonVoiceNetwork : MonoBehaviour
 
     public void Awake()
     {
-		if (Microphone.devices.Length < 1)
+        // TODO odkomentować, zawiesza grę jeśli nie ma mikrofonu.
+		/*if (Microphone.devices.Length < 1)
         {
             Debug.LogError("PUNVoice: No microphone device found");
-        }
+        }*/
 	}
 
     /// <summary>
