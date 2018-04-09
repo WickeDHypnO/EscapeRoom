@@ -58,6 +58,7 @@ public class UsableTargeter : Photon.PunBehaviour
             targetedItem.GetComponent<Collider>().enabled = false;
             targetedItem.GetComponent<HighlightItem>().OutlineOff();
             targetedItem = null;
+            return; // ?? inaczej niżej się wysypuje
         }
 
         if(Input.GetKeyDown(KeyCode.E) && targetedItem.GetComponent<LeverController>())
