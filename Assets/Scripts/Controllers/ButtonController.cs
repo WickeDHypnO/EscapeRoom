@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ButtonController : Photon.PunBehaviour, IPunObservable
+public class ButtonController : UsableTarget
 {
     public GameObject buttonObject;
     public GameObject highlightObject;
@@ -14,7 +14,7 @@ public class ButtonController : Photon.PunBehaviour, IPunObservable
     private bool moving;
     private float elapsedTime;
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
@@ -28,7 +28,7 @@ public class ButtonController : Photon.PunBehaviour, IPunObservable
         }
     }
 
-    public void Use()
+    public override void Use()
     {
         if (moving) return;
         push();
@@ -42,9 +42,6 @@ public class ButtonController : Photon.PunBehaviour, IPunObservable
         elapsedTime = 0.0f;
         moving = true;
     }
-
-    // Use this for initialization
-    void Start () {}
 	
 	// Update is called once per frame
 	void Update () {
