@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomController : MonoBehaviour
+public class Room2Controller : MonoBehaviour
 {
     public List<LeverController> levers;
     public List<int> leversCombination;

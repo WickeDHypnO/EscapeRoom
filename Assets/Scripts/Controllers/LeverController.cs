@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class LeverController : Photon.PunBehaviour, IPunObservable {
+public class LeverController : UsableTarget {
 
     public bool position;
     public bool canUse;
@@ -12,7 +12,7 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
     public bool standalone;
     public UnityEvent onLeverDown;
 
-	public void Use () {
+	public override void Use () {
 		if(canUse)
         {
             if(!position)
@@ -43,8 +43,6 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
         }
         canUse = true;
         position = true;
-        //if(!standalone)
-        //FindObjectOfType<RoomController>().CheckLevers(this);
         onLeverDown.Invoke();
     }
 
@@ -62,7 +60,7 @@ public class LeverController : Photon.PunBehaviour, IPunObservable {
         canUse = true;
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
