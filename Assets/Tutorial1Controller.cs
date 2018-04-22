@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Tutorial1Controller : MonoBehaviour {
 
-    public int platesPressed = 0;
+    int platesPressed = 0;
     public DoorController door;
+    public GameObject blockingVolume;
+    bool leverDown = false;
 
 	public void platePressed()
     {
@@ -15,10 +17,15 @@ public class Tutorial1Controller : MonoBehaviour {
             door.Open();
         }
     }
-	
+	public void leverSetDown()
+    {
+        leverDown = true;
+        blockingVolume.SetActive(false);
+    }
     public void plateReleased()
     {
         platesPressed--;
-        door.Close();
+        if(!leverDown)
+            door.Close();
     }
 }
