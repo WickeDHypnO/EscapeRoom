@@ -12,6 +12,7 @@ public class UsableTargeter : Photon.PunBehaviour
     GameObject pickedUpItem;
     private static KeyCode USE_KEY_CODE = KeyCode.E;
 
+
     void LateUpdate()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 50f, raycastMask))
@@ -33,7 +34,7 @@ public class UsableTargeter : Photon.PunBehaviour
             }
         }
 
-        if (Input.GetKeyUp(USE_KEY_CODE))
+        if (Input.GetKeyDown(USE_KEY_CODE))
         {
             handleUse();
         }
@@ -61,6 +62,7 @@ public class UsableTargeter : Photon.PunBehaviour
             GetComponentInParent<PlayerInventory>().AddItem(targetedItem.GetComponent<Item>());
             targetedItem.GetComponent<Collider>().enabled = false;
             targetedItem.GetComponent<HighlightItem>().OutlineOff();
+            Destroy(targetedItem.GetComponent<Item>());
             targetedItem = null;
         }
 

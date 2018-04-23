@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_LightingDataAsset: {fileID: 112000014, guid: e1d56ab870df47d408af4dd1d17b23b3,
+  m_LightingDataAsset: {fileID: 112000074, guid: 4bfbc4b94a3d34d4cb3f40c2c5a1558c,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -123,7 +123,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -131,7 +131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -156,6 +156,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -216,6 +220,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -349,7 +357,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4443222438831226, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.781
+      value: 5.7810016
       objectReference: {fileID: 0}
     - target: {fileID: 4443222438831226, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
       propertyPath: m_LocalPosition.y
@@ -357,7 +365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4443222438831226, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.052983284
+      value: -0.5529833
       objectReference: {fileID: 0}
     - target: {fileID: 4443222438831226, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
       propertyPath: m_LocalRotation.x
@@ -390,6 +398,22 @@ Prefab:
     - target: {fileID: 4443222438831226, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470248674594486, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891341004562140, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687217230054832, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352952788731886, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac27b6ba1dbbe3343bb522a5b2537798, type: 2}
@@ -441,6 +465,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -491,6 +519,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -536,6 +568,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -588,6 +624,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -610,7 +650,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -618,7 +658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -643,6 +683,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -698,6 +742,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -757,6 +805,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -803,6 +855,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -825,7 +881,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.5000002
+      value: -0.00000017881393
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -862,6 +918,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -936,6 +996,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -961,7 +1025,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &130910558
 Transform:
@@ -1088,6 +1152,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -1142,9 +1210,109 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &138876747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 138876751}
+  - component: {fileID: 138876750}
+  - component: {fileID: 138876749}
+  - component: {fileID: 138876748}
+  - component: {fileID: 138876752}
+  m_Layer: 0
+  m_Name: ResetTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!33 &138876748
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138876747}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &138876749
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138876747}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &138876750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138876747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &138876751
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138876747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.43, z: 0}
+  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 83
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138876752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138876747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681f7b6d85ac2b14692934ae6796a6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &143289688 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4096603022192376, guid: 1bf36070ad1c6204d9e6373db9fd8e7f,
@@ -1252,7 +1420,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 4.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1260,7 +1428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1286,6 +1454,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -1303,7 +1475,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1311,7 +1483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1337,6 +1509,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -1359,7 +1535,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &157133649
 Transform:
@@ -1372,7 +1548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &157133650
 Light:
@@ -1453,6 +1629,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -1503,6 +1683,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -1583,6 +1767,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -1643,6 +1831,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1853736460140600, guid: bcfc03703207cbd4483db1b5885d160a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcfc03703207cbd4483db1b5885d160a, type: 2}
   m_IsPrefabParent: 0
@@ -1663,7 +1855,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &176763710
 Transform:
@@ -1778,6 +1970,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -1832,6 +2028,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1958709202279254, guid: 72895680c7aa6844f95311b06f23fb8e, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72895680c7aa6844f95311b06f23fb8e, type: 2}
   m_IsPrefabParent: 0
@@ -1877,6 +2077,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -2024,6 +2228,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -2078,6 +2286,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1054275748140870, guid: b1b36c5d319f4dd44a5b30988a0ac127, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1b36c5d319f4dd44a5b30988a0ac127, type: 2}
   m_IsPrefabParent: 0
@@ -2090,7 +2302,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2098,7 +2310,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2123,6 +2335,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -2192,6 +2408,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -2268,7 +2488,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2276,7 +2496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2301,6 +2521,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -2412,6 +2636,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -2565,7 +2793,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4023259263470078, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4023259263470078, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2595,6 +2823,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1018463967823662, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473098557840720, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672941204292718, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
   m_IsPrefabParent: 0
@@ -2607,7 +2847,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2615,7 +2855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2640,6 +2880,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -2700,6 +2944,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -2719,7 +2967,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &312329197
 Transform:
@@ -2827,6 +3075,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -2872,6 +3124,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -2922,6 +3178,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -3046,6 +3306,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -3062,7 +3326,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &355930147
 Transform:
@@ -3150,6 +3414,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -3222,6 +3490,18 @@ Prefab:
       propertyPath: m_Name
       value: WallLampHandle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427463741638376, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959266769990298, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759516365899578, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
   m_IsPrefabParent: 0
@@ -3242,7 +3522,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &376701764
 Transform:
@@ -3362,6 +3642,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -3379,7 +3663,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.4999999
+      value: 0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3416,6 +3700,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -3462,6 +3750,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -3557,7 +3849,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &414929862
 Transform:
@@ -3630,6 +3922,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -3675,6 +3971,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -3753,7 +4053,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3761,7 +4061,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3786,6 +4086,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -3843,6 +4147,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -3893,6 +4201,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -3939,6 +4251,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -3984,6 +4300,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -4108,6 +4428,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -4164,6 +4488,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -4189,7 +4517,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &506863437
 Transform:
@@ -4304,6 +4632,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -4321,7 +4653,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 7.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4329,7 +4661,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4354,6 +4686,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -4406,6 +4742,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -4456,6 +4796,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -4473,7 +4817,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4481,7 +4825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4506,6 +4850,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -4638,6 +4986,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -4693,6 +5045,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -4710,7 +5066,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4718,7 +5074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4743,6 +5099,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -4769,7 +5129,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &586170650
 Transform:
@@ -4892,6 +5252,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -4942,69 +5306,13 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &598124075
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 797972059}
-    m_Modifications:
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_Name
-      value: WoodenFloor01 (60)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 23269054763418716, guid: f90768d739fe4504089cac31ff681e30,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b36254a0c49b53945a857115d4190e0c, type: 2}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f90768d739fe4504089cac31ff681e30, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &598124076 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30,
-    type: 2}
-  m_PrefabInternal: {fileID: 598124075}
 --- !u!1 &600998940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,7 +5327,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &600998941
 Transform:
@@ -5113,6 +5421,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -5125,7 +5437,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5133,7 +5445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5158,6 +5470,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -5218,6 +5534,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -5264,6 +5584,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -5281,7 +5605,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.50000054
+      value: -0.0000005364418
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5319,6 +5643,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -5339,7 +5667,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &616761141
 Transform:
@@ -5478,6 +5806,22 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1839035599422272, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941297897667198, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972640362976476, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626878014851932, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
   m_IsPrefabParent: 0
@@ -5559,6 +5903,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -5571,7 +5919,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5579,7 +5927,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5605,6 +5953,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -5622,7 +5974,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 7.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5630,7 +5982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5655,6 +6007,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -5707,6 +6063,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -5719,7 +6079,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.49999943
+      value: 0.0000005662441
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5756,6 +6116,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -5802,6 +6166,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -5861,6 +6229,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -5914,6 +6286,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -5977,6 +6353,10 @@ Prefab:
     - target: {fileID: 4096603022192376, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
@@ -6079,6 +6459,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -6137,6 +6521,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -6191,6 +6579,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -6203,7 +6595,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 4.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6211,7 +6603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6237,6 +6629,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -6245,11 +6641,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81,
     type: 2}
   m_PrefabInternal: {fileID: 675262990}
---- !u!4 &681695305 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30,
-    type: 2}
-  m_PrefabInternal: {fileID: 751703892}
 --- !u!1001 &683207081
 Prefab:
   m_ObjectHideFlags: 0
@@ -6301,6 +6692,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -6351,6 +6746,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -6396,6 +6795,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -6446,6 +6849,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -6500,6 +6907,10 @@ Prefab:
     - target: {fileID: 4257403047086286, guid: e4140b7d55d6fb64eb125f2721a0b4b9, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107032650592708, guid: e4140b7d55d6fb64eb125f2721a0b4b9, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4140b7d55d6fb64eb125f2721a0b4b9, type: 2}
@@ -6560,6 +6971,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -6614,6 +7029,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -6622,61 +7041,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30,
     type: 2}
   m_PrefabInternal: {fileID: 1639568992}
---- !u!1001 &751703892
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 797972059}
-    m_Modifications:
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_Name
-      value: WoodenFloor01 (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23269054763418716, guid: f90768d739fe4504089cac31ff681e30,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b36254a0c49b53945a857115d4190e0c, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &754950487 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49,
@@ -6695,7 +7059,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &756389687
 Transform:
@@ -6842,6 +7206,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 1983433410344436, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1406874619019364, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464883335234594, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113621357536842, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
   m_IsPrefabParent: 0
@@ -6953,6 +7333,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -6975,7 +7359,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &774574482
 Transform:
@@ -7021,7 +7405,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &791604232
 Transform:
@@ -7059,7 +7443,7 @@ Transform:
   - {fileID: 1018207273}
   - {fileID: 1551219902}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &793424245
 Prefab:
@@ -7112,6 +7496,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -7162,6 +7550,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -7194,25 +7586,21 @@ Transform:
   - {fileID: 2035811486}
   - {fileID: 1934092069}
   - {fileID: 25721765}
-  - {fileID: 841800629}
   - {fileID: 263540930}
   - {fileID: 2036118088}
   - {fileID: 1718017395}
   - {fileID: 932267694}
-  - {fileID: 917839895}
   - {fileID: 1483647925}
   - {fileID: 481181038}
+  - {fileID: 1638949438}
   - {fileID: 438117111}
   - {fileID: 27129099}
-  - {fileID: 598124076}
   - {fileID: 1712914323}
   - {fileID: 900113180}
   - {fileID: 353288688}
   - {fileID: 764219093}
-  - {fileID: 681695305}
-  - {fileID: 1638949438}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &807978372
 Prefab:
@@ -7260,6 +7648,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -7408,6 +7800,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.2732725
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -7457,6 +7853,10 @@ Prefab:
     - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_Name
       value: WoodenPillar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
@@ -7514,6 +7914,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -7522,66 +7926,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81,
     type: 2}
   m_PrefabInternal: {fileID: 837751238}
---- !u!1001 &841800628
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 797972059}
-    m_Modifications:
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_Name
-      value: WoodenFloor01 (40)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23269054763418716, guid: f90768d739fe4504089cac31ff681e30,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b36254a0c49b53945a857115d4190e0c, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &841800629 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30,
-    type: 2}
-  m_PrefabInternal: {fileID: 841800628}
 --- !u!1001 &845767373
 Prefab:
   m_ObjectHideFlags: 0
@@ -7689,6 +8033,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -7730,6 +8078,10 @@ Prefab:
     - target: {fileID: 4612584189805486, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_RootOrder
       value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -7780,6 +8132,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -7832,6 +8188,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -7882,6 +8242,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -8130,6 +8494,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -8241,6 +8609,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -8292,6 +8664,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -8338,6 +8714,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -8346,66 +8726,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81,
     type: 2}
   m_PrefabInternal: {fileID: 917016961}
---- !u!1001 &917839894
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 797972059}
-    m_Modifications:
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_Name
-      value: WoodenFloor01 (50)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280230624049868, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23269054763418716, guid: f90768d739fe4504089cac31ff681e30,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b36254a0c49b53945a857115d4190e0c, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f90768d739fe4504089cac31ff681e30, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &917839895 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4817891349359482, guid: f90768d739fe4504089cac31ff681e30,
-    type: 2}
-  m_PrefabInternal: {fileID: 917839894}
 --- !u!1001 &929829296
 Prefab:
   m_ObjectHideFlags: 0
@@ -8448,6 +8768,10 @@ Prefab:
     - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_Name
       value: CellarWall01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -8494,6 +8818,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -8606,6 +8934,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -8665,6 +8997,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -8714,6 +9050,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -8933,6 +9273,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -8984,6 +9328,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -9034,6 +9382,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -9079,6 +9431,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -9130,6 +9486,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -9191,6 +9551,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -9203,7 +9567,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9211,7 +9575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9237,6 +9601,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -9259,7 +9627,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 4.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9267,7 +9635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9292,6 +9660,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -9344,6 +9716,22 @@ Prefab:
       propertyPath: m_Name
       value: Window_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1406874619019364, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983433410344436, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464883335234594, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113621357536842, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b50c8ce6a98b554495b6f709dfcaa9b, type: 2}
   m_IsPrefabParent: 0
@@ -9369,7 +9757,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1022282412
 Transform:
@@ -9454,7 +9842,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1023449559
 Transform:
@@ -9496,7 +9884,7 @@ Transform:
   - {fileID: 511078714}
   - {fileID: 378812695}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1001 &1023699579
 Prefab:
@@ -9540,6 +9928,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -9592,6 +9984,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -9617,7 +10013,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1031961798
 Transform:
@@ -9732,6 +10128,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -9744,7 +10144,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4699649640070856, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4699649640070856, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9781,6 +10181,10 @@ Prefab:
     - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_Name
       value: WoodenPillar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
@@ -9833,6 +10237,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -9855,7 +10263,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1061552474
 Transform:
@@ -9868,7 +10276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &1061552475
 Light:
@@ -9961,6 +10369,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -10006,6 +10418,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -10116,7 +10532,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1094944837
 Transform:
@@ -10140,7 +10556,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4699649640070856, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4699649640070856, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10177,6 +10593,10 @@ Prefab:
     - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
       propertyPath: m_Name
       value: WoodenPillar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318228927100682, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9ca5d66b510b374f9936a1dab61a645, type: 2}
@@ -10242,6 +10662,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -10261,7 +10685,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1107616820
 Transform:
@@ -10397,6 +10821,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -10409,7 +10837,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10417,7 +10845,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -10442,6 +10870,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -10621,7 +11053,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1155114903
 Transform:
@@ -10778,6 +11210,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -10828,6 +11264,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -10877,6 +11317,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -10981,6 +11425,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -11027,6 +11475,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -11039,7 +11491,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -11047,7 +11499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11072,6 +11524,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -11131,6 +11587,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -11270,6 +11730,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1916199400767460, guid: 7dd8ae3b512b74345bc60e12a325adc6, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dd8ae3b512b74345bc60e12a325adc6, type: 2}
   m_IsPrefabParent: 0
@@ -11315,6 +11779,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -11367,6 +11835,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -11412,6 +11884,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -11459,6 +11935,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -11476,7 +11956,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -11484,7 +11964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11510,6 +11990,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -11527,7 +12011,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.49999985
+      value: 0.00000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -11564,6 +12048,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -11711,6 +12199,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -11756,6 +12248,10 @@ Prefab:
     - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_Name
       value: CellarWall01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -11807,6 +12303,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -11827,7 +12327,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1278522452
 Transform:
@@ -11942,6 +12442,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -11959,7 +12463,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -11967,7 +12471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11992,6 +12496,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -12043,6 +12551,10 @@ Prefab:
     - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_Name
       value: CellarWall01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -12098,6 +12610,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -12144,6 +12660,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -12189,6 +12709,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -12245,6 +12769,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -12294,6 +12822,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -12358,6 +12890,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -12403,6 +12939,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -12454,6 +12994,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -12543,6 +13087,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -12593,6 +13141,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -12639,6 +13191,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -12670,7 +13226,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1343634664
 Transform:
@@ -12803,6 +13359,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1606742463580718, guid: a82431db160323c4eaac1fd9226b1e54, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a82431db160323c4eaac1fd9226b1e54, type: 2}
   m_IsPrefabParent: 0
@@ -12858,6 +13418,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -12909,6 +13473,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -12959,6 +13527,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -13004,6 +13576,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -13056,6 +13632,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -13101,6 +13681,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -13148,6 +13732,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -13165,7 +13753,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1394019387
 Transform:
@@ -13271,6 +13859,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -13316,6 +13908,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -13380,6 +13976,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -13431,6 +14031,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -13480,6 +14084,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -13532,6 +14140,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -13582,6 +14194,10 @@ Prefab:
     - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
       propertyPath: m_Name
       value: OldWoodenCeiling (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
@@ -13744,6 +14360,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -13855,6 +14475,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -13928,6 +14552,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -13982,6 +14610,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -14028,6 +14660,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -14040,7 +14676,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14048,7 +14684,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -14073,6 +14709,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -14128,6 +14768,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -14265,6 +14909,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -14396,6 +15044,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -14457,6 +15109,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -14484,7 +15140,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1584556116
 Transform:
@@ -14587,6 +15243,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -14604,7 +15264,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1594651587
 Transform:
@@ -14664,7 +15324,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14672,7 +15332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -14697,6 +15357,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -14748,6 +15412,10 @@ Prefab:
     - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_Name
       value: CellarWall01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -14892,6 +15560,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1630079068925204, guid: 323771d636b25d846996c4633fc3c937, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 323771d636b25d846996c4633fc3c937, type: 2}
   m_IsPrefabParent: 0
@@ -14941,6 +15613,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -14996,6 +15672,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -15042,6 +15722,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -15064,7 +15748,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &1623049526
 Light:
@@ -15113,7 +15797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 31.027002, y: 5.151, z: -0.41700003}
 --- !u!1001 &1626210539
 Prefab:
@@ -15162,6 +15846,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -15208,6 +15896,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -15228,7 +15920,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1634063441
 Transform:
@@ -15322,7 +16014,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1638108834
 Transform:
@@ -15407,7 +16099,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1638949438
 Transform:
@@ -15416,7 +16108,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1638949437}
   m_LocalRotation: {x: 0.5492787, y: -0.000000009740016, z: 0.000000035337628, w: 0.8356393}
-  m_LocalPosition: {x: -0.3006, y: 0.6397, z: 2.4569}
+  m_LocalPosition: {x: 0.23, y: 0.6397, z: 2.4569}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952709642}
@@ -15424,7 +16116,7 @@ Transform:
   - {fileID: 71625733}
   - {fileID: 863360696}
   m_Father: {fileID: 797972059}
-  m_RootOrder: 20
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1639568992
 Prefab:
@@ -15537,7 +16229,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1653960380
 Transform:
@@ -15580,7 +16272,7 @@ Transform:
   - {fileID: 2146133705}
   - {fileID: 414929862}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1665251889
 Prefab:
@@ -15624,6 +16316,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -15694,6 +16390,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -15781,6 +16481,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -15839,6 +16543,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -15884,6 +16592,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -15940,6 +16652,10 @@ Prefab:
       propertyPath: m_Name
       value: TinCeilingEdge_02 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
   m_IsPrefabParent: 0
@@ -15952,7 +16668,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -15960,7 +16676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15985,6 +16701,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -16082,6 +16802,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -16249,6 +16973,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -16285,7 +17013,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1744203556
 Transform:
@@ -16300,7 +17028,6 @@ Transform:
   - {fileID: 828706458}
   - {fileID: 1105861724}
   - {fileID: 1039085921}
-  - {fileID: 2143473204}
   - {fileID: 1653960380}
   - {fileID: 1023449559}
   - {fileID: 1824910450}
@@ -16358,6 +17085,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -16528,6 +17259,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -16702,6 +17437,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -16765,6 +17504,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
   m_IsPrefabParent: 0
@@ -16822,6 +17565,10 @@ Prefab:
     - target: {fileID: 4495823865500274, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731406538948232, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2adb3db29a9c944ebf280f781d3dc49, type: 2}
@@ -16881,6 +17628,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -16939,6 +17690,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -16984,6 +17739,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -17048,6 +17807,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1759516365899578, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959266769990298, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427463741638376, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a577088ff564bb24788e2926f9d0fdb2, type: 2}
   m_IsPrefabParent: 0
@@ -17064,7 +17835,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1824910450
 Transform:
@@ -17106,7 +17877,7 @@ Transform:
   - {fileID: 984139345}
   - {fileID: 239307098}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1001 &1825618153
 Prefab:
@@ -17151,6 +17922,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -17168,7 +17943,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.4999995
+      value: 0.0000005066395
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17205,6 +17980,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -17451,6 +18230,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -17471,7 +18254,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1857172444
 Transform:
@@ -17552,7 +18335,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 7.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17560,7 +18343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17586,6 +18369,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -17603,7 +18390,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 4.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17611,7 +18398,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17636,6 +18423,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -17692,9 +18483,75 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1878047734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1878047736}
+  - component: {fileID: 1878047735}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &1878047735
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878047734}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 7.54, y: 6.05, z: 7.8}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 100
+  m_ShadowDistance: 100
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.43382353, g: 0.43382353, b: 0.43382353, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294966751
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 8900000, guid: ffbbd955e3f00fc49a64b3a055eda012,
+    type: 3}
+--- !u!4 &1878047736
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878047734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.86, y: 2.01, z: -0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 82
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1880883784
 Prefab:
   m_ObjectHideFlags: 0
@@ -17831,6 +18688,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -17876,6 +18737,10 @@ Prefab:
     - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_Name
       value: CellarWall01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -17923,6 +18788,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -17945,7 +18814,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 7.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17953,7 +18822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17978,6 +18847,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -18042,6 +18915,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1916199400767460, guid: 7dd8ae3b512b74345bc60e12a325adc6, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dd8ae3b512b74345bc60e12a325adc6, type: 2}
   m_IsPrefabParent: 0
@@ -18087,6 +18964,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -18169,7 +19050,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1935452775
 Transform:
@@ -18212,7 +19093,7 @@ Transform:
   - {fileID: 1608714071}
   - {fileID: 1975709853}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1940786236
 Prefab:
@@ -18256,6 +19137,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -18318,6 +19203,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -18376,6 +19265,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -18432,6 +19325,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -18487,6 +19384,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -18556,6 +19457,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1914650985481524, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf36070ad1c6204d9e6373db9fd8e7f, type: 2}
   m_IsPrefabParent: 0
@@ -18617,6 +19522,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -18677,6 +19586,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -18759,6 +19672,22 @@ Prefab:
       propertyPath: m_Name
       value: WoodenDoor_01 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1839035599422272, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626878014851932, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941297897667198, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972640362976476, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
   m_IsPrefabParent: 0
@@ -18815,6 +19744,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -18827,7 +19760,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.0000014
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.y
@@ -18835,7 +19768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4831746486052882, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18861,6 +19794,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -18883,7 +19820,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2023164247
 Transform:
@@ -18896,7 +19833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &2023164248
 Light:
@@ -18982,6 +19919,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -19036,6 +19977,10 @@ Prefab:
     - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_Name
       value: TinCeilingEdge_02 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -19222,6 +20167,10 @@ Prefab:
       propertyPath: m_Name
       value: CellarWall01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
   m_IsPrefabParent: 0
@@ -19268,6 +20217,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -19285,7 +20238,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.50000006
+      value: -0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalPosition.y
@@ -19318,6 +20271,10 @@ Prefab:
     - target: {fileID: 4585051846233532, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814400728830042, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff610e38dec67284b87582a28baa1b49, type: 2}
@@ -19372,6 +20329,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
@@ -19431,6 +20392,10 @@ Prefab:
       propertyPath: m_Name
       value: DmbwtrRope_N (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1054275748140870, guid: b1b36c5d319f4dd44a5b30988a0ac127, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1b36c5d319f4dd44a5b30988a0ac127, type: 2}
   m_IsPrefabParent: 0
@@ -19477,6 +20442,10 @@ Prefab:
       propertyPath: m_Name
       value: OldWoodenCeiling (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1401293127379964, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b5a62432239db647aee64098cdd68f0, type: 2}
   m_IsPrefabParent: 0
@@ -19493,7 +20462,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2091681726
 Transform:
@@ -19550,6 +20519,10 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_Name
       value: WoodenWall_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -19614,6 +20587,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1606742463580718, guid: a82431db160323c4eaac1fd9226b1e54, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a82431db160323c4eaac1fd9226b1e54, type: 2}
   m_IsPrefabParent: 0
@@ -19634,7 +20611,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2106130352
 Transform:
@@ -19842,6 +20819,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenWall_2 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
   m_IsPrefabParent: 0
@@ -19892,68 +20873,7 @@ Transform:
   - {fileID: 784056010}
   - {fileID: 1667983364}
   m_Father: {fileID: 1744203556}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2143473202
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2143473204}
-  - component: {fileID: 2143473203}
-  m_Layer: 0
-  m_Name: Reflection Probe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!215 &2143473203
-ReflectionProbe:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2143473202}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Type: 0
-  m_Mode: 0
-  m_RefreshMode: 0
-  m_TimeSlicingMode: 0
-  m_Resolution: 256
-  m_UpdateFrequency: 0
-  m_BoxSize: {x: 12.4, y: 10, z: 10.5}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
-  m_NearClip: 0.3
-  m_FarClip: 1000
-  m_ShadowDistance: 100
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.33823532, g: 0.33823532, b: 0.33823532, a: 0}
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IntensityMultiplier: 1
-  m_BlendDistance: 1
-  m_HDR: 1
-  m_BoxProjection: 1
-  m_RenderDynamicObjects: 0
-  m_UseOcclusionCulling: 1
-  m_Importance: 1
-  m_CustomBakedTexture: {fileID: 0}
---- !u!4 &2143473204
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2143473202}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.53, y: 0, z: -1.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1744203556}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2146133705 stripped
 Transform:
@@ -20006,6 +20926,10 @@ Prefab:
     - target: {fileID: 4478810883210600, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972899150489230, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9285a9ce8024c4a9110063e273e3b3, type: 2}

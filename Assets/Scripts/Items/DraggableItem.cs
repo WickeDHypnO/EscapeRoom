@@ -6,7 +6,21 @@ public class DraggableItem : Photon.PunBehaviour
 {
 
     public bool freeMovement = true;
+    [HideInInspector]
+    public Vector3 defaultPosition;
 
+    void Start()
+    {
+        defaultPosition = transform.position;
+    }
+
+    void FixedUpdate()
+    {
+        if(transform.position.y < -10000)
+        {
+            transform.position = defaultPosition;
+        }
+    }
     public void ChangeOwner(int playerID)
     {
         photonView.TransferOwnership(playerID);
@@ -28,6 +42,7 @@ public class DraggableItem : Photon.PunBehaviour
         if (freeMovement)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            GetComponent<Collider>().enabled = false;
             transform.SetParent(PhotonView.Find(viewID).transform);
         }
         else
@@ -43,6 +58,7 @@ public class DraggableItem : Photon.PunBehaviour
         if (freeMovement)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponent<Collider>().enabled = true;
             transform.SetParent(null);
         }
         else
