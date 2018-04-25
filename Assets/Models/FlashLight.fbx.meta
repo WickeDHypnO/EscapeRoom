@@ -22,12 +22,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: a9b3fcfde2e3d5b41881129f5aa5d8b1, type: 2}
+    second: {fileID: 2100000, guid: 0dda4e609ed231546b429f0cfb5bd142, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bake
-    second: {fileID: 2100000, guid: 9b9244050342cfd4a80d519cf1e5ad9d, type: 2}
+    second: {fileID: 2100000, guid: 3179a00e073d03446a2077f606c8458e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,15 +65,15 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 1
+    secondaryUVAreaDistortion: 1
+    secondaryUVHardAngle: 60
+    secondaryUVPackMargin: 16
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60

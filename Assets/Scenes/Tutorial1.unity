@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1623049526}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
@@ -64,7 +64,7 @@ LightmapSettings:
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000,
+    m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000,
       type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_LightingDataAsset: {fileID: 112000074, guid: 4bfbc4b94a3d34d4cb3f40c2c5a1558c,
+  m_LightingDataAsset: {fileID: 112000614, guid: 4bfbc4b94a3d34d4cb3f40c2c5a1558c,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -4937,8 +4937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de44556cc5f8204c8528e5b5091a260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platesPressed: 0
   door: {fileID: 617400814}
   blockingVolume: {fileID: 956441321}
+  leverDown: 0
 --- !u!1001 &548772209
 Prefab:
   m_ObjectHideFlags: 0
@@ -5371,9 +5373,9 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 100
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -5812,11 +5814,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1941297897667198, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967169
       objectReference: {fileID: 0}
     - target: {fileID: 1972640362976476, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967169
       objectReference: {fileID: 0}
     - target: {fileID: 1626878014851932, guid: d2f64e03a02337f488dee27fb34a5e1c, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -6066,6 +6068,11 @@ Prefab:
     - target: {fileID: 1094043859012058, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 23124504047960630, guid: 12417fe7d8f616d49897cab5a2cbbe81,
+        type: 2}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12417fe7d8f616d49897cab5a2cbbe81, type: 2}
@@ -7586,13 +7593,13 @@ Transform:
   - {fileID: 2035811486}
   - {fileID: 1934092069}
   - {fileID: 25721765}
+  - {fileID: 1638949438}
   - {fileID: 263540930}
   - {fileID: 2036118088}
   - {fileID: 1718017395}
   - {fileID: 932267694}
   - {fileID: 1483647925}
   - {fileID: 481181038}
-  - {fileID: 1638949438}
   - {fileID: 438117111}
   - {fileID: 27129099}
   - {fileID: 1712914323}
@@ -13778,7 +13785,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.9237322, b: 0.30882353, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -13799,7 +13806,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 100
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -15184,9 +15191,9 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 10
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -15308,9 +15315,9 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 10
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -15758,7 +15765,7 @@ Light:
   m_GameObject: {fileID: 1623049525}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 0.91176474, b: 0.5735294, a: 1}
   m_Intensity: 10
   m_Range: 17.652618
@@ -15779,7 +15786,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -16116,7 +16123,7 @@ Transform:
   - {fileID: 71625733}
   - {fileID: 863360696}
   m_Father: {fileID: 797972059}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1639568992
 Prefab:

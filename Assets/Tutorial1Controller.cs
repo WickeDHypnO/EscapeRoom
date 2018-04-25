@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Tutorial1Controller : MonoBehaviour {
 
-    int platesPressed = 0;
+    public int platesPressed = 0;
     public DoorController door;
     public GameObject blockingVolume;
-    bool leverDown = false;
+    public bool leverDown = false;
 
 	public void platePressed()
     {
