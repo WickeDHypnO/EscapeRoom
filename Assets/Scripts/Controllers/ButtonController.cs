@@ -53,6 +53,7 @@ public class ButtonController : UsableTarget
             distance = (MoveTime - elapsedTime) * MoveDistance / MoveTime;
             moving = false;
             highlightObject.SetActive(true);
+            GetComponent<HighlightItem>().OutlineOff();
             onButtonPushed.Invoke();
         }
         setPosition(-distance);

@@ -10,18 +10,25 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
     public int FloorsCount = 3;
     public int CurrentFloor = 1;
     public GameObject[] FloorsDoors;
+    public GameObject ElevatorDoor;
     private bool moving;
     private float elapsedTime;
     private float moveDirection;
     private float height;
     private float totalMoveTime;
+    private ElevatorDoorController elevatorDoorComp;
+    private HashSet<GameObject> objectsInside;
 
-	// Use this for initialization
-	void Start () {}
-	
-	// Update is called once per frame
-	void Update () {
-		if (moving)
+    // Use this for initialization
+    void Start()
+    {
+        elevatorDoorComp = ElevatorDoor.GetComponent<ElevatorDoorController>();
+        objectsInside = new HashSet<GameObject>();
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (moving)
         {
             float time = elapsedTime + Time.deltaTime;
             float distance = Time.deltaTime * height / totalMoveTime;
@@ -35,9 +42,10 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
             Vector3 currentPos = transform.position;
             float y = currentPos.y + distance;
             transform.position = new Vector3(currentPos.x, y, currentPos.z);
+            updateObjectsInside(distance);
             elapsedTime = time;
         }
-	}
+    }
 
     public void ChangeFloor(int floorNumber)
     {
@@ -77,27 +85,48 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
         startMove(-1.0f);
     }*/
 
-    private WallWithHiddenDoors getDoorForFloor(int floorNumber)
+    private MonoBehaviour getDoorForFloorComponent(int floorNumber)
     {
         if (FloorsDoors.Length != FloorsCount) return null;
         GameObject fd = FloorsDoors[floorNumber - 1];
         if (fd == null) return null;
         WallWithHiddenDoors wd = fd.GetComponent<WallWithHiddenDoors>();
-        return wd;
+        if (wd != null)
+        {
+            return wd;
+        }
+        ElevatorDoorController edc = fd.GetComponent<ElevatorDoorController>();
+        return edc;
     }
 
     private void openDoor()
     {
-        WallWithHiddenDoors wd = getDoorForFloor(CurrentFloor);
+        elevatorDoorComp.Open();
+        MonoBehaviour wd = getDoorForFloorComponent(CurrentFloor);
         if (wd == null) return;
-        wd.Open();
+        if (wd is WallWithHiddenDoors)
+        {
+            ((WallWithHiddenDoors)wd).Open();
+        }
+        else
+        {
+            ((ElevatorDoorController)wd).Open();
+        }
     }
 
     private void closeDoor()
     {
-        WallWithHiddenDoors wd = getDoorForFloor(CurrentFloor);
+        elevatorDoorComp.Close();
+        MonoBehaviour wd = getDoorForFloorComponent(CurrentFloor);
         if (wd == null) return;
-        wd.Close();
+        if (wd is WallWithHiddenDoors)
+        {
+            ((WallWithHiddenDoors)wd).Close();
+        }
+        else
+        {
+            ((ElevatorDoorController)wd).Close();
+        }
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -119,6 +148,26 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
             moveDirection = (float)stream.ReceiveNext();
             height = (float)stream.ReceiveNext();
             totalMoveTime = (float)stream.ReceiveNext();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        objectsInside.Add(other.gameObject);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        objectsInside.Remove(other.gameObject);
+    }
+
+    private void updateObjectsInside(float yDist)
+    {
+        foreach (GameObject obj in objectsInside)
+        {
+            Vector3 objPos = obj.transform.position;
+            float y = objPos.y + yDist;
+            obj.transform.position = new Vector3(objPos.x, y, objPos.z);
         }
     }
 }
