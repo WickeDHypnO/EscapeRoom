@@ -33,12 +33,14 @@ public class ElevatorDoorController : Photon.PunBehaviour, IPunObservable
 
     public void Open()
     {
+        if (Opened) return;
         isOpening = true;
         animatorComponent.SetBool(OPEN_PARAMETER_NAME, true);
     }
 
     public void Close()
     {
+        if (!Opened && !isOpening) return;
         if (wholeDoorCollider != null)
         {
             wholeDoorCollider.enabled = true;
