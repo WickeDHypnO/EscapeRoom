@@ -38,6 +38,10 @@ public class UsableTargeter : Photon.PunBehaviour
         {
             handleUse();
         }
+        else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>())
+        {
+            targetedItem.GetComponent<ConstantUsableTarget>().Use();
+        }
     }
 
     private void handleUse()
