@@ -15,7 +15,10 @@ public class UIController : Photon.PunBehaviour
     public Text roomNumber;
 
     List<string> playerList;
-
+    void Start()
+    {
+        SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+    }
     public void ExitGame()
     {
         if(PhotonNetwork.connected)
@@ -51,8 +54,15 @@ public class UIController : Photon.PunBehaviour
         StartCoroutine(GetPlayerListDelayed());
     }
 
+
     public void LoadRoom()
     {
+        StartCoroutine(LoadRoomCor());
+    }
+    public IEnumerator LoadRoomCor()
+    {
+        FindObjectOfType<LoadingScreenCanvas>().StartLoading();
+        yield return new WaitForSeconds(1f);
         if (PhotonNetwork.isMasterClient)
             PhotonNetwork.LoadLevel(int.Parse(roomNumber.text));
     }

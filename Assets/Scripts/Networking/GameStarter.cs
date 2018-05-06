@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStarter : Photon.PunBehaviour {
 
@@ -10,6 +11,14 @@ public class GameStarter : Photon.PunBehaviour {
     void OnEnable () {
         if(PhotonNetwork.isMasterClient)
         StartGame();
+        if(FindObjectOfType<LoadingScreenCanvas>())
+        {
+            FindObjectOfType<LoadingScreenCanvas>().FinishLoading();
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+        }
 	}
 
     public void StartGame()
