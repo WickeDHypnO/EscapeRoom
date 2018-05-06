@@ -10,14 +10,15 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
     public GameObject TopLeftDoor;
     public GameObject TopRightDoor;
     public GameObject BoxObject;
-    public float Height = 4.4f;
-    public float MaximumAngle = 500.0f;
+    public float BoxHeight = 4.4f;
+    public float MaximumAngle = 500.0f; // Maksymalny kąt obrotu korbki
     public float DoorsOpeningAngle = 90.0f; // Dotyczy obrotu korbki
-    public float OpenedDoorsAngle = 120.0f;  // Dotyczy obrotu drzwi
+    public float OpenedDoorsAngle = 120.0f;  // Dotyczy obrotu drzwi (kąt otwartych drzwi)
     //private float boxStartingY;
     private float previousAngle;
     private float boxMovingAngle;
     private float topDoorsRotationStartingAngle;
+    private MoveObjectsInside moveObjectsComponent;
 
 	// Use this for initialization
 	void Start ()
@@ -25,6 +26,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
         //boxStartingY = BoxObject.transform.position.y;
         boxMovingAngle = MaximumAngle - 2 * DoorsOpeningAngle;
         topDoorsRotationStartingAngle = MaximumAngle - DoorsOpeningAngle;
+        moveObjectsComponent = BoxObject.GetComponent<MoveObjectsInside>();
     }
 	
 	// Update is called once per frame
@@ -35,7 +37,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
         float angleDiff = Mathf.Abs(angle - previousAngle);
         float direction = (angle > previousAngle ? 1.0f : -1.0f);
 
-        if (angle > topDoorsRotationStartingAngle)
+        if (angle >= topDoorsRotationStartingAngle)
         {
             if (previousAngle < topDoorsRotationStartingAngle)
             {
@@ -45,7 +47,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
             }
             rotateDoors(TopLeftDoor, TopRightDoor, angleDiff, direction);
         }
-        else if (angle > DoorsOpeningAngle)
+        else if (angle >= DoorsOpeningAngle)
         {
             if (previousAngle < DoorsOpeningAngle)
             {
@@ -61,7 +63,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
             }
             moveBox(angleDiff, direction);
         }
-        else if (angle > 0.0f)
+        else/* if (angle >= 0.0f)*/
         {
             if (previousAngle > DoorsOpeningAngle)
             {
@@ -88,10 +90,11 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
 
     private void moveBox(float angleDiff, float direction)
     {
-        float distanceIncrement = (angleDiff * Height / boxMovingAngle) * direction;
+        float distanceIncrement = (angleDiff * BoxHeight / boxMovingAngle) * direction;
         Vector3 currentPos = BoxObject.transform.position;
         float y = currentPos.y + distanceIncrement;
         BoxObject.transform.position = new Vector3(currentPos.x, y, currentPos.z);
+        moveObjectsComponent.MoveObjectsInsideBy(distanceIncrement);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
