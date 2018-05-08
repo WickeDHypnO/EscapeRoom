@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial1Controller : MonoBehaviour {
 
-    public int platesPressed = 0;
     public DoorController door;
     public GameObject blockingVolume;
-    public bool leverDown = false;
+    private bool leverDown = false;
+    private bool[] platesPressed = { false, false };
 
     void Start()
     {
@@ -20,24 +20,27 @@ public class Tutorial1Controller : MonoBehaviour {
         {
             FindObjectOfType<LoadingScreenCanvas>().FinishLoading();
         }
+        
     }
 
-	public void platePressed()
+	public void PlatePressed(int id)
     {
-        platesPressed++;
-        if (platesPressed == 2)
+        platesPressed[id] = true;
+        if (platesPressed[0] && platesPressed[1])
         {
             door.Open();
         }
     }
-	public void leverSetDown()
+
+	public void LeverSetDown()
     {
         leverDown = true;
         blockingVolume.SetActive(false);
     }
-    public void plateReleased()
+
+    public void PlateReleased(int id)
     {
-        platesPressed--;
+        platesPressed[id] = false;
         if(!leverDown)
             door.Close();
     }

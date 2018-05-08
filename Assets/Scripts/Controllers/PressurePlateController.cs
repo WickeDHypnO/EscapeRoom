@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class IntEvent : UnityEvent<int>
+{
+}
+
 public class PressurePlateController : MonoBehaviour
 {
 
     public float neededWeight;
     public bool pressed = false;
+    public int id;
     float currentWeight;
     public GameObject plate;
     public float pressedHeightDelta;
     float defaultHeight;
-    public UnityEvent onPressed;
-    public UnityEvent onReleased;
+    public IntEvent onPressed;
+    public IntEvent onReleased;
 
     void Start()
     {
@@ -29,7 +35,7 @@ public class PressurePlateController : MonoBehaviour
         if (currentWeight >= neededWeight)
         {
             pressed = true;
-            onPressed.Invoke();
+            onPressed.Invoke(id);
         }
         else
         {
@@ -51,7 +57,7 @@ public class PressurePlateController : MonoBehaviour
         else
         {
             pressed = false;
-            onReleased.Invoke();
+            onReleased.Invoke(id);
         }
         ChangeVisualState(!pressed);
     }
