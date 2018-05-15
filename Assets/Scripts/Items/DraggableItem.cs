@@ -42,7 +42,7 @@ public class DraggableItem : Photon.PunBehaviour
         if (freeMovement)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            GetComponent<Collider>().enabled = false;
+            gameObject.layer = LayerMask.NameToLayer("NoPlayerCollision");
             transform.SetParent(PhotonView.Find(viewID).transform);
         }
         else
@@ -58,7 +58,7 @@ public class DraggableItem : Photon.PunBehaviour
         if (freeMovement)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            GetComponent<Collider>().enabled = true;
+            gameObject.layer = LayerMask.NameToLayer("PickableItem");
             transform.SetParent(null);
         }
         else
