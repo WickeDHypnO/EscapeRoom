@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDebugSpawner : MonoBehaviour
 {
-
+#if !REALEASE_VERSION
     public GameObject player;
     public Transform secondPlayerSpawn;
     public bool spawnSecondPlayer;
@@ -74,4 +74,5 @@ public class PlayerDebugSpawner : MonoBehaviour
             }
         }
     }
+#endif
 }

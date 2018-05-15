@@ -51,12 +51,12 @@ public class ConnectionManager : Photon.PunBehaviour
         ro.IsOpen = true;
         ro.IsVisible = true;
         PhotonNetwork.JoinOrCreateRoom("asd" + Random.Range(0, 20), ro, TypedLobby.Default);
-        PhotonNetwork.player.NickName = "Master";
+        PhotonNetwork.player.NickName = "Player 1";
     }
 
     public override void OnJoinedRoom()
     {
         if(PhotonNetwork.isNonMasterClientInRoom)
-        PhotonNetwork.player.NickName = "Slave";
+        PhotonNetwork.player.NickName = "Player 2";
     }
 }
