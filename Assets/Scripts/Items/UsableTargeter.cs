@@ -10,7 +10,7 @@ public class UsableTargeter : Photon.PunBehaviour
     RaycastHit hitInfo;
     GameObject targetedItem;
     GameObject pickedUpItem;
-    private static KeyCode USE_KEY_CODE = KeyCode.E;
+    private static KeyCode USE_KEY_CODE = KeyCode.Mouse0;
 
 
     void LateUpdate()
@@ -37,6 +37,10 @@ public class UsableTargeter : Photon.PunBehaviour
         if (Input.GetKeyDown(USE_KEY_CODE))
         {
             handleUse();
+        }
+        else if (Input.GetKeyUp(USE_KEY_CODE))
+        {
+            handleDeactivate();
         }
         else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>())
         {
@@ -73,6 +77,15 @@ public class UsableTargeter : Photon.PunBehaviour
         else if (targetedItem.GetComponent<UsableTarget>())
         {
             targetedItem.GetComponent<UsableTarget>().Use();
+        }
+    }
+
+    void handleDeactivate()
+    {
+         if (pickedUpItem)
+        {
+            pickedUpItem.GetComponent<DraggableItem>().DetachFromPlayer();
+            pickedUpItem = null;
         }
     }
 
