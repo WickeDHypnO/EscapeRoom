@@ -57,6 +57,12 @@ public class UIController : Photon.PunBehaviour
 
     public void LoadRoom()
     {
+        photonView.RPC("RpcStartLoading", PhotonTargets.All, null);
+    }
+
+    [PunRPC]
+    public void RpcStartLoading()
+    {
         StartCoroutine(LoadRoomCor());
     }
     public IEnumerator LoadRoomCor()

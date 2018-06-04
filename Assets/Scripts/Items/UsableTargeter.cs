@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UsableTargeter : Photon.PunBehaviour
 {
+    public const float DefaultItemUseDistance = 2.0f;
 
     public LayerMask raycastMask;
     public float itemPickupDistance = 2f;
@@ -15,6 +16,7 @@ public class UsableTargeter : Photon.PunBehaviour
 
     void LateUpdate()
     {
+        bool distanceCondition = false;
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 50f, raycastMask))
         {
             if (targetedItem != hitInfo.collider.gameObject)
@@ -25,38 +27,42 @@ public class UsableTargeter : Photon.PunBehaviour
                 }
                 targetedItem = hitInfo.collider.gameObject;
             }
-            if(targetedItem.GetComponent<HighlightItem>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
+            bool isUsable = targetedItem.GetComponent<UsableTarget>();
+            bool isPickable = !isUsable && (targetedItem.GetComponent<Item>() || targetedItem.GetComponent<Item>() || targetedItem.GetComponent<DraggableItem>());
+            float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable ? itemPickupDistance : float.MaxValue));
+            float distance = Vector3.Distance(transform.position, targetedItem.transform.position);
+            distanceCondition = distance <= requiredDistance;
+            HighlightItem highlight = targetedItem.GetComponent<HighlightItem>();
+            if (highlight && distanceCondition)
             {
-                if(!targetedItem.GetComponent<HighlightItem>().outlineOn)
+                if(!highlight.outlineOn)
                 {
-                    targetedItem.GetComponent<HighlightItem>().OutlineOn();
+                    highlight.OutlineOn();
                 }
             }
+        }
+        else
+        {
+            return;
         }
 
         if (Input.GetKeyDown(USE_KEY_CODE))
         {
-            handleUse();
+            handleUse(distanceCondition);
         }
         else if (Input.GetKeyUp(USE_KEY_CODE))
         {
             handleDeactivate();
         }
-        else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>())
+        else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>() && distanceCondition)
         {
             targetedItem.GetComponent<ConstantUsableTarget>().Use();
         }
     }
 
-    private void handleUse()
+    private void handleUse(bool distanceCondition)
     {
-        if (pickedUpItem)
-        {
-            pickedUpItem.GetComponent<DraggableItem>().DetachFromPlayer();
-            pickedUpItem = null;
-        }
-
-        else if (targetedItem.GetComponent<DraggableItem>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
+        if (targetedItem.GetComponent<DraggableItem>() && distanceCondition)
         {
             pickedUpItem = targetedItem;
             Debug.Log(pickedUpItem);
@@ -65,7 +71,7 @@ public class UsableTargeter : Photon.PunBehaviour
             pickedUpItem.GetComponent<DraggableItem>().AttachToPlayer(photonView.viewID);
         }
 
-        else if (targetedItem.GetComponent<Item>() && Vector3.Distance(transform.position, targetedItem.transform.position) < itemPickupDistance)
+        else if (targetedItem.GetComponent<Item>() && distanceCondition)
         {
             GetComponentInParent<PlayerInventory>().AddItem(targetedItem.GetComponent<Item>());
             targetedItem.GetComponent<Collider>().enabled = false;
@@ -74,7 +80,7 @@ public class UsableTargeter : Photon.PunBehaviour
             targetedItem = null;
         }
 
-        else if (targetedItem.GetComponent<UsableTarget>())
+        else if (targetedItem.GetComponent<UsableTarget>() && distanceCondition)
         {
             targetedItem.GetComponent<UsableTarget>().Use();
         }

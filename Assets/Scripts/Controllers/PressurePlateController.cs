@@ -46,7 +46,7 @@ public class PressurePlateController : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-
+        bool wasPressed = currentWeight >= neededWeight;
         if (col.GetComponent<Rigidbody>())
         {
             currentWeight -= col.GetComponent<Rigidbody>().mass;
@@ -55,7 +55,7 @@ public class PressurePlateController : MonoBehaviour
         {
             pressed = true;
         }
-        else
+        else if (wasPressed)
         {
             pressed = false;
             onReleased.Invoke(id);

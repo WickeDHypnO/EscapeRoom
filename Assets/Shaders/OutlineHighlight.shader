@@ -27,6 +27,7 @@ Shader "Custom/OutlineHighlight" {
           v.vertex.xyz += v.normal * _Amount;
       }
 
+
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
 			fixed4 c = _Color;
