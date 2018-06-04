@@ -13,6 +13,7 @@ public class RotatingHandleController : ConstantUsableTarget
     public float Turn90Time = 1.0f;
     public float ReverseTimeMultiplier = 4.0f;
     public bool ClockwiseRotate;
+    public GameObject HighlightObject;
     public HandleRotationEvent OnHandleRotate;
     private bool used;
     private float startingAngle;
@@ -94,6 +95,10 @@ public class RotatingHandleController : ConstantUsableTarget
             canMoveDown = false;
         }
         transform.rotation = Quaternion.Euler(currentRot.x, currentRot.y, angleZ);
+        if (HighlightObject != null)
+        {
+            HighlightObject.transform.rotation = Quaternion.Euler(currentRot.x, currentRot.y, angleZ);
+        }
         OnHandleRotate.Invoke(angleZ);
     }
 }
