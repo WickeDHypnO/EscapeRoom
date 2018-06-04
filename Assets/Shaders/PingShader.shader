@@ -13,6 +13,7 @@
       struct Input {
           float3 worldPos;
       };
+      
 	  fixed4 _Color;
 	  float _EmmisiveStrength;
 	  float _Alpha;

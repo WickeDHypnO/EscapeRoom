@@ -28,7 +28,7 @@ public class UsableTargeter : Photon.PunBehaviour
                 targetedItem = hitInfo.collider.gameObject;
             }
             bool isUsable = targetedItem.GetComponent<UsableTarget>();
-            bool isPickable = !isUsable && (targetedItem.GetComponent<Item>() || targetedItem.GetComponent<Item>());
+            bool isPickable = !isUsable && (targetedItem.GetComponent<Item>() || targetedItem.GetComponent<Item>() || targetedItem.GetComponent<DraggableItem>());
             float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable ? itemPickupDistance : float.MaxValue));
             float distance = Vector3.Distance(transform.position, targetedItem.transform.position);
             distanceCondition = distance <= requiredDistance;
