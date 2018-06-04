@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightController : MonoBehaviour/*Photon.PunBehaviour, IPunObservable*/
+public class GemController : MonoBehaviour/*Photon.PunBehaviour, IPunObservable*/
 {
     public bool Enabled = false;
     public Color OffColour = Color.red;

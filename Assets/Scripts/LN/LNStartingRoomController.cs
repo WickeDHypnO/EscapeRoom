@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LNStartingRoomController : RoomController {
 
-    public bool FloorDestroyed { get; private set; }
+    public GameObject[] Lights;
+    private int activatedGems;
+    private bool lightsEnabled;
 
 	// Use this for initialization
 	void Start () {
-        FloorDestroyed = false;
 	}
 	
 	// Update is called once per frame
@@ -16,10 +17,33 @@ public class LNStartingRoomController : RoomController {
 		
 	}
 
-    public void DestroyFloor()
+    public void ActivateGem()
     {
-        if (FloorDestroyed) return;
-        // TODO
-        FloorDestroyed = true;
+        ++activatedGems;
+        if (activatedGems >= 3)
+        {
+            // Uruchomienie pułapki
+        }
+    }
+
+    public void DeactivateGem()
+    {
+        --activatedGems;
+    }
+
+    public void EnableLights()
+    {
+        foreach (GameObject light in Lights)
+        {
+            light.SetActive(true);
+        }
+    }
+
+    public void DisableLights()
+    {
+        foreach (GameObject light in Lights)
+        {
+            light.SetActive(false);
+        }
     }
 }
