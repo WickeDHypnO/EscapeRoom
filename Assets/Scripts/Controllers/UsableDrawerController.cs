@@ -38,10 +38,6 @@ public class UsableDrawerController : UsableTarget
     // Use this for initialization
     void Start () {
         initialPosition = transform.position;
-        if (Locked)
-        {
-            disableOutline();
-        }
     }
 	
 	// Update is called once per frame

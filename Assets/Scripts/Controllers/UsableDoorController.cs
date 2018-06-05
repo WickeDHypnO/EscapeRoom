@@ -42,23 +42,17 @@ public class UsableDoorController : UsableTarget
             startMoving();
         }
         Locked = true;
-        disableOutline();
     }
     
     public void Unlock()
     {
         Locked = false;
-        enableOutline();
     }
 
     // Use this for initialization
     void Start ()
     {
         initialRotation = transform.localRotation.eulerAngles;
-        if (Locked)
-        {
-            disableOutline();
-        }
     }
 	
 	// Update is called once per frame

@@ -5,30 +5,47 @@ using UnityEngine;
 public class LNStartingRoomController : RoomController {
 
     public GameObject[] Lights;
+    public GameObject[] MovingFloors;
+    public GameObject TrapTrigger;
+    private const int GEMS_COUNT = 3;
     private int activatedGems;
-    private bool lightsEnabled;
+    private bool trapActivated;
 
 	// Use this for initialization
-	void Start () {
-	}
+	void Start ()
+    {
+        activatedGems = 0;
+        trapActivated = false;
+    }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update () {}
 
     public void ActivateGem()
     {
+        if (trapActivated) return;
         ++activatedGems;
-        if (activatedGems >= 3)
+        if (activatedGems >= GEMS_COUNT)
         {
-            // Uruchomienie pułapki
+            activateTrap();
         }
     }
 
     public void DeactivateGem()
     {
+        if (trapActivated) return;
         --activatedGems;
+    }
+
+    public void DeactivateTrap()
+    {
+        if (!trapActivated) return;
+        foreach (GameObject floor in MovingFloors)
+        {
+            MovingFloor mf = floor.GetComponent<MovingFloor>();
+            mf.MoveDown();
+        }
+        TrapTrigger.SetActive(false);
     }
 
     public void EnableLights()
@@ -45,5 +62,16 @@ public class LNStartingRoomController : RoomController {
         {
             light.SetActive(false);
         }
+    }
+
+    private void activateTrap()
+    {
+        foreach (GameObject floor in MovingFloors)
+        {
+            MovingFloor mf = floor.GetComponent<MovingFloor>();
+            mf.MoveUp();
+        }
+        TrapTrigger.SetActive(true);
+        trapActivated = true;
     }
 }
