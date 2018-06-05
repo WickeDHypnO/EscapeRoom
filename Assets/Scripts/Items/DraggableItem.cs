@@ -1,6 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class GOEvent : UnityEvent<GameObject>
+{
+
+}
 
 public class DraggableItem : Photon.PunBehaviour
 {
@@ -8,7 +15,7 @@ public class DraggableItem : Photon.PunBehaviour
     public bool freeMovement = true;
     [HideInInspector]
     public Vector3 defaultPosition;
-
+    public GOEvent OnDetached;
     void Start()
     {
         defaultPosition = transform.position;
@@ -65,5 +72,6 @@ public class DraggableItem : Photon.PunBehaviour
         {
             GetComponent<ConfigurableJoint>().connectedBody = null;
         }
+        OnDetached.Invoke(this.gameObject);
     }
 }
