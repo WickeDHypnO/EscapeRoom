@@ -11,6 +11,7 @@ public class LeverController : UsableTarget {
     public GameObject lever;
     public bool standalone;
     public UnityEvent onLeverDown;
+    public UnityEvent onLeverUp;
 
 	public override void Use () {
 		if(canUse)
@@ -58,6 +59,7 @@ public class LeverController : UsableTarget {
             currentRotation += 3.5f;
         }
         canUse = true;
+        onLeverUp.Invoke();
     }
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
