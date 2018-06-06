@@ -36,7 +36,8 @@ public class UsableDrawerController : UsableTarget
     }
 
     // Use this for initialization
-    void Start () {
+    protected override void initialize()
+    {
         initialPosition = transform.position;
     }
 	

@@ -7,6 +7,7 @@ public class LNStartingRoomController : RoomController {
     public GameObject[] Lights;
     public GameObject[] MovingFloors;
     public GameObject TrapTrigger;
+    public GameObject[] WardrobeDoors;
     private const int GEMS_COUNT = 3;
     private int activatedGems;
     private bool trapActivated;
@@ -28,6 +29,7 @@ public class LNStartingRoomController : RoomController {
         if (activatedGems >= GEMS_COUNT)
         {
             activateTrap();
+            openWardrobeDoors();
         }
     }
 
@@ -73,5 +75,15 @@ public class LNStartingRoomController : RoomController {
         }
         TrapTrigger.SetActive(true);
         trapActivated = true;
+    }
+
+    private void openWardrobeDoors()
+    {
+        foreach (GameObject door in WardrobeDoors)
+        {
+            UsableDoorController udc = door.GetComponent<UsableDoorController>();
+            udc.Unlock();
+            udc.Use();
+        }
     }
 }
