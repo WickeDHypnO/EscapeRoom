@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : Photon.PunBehaviour {
+    public string ItemId;
     public Sprite itemImage;
     public bool flashlight = false;
+    public int UsesCount = 1;
 
     public void HideItem(int viewID)
     {

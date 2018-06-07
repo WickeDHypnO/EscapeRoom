@@ -12,7 +12,13 @@ public class UsableTargeter : Photon.PunBehaviour
     GameObject targetedItem;
     GameObject pickedUpItem;
     private static KeyCode USE_KEY_CODE = KeyCode.Mouse0;
+    private PlayerInventory inventory;
+    private string itemToUse = null;
 
+    void Start()
+    {
+        inventory = GetComponentInParent<PlayerInventory>();
+    }
 
     void LateUpdate()
     {
@@ -21,6 +27,10 @@ public class UsableTargeter : Photon.PunBehaviour
         {
             if (targetedItem != hitInfo.collider.gameObject)
             {
+                if (!string.IsNullOrEmpty(itemToUse))
+                {
+                    cleanItemToUse(true);
+                }
                 if (targetedItem && targetedItem.GetComponent<HighlightItem>())
                 {
                     targetedItem.GetComponent<HighlightItem>().OutlineOff();
@@ -32,10 +42,23 @@ public class UsableTargeter : Photon.PunBehaviour
             float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable ? itemPickupDistance : float.MaxValue));
             float distance = Vector3.Distance(transform.position, targetedItem.transform.position);
             distanceCondition = distance <= requiredDistance;
-            HighlightItem highlight = targetedItem.GetComponent<HighlightItem>();
-            if (highlight && distanceCondition)
+            if (distanceCondition)
             {
-                if(!highlight.outlineOn)
+                if (isUsable && string.IsNullOrEmpty(itemToUse))
+                {
+                    UsableTarget ut = targetedItem.GetComponent<UsableTarget>();
+                    if (ut.UsesItems)
+                    {
+                        itemToUse = checkItems(ut);
+                        if (!string.IsNullOrEmpty(itemToUse))
+                        {
+                            ut.SetItemUseOutline(true);
+                            inventory.HighlightItem(itemToUse, true);
+                        }
+                    }
+                }
+                HighlightItem highlight = targetedItem.GetComponent<HighlightItem>();
+                if (highlight != null)
                 {
                     highlight.OutlineOn();
                 }
@@ -43,6 +66,10 @@ public class UsableTargeter : Photon.PunBehaviour
         }
         else
         {
+            if (!string.IsNullOrEmpty(itemToUse))
+            {
+                cleanItemToUse(true);
+            }
             return;
         }
 
@@ -56,7 +83,11 @@ public class UsableTargeter : Photon.PunBehaviour
         }
         else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>() && distanceCondition)
         {
-            targetedItem.GetComponent<ConstantUsableTarget>().Use();
+            ConstantUsableTarget cut = targetedItem.GetComponent<ConstantUsableTarget>();
+            if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(cut))
+            {
+                cut.Use();
+            }
         }
     }
 
@@ -70,19 +101,21 @@ public class UsableTargeter : Photon.PunBehaviour
             pickedUpItem.GetComponent<DraggableItem>().ChangeOwner(photonView.owner.ID);
             pickedUpItem.GetComponent<DraggableItem>().AttachToPlayer(photonView.viewID);
         }
-
         else if (targetedItem.GetComponent<Item>() && distanceCondition)
         {
-            GetComponentInParent<PlayerInventory>().AddItem(targetedItem.GetComponent<Item>());
+            inventory.AddItem(targetedItem.GetComponent<Item>());
             targetedItem.GetComponent<Collider>().enabled = false;
             targetedItem.GetComponent<HighlightItem>().OutlineOff();
             Destroy(targetedItem.GetComponent<Item>());
             targetedItem = null;
         }
-
         else if (targetedItem.GetComponent<UsableTarget>() && distanceCondition)
         {
-            targetedItem.GetComponent<UsableTarget>().Use();
+            UsableTarget ut = targetedItem.GetComponent<UsableTarget>();
+            if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(ut))
+            {
+                ut.Use();
+            }
         }
     }
 
@@ -95,4 +128,38 @@ public class UsableTargeter : Photon.PunBehaviour
         }
     }
 
+    private string checkItems(UsableTarget targetObject)
+    {
+        string id;
+        foreach (Item item in inventory.items)
+        {
+            id = item.ItemId;
+            if (targetObject.CheckItemOnTrace(id))
+            {
+                return id;
+            }
+        }
+        return null;
+    }
+
+    private bool tryUsingItem(UsableTarget target)
+    {
+        if (target.UseItem(itemToUse))
+        {
+            bool itemRemoved = !inventory.HandleItemUse(itemToUse);
+            cleanItemToUse(!itemRemoved);
+            return true;
+        }
+        return false;
+    }
+
+    private void cleanItemToUse(bool disableItemHighlight)
+    {
+        if (disableItemHighlight)
+        {
+            inventory.HighlightItem(itemToUse, false);
+        }
+        targetedItem.GetComponent<UsableTarget>().SetItemUseOutline(false);
+        itemToUse = null;
+    }
 }
