@@ -10,19 +10,12 @@ public class GameStarter : Photon.PunBehaviour {
 
     void OnEnable () {
         if(PhotonNetwork.isMasterClient)
-        StartGame();
-        if(FindObjectOfType<LoadingScreenCanvas>())
-        {
-            FindObjectOfType<LoadingScreenCanvas>().FinishLoading();
-        }
-        else
-        {
-            SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
-        }
+        StartCoroutine(StartGame());
 	}
 
-    public void StartGame()
+    public IEnumerator StartGame()
     {
+        yield return new WaitForSeconds(0.2f);
         foreach (PhotonPlayer pp in PhotonNetwork.playerList)
         {
             photonView.RPC("RpcCreatePlayer", pp);
@@ -32,6 +25,14 @@ public class GameStarter : Photon.PunBehaviour {
     [PunRPC]
     void RpcCreatePlayer()
     {
+        if(FindObjectOfType<LoadingScreenCanvas>())
+        {
+            FindObjectOfType<LoadingScreenCanvas>().FinishLoading();
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+        }
         PhotonNetwork.Instantiate(playerPrefab.name, PhotonNetwork.isMasterClient ? playerStarts[0].position : playerStarts[1].position, Quaternion.identity, 0);
         gameObject.SetActive(false);
     }
