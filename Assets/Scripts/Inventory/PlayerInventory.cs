@@ -7,7 +7,6 @@ public class PlayerInventory : Photon.PunBehaviour {
 
     public List<Item> items;
     public List<Image> itemImages;
-    private static readonly Vector4 ITEM_HIGHLIGHT_COLOUR = new Vector4(0.0f, 1.0f, 0.0f, 1.0f);
 
     public void AddItem(Item item) {
         items.Add(item);
@@ -43,7 +42,7 @@ public class PlayerInventory : Photon.PunBehaviour {
     {
         int index = getIndexById(itemId);
         if (index < 0) return;
-        Vector4 colour = (highlight ? ITEM_HIGHLIGHT_COLOUR : new Vector4(1.0f, 1.0f, 1.0f, 1.0f));
+        Vector4 colour = (highlight ? items[index].ItemHighlightColour : new Vector4(1.0f, 1.0f, 1.0f, 1.0f));
         itemImages[index].color = new Color(colour.x, colour.y, colour.z, colour.w);
     }
 

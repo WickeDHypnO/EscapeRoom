@@ -7,6 +7,7 @@ public class Item : Photon.PunBehaviour {
     public Sprite itemImage;
     public bool flashlight = false;
     public int UsesCount = 1;
+    public Vector4 ItemHighlightColour = new Vector4(0.0f, 1.0f, 0.0f, 1.0f);
 
     public void HideItem(int viewID)
     {
