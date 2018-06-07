@@ -1036,6 +1036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 0
   OpenAngle: -90
   OpenTime: 0.3
@@ -1344,6 +1346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 0
   OpenDistance: -0.4
   OpenTime: 0.3
@@ -3137,6 +3141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 1
   OpenAngle: -100
   OpenTime: 0.5
@@ -3262,6 +3268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 0
   OpenDistance: -0.4
   OpenTime: 0.3
@@ -4506,6 +4514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 1.25
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   MoveDistance: 0.006
   Complex: 1
   ActualButtonObject: {fileID: 1245703833}
@@ -4707,6 +4717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 0
   OpenAngle: 90
   OpenTime: 0.3
@@ -6584,8 +6596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 863ae0d4e190af34c8cca2a794543231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ItemId: WardrobeKey
   itemImage: {fileID: 21300000, guid: c0e5da6dbea4146439d4ca606136d1ab, type: 3}
   flashlight: 0
+  UsesCount: 1
+  ItemHighlightColour: {x: 0, y: 1, z: 0, w: 1}
 --- !u!114 &1307592289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6650,6 +6665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   MaximumAngle: 500
   Turn90Time: 0.75
   ReverseTimeMultiplier: 10
@@ -8736,6 +8753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 1
   OpenAngle: 100
   OpenTime: 0.5
@@ -9042,7 +9061,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4990127174639378, guid: 3cee4230548fb354581800fd1bc63562,
     type: 2}
   m_PrefabInternal: {fileID: 435268434}
---- !u!114 &1777250798
+--- !u!114 &1777250795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -9050,14 +9069,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777250793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524e1614785ebe6469065da2060c265b, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a477902cb0c6d4ca28309ad2098a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 1
   Locked: 1
   OpenAngle: -100
   OpenTime: 0.5
+  SecondDoor: {fileID: 2132177745}
 --- !u!114 &1777250799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9144,7 +9166,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 1777250799}
-  - {fileID: 1777250798}
+  - {fileID: 1777250795}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 31
   instantiationId: 31
@@ -10193,6 +10215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 0
   Locked: 0
   OpenDistance: -0.4
   OpenTime: 0.3
@@ -10486,7 +10510,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4017292638473140, guid: 3cee4230548fb354581800fd1bc63562,
     type: 2}
   m_PrefabInternal: {fileID: 435268434}
---- !u!114 &2132177750
+--- !u!114 &2132177747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -10494,14 +10518,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132177745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524e1614785ebe6469065da2060c265b, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a477902cb0c6d4ca28309ad2098a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseDistance: 2
   InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
+  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
+  UsesItems: 1
   Locked: 1
   OpenAngle: 100
   OpenTime: 0.5
+  SecondDoor: {fileID: 1777250793}
 --- !u!114 &2132177752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10588,7 +10615,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 2132177752}
-  - {fileID: 2132177750}
+  - {fileID: 2132177747}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 30
   instantiationId: 30
