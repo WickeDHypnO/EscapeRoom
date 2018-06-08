@@ -9,12 +9,12 @@ public class LNWardrobeDoorsController : UsableDoorController
 
     public override bool CheckItemOnTrace(string itemId)
     {
-        return (itemId == KEY_ITEM_ID);
+        return (Locked && (itemId == KEY_ITEM_ID));
     }
 
     public override bool UseItem(string itemId)
     {
-        if (itemId == KEY_ITEM_ID)
+        if (Locked && (itemId == KEY_ITEM_ID))
         {
             Unlock();
             if (SecondDoor != null)

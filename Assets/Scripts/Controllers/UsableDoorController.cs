@@ -41,13 +41,13 @@ public class UsableDoorController : UsableTarget
         {
             startMoving();
         }
-        setOutlineActive(false);
+        SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
         Locked = true;
     }
     
     public void Unlock()
     {
-        setOutlineActive(true);
+        SetOutlineColour(HighlightColours.DEFAULT_COLOUR);
         Locked = false;
     }
 
@@ -57,7 +57,7 @@ public class UsableDoorController : UsableTarget
         initialRotation = transform.localRotation.eulerAngles;
         if (Locked)
         {
-            setOutlineActive(false);
+            SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
         }
     }
 	

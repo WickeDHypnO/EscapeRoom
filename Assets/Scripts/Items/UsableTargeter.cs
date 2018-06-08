@@ -14,6 +14,7 @@ public class UsableTargeter : Photon.PunBehaviour
     private static KeyCode USE_KEY_CODE = KeyCode.Mouse0;
     private PlayerInventory inventory;
     private string itemToUse = null;
+    private bool puzzleElementMatching = false;
 
     void Start()
     {
@@ -27,19 +28,24 @@ public class UsableTargeter : Photon.PunBehaviour
         {
             if (targetedItem != hitInfo.collider.gameObject)
             {
-                if (!string.IsNullOrEmpty(itemToUse))
-                {
-                    cleanItemToUse(true);
-                }
+                checkAndCleanItem();
                 if (targetedItem && targetedItem.GetComponent<HighlightItem>())
                 {
-                    targetedItem.GetComponent<HighlightItem>().OutlineOff();
+                    if (targetedItem.GetComponent<PuzzleElementPlaceholder>())
+                    {
+                        targetedItem.GetComponent<PuzzleElementPlaceholder>().SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
+                    }
+                    else
+                    {
+                        targetedItem.GetComponent<HighlightItem>().OutlineOff();
+                    }
                 }
                 targetedItem = hitInfo.collider.gameObject;
             }
             bool isUsable = targetedItem.GetComponent<UsableTarget>();
             bool isPickable = !isUsable && (targetedItem.GetComponent<Item>() || targetedItem.GetComponent<Item>() || targetedItem.GetComponent<DraggableItem>());
-            float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable ? itemPickupDistance : float.MaxValue));
+            bool isPuzzle = !isUsable && !isPickable && targetedItem.GetComponent<PuzzleElementPlaceholder>();
+            float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable || isPuzzle ? itemPickupDistance : float.MaxValue));
             float distance = Vector3.Distance(transform.position, targetedItem.transform.position);
             distanceCondition = distance <= requiredDistance;
             if (distanceCondition)
@@ -52,10 +58,20 @@ public class UsableTargeter : Photon.PunBehaviour
                         itemToUse = checkItems(ut);
                         if (!string.IsNullOrEmpty(itemToUse))
                         {
-                            ut.SetItemUseOutline(true);
+                            ut.SetOutlineColour(HighlightColours.ITEM_USE_COLOUR);
                             inventory.HighlightItem(itemToUse, true);
                         }
                     }
+                }
+                if (isPuzzle && (pickedUpItem != null))
+                {
+                    DraggableItem di = pickedUpItem.GetComponent<DraggableItem>();
+                    PuzzleElementPlaceholder pep = targetedItem.GetComponent<PuzzleElementPlaceholder>();
+                    if (di.IsPuzzleElement)
+                    {
+                        puzzleElementMatching = pep.CheckElementOnTrace(di.PuzzleElementId);
+                    }
+                    pep.SetOutlineColour((puzzleElementMatching ? HighlightColours.ITEM_USE_COLOUR : HighlightColours.WRONG_ELEMENT_COLOUR));
                 }
                 HighlightItem highlight = targetedItem.GetComponent<HighlightItem>();
                 if (highlight != null)
@@ -66,10 +82,7 @@ public class UsableTargeter : Photon.PunBehaviour
         }
         else
         {
-            if (!string.IsNullOrEmpty(itemToUse))
-            {
-                cleanItemToUse(true);
-            }
+            checkAndCleanItem();
             return;
         }
 
@@ -77,17 +90,13 @@ public class UsableTargeter : Photon.PunBehaviour
         {
             handleUse(distanceCondition);
         }
-        else if (Input.GetKeyUp(USE_KEY_CODE))
+        else if (Input.GetKeyUp(USE_KEY_CODE) && (pickedUpItem != null))
         {
             handleDeactivate();
         }
         else if (Input.GetKey(USE_KEY_CODE) && targetedItem.GetComponent<ConstantUsableTarget>() && distanceCondition)
         {
-            ConstantUsableTarget cut = targetedItem.GetComponent<ConstantUsableTarget>();
-            if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(cut))
-            {
-                cut.Use();
-            }
+            usableTargetUse();
         }
     }
 
@@ -111,21 +120,25 @@ public class UsableTargeter : Photon.PunBehaviour
         }
         else if (targetedItem.GetComponent<UsableTarget>() && distanceCondition)
         {
-            UsableTarget ut = targetedItem.GetComponent<UsableTarget>();
-            if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(ut))
-            {
-                ut.Use();
-            }
+            usableTargetUse();
         }
     }
 
     void handleDeactivate()
     {
-         if (pickedUpItem)
+        bool puzzleMatched = false;
+        PuzzleElementPlaceholder pep = targetedItem.GetComponent<PuzzleElementPlaceholder>();
+        if (pep != null)
         {
-            pickedUpItem.GetComponent<DraggableItem>().DetachFromPlayer();
-            pickedUpItem = null;
+            pep.SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
+            puzzleMatched = puzzleElementMatching;
         }
+        pickedUpItem.GetComponent<DraggableItem>().DetachFromPlayer();
+        if (puzzleMatched)
+        {
+            pep.PlaceElement(pickedUpItem);
+        }
+        pickedUpItem = null;
     }
 
     private string checkItems(UsableTarget targetObject)
@@ -159,7 +172,24 @@ public class UsableTargeter : Photon.PunBehaviour
         {
             inventory.HighlightItem(itemToUse, false);
         }
-        targetedItem.GetComponent<UsableTarget>().SetItemUseOutline(false);
+        targetedItem.GetComponent<UsableTarget>().RevertOutlineColour();
         itemToUse = null;
+    }
+
+    private void checkAndCleanItem()
+    {
+        if (!string.IsNullOrEmpty(itemToUse))
+        {
+            cleanItemToUse(true);
+        }
+    }
+
+    private void usableTargetUse()
+    {
+        UsableTarget ut = targetedItem.GetComponent<UsableTarget>();
+        if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(ut))
+        {
+            ut.Use();
+        }
     }
 }

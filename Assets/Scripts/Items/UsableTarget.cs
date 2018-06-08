@@ -1,20 +1,16 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class UsableTarget : Photon.PunBehaviour, IPunObservable
 {
     public float UseDistance = UsableTargeter.DefaultItemUseDistance;
-
-    public Vector4 InactiveOutlineColour = new Vector4(0.4f, 0.4f, 0.4f, 0.5f);
-
-    public Vector4 ItemUseOutlineColour = new Vector4(0.0f, 0.8f, 0.0f, 0.2f);
-
+    public Vector4 InactiveOutlineColour = HighlightItem.INTACTIVE_OUTLINE_COLOUR;
+    public Vector4 ItemUseOutlineColour = HighlightItem.ITEM_USE_OUTLINE_COLOUR;
     public bool UsesItems = false;
-
     protected Vector4 defaultOutlineColour;
-
-    private bool inactiveOutline = false;
+    private HighlightColours currentOutlineState;
+    private HighlightColours previousOutlineState;
 
     public abstract void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info);
 
@@ -36,46 +32,50 @@ public abstract class UsableTarget : Photon.PunBehaviour, IPunObservable
         return false;
     }
 
-    public void SetItemUseOutline(bool enable)
+    public void SetOutlineColour(HighlightColours colourType)
     {
         HighlightItem highlight = GetComponent<HighlightItem>();
         if (highlight == null) return;
-        if (enable)
+        Vector4 colour = getHighlightColour(colourType);
+        highlight.SetColour(colour);
+        previousOutlineState = currentOutlineState;
+        currentOutlineState = colourType;
+    }
+
+    public void RevertOutlineColour()
+    {
+        if (previousOutlineState != HighlightColours.ITEM_USE_COLOUR)
         {
-            highlight.outline.GetComponent<MeshRenderer>().material.SetVector("_Color", ItemUseOutlineColour);
-        }
-        else
-        {
-            highlight.outline.GetComponent<MeshRenderer>().material.SetVector("_Color",
-                (inactiveOutline ? InactiveOutlineColour : defaultOutlineColour));
+            SetOutlineColour(previousOutlineState);
         }
     }
+
+    protected virtual void initialize() {}
 
     void Start()
     {
         HighlightItem highlight = GetComponent<HighlightItem>();
         if (highlight != null)
         {
-            defaultOutlineColour = highlight.outline.GetComponent<MeshRenderer>().material.GetVector("_Color");
+            currentOutlineState = HighlightColours.DEFAULT_COLOUR;
+            previousOutlineState = HighlightColours.DEFAULT_COLOUR;
+            defaultOutlineColour = highlight.GetCurrentColour();
         }
         initialize();
     }
 
-    protected void setOutlineActive(bool active)
+    private Vector4 getHighlightColour(HighlightColours colourType)
     {
-        HighlightItem highlight = GetComponent<HighlightItem>();
-        if (highlight == null) return;
-        if (active)
+        switch (colourType)
         {
-            highlight.outline.GetComponent<MeshRenderer>().material.SetVector("_Color", defaultOutlineColour);
-            inactiveOutline = false;
-        }
-        else
-        {
-            highlight.outline.GetComponent<MeshRenderer>().material.SetVector("_Color", InactiveOutlineColour);
-            inactiveOutline = true;
+            case HighlightColours.DEFAULT_COLOUR:
+                return defaultOutlineColour;
+            case HighlightColours.INACTIVE_COLOUR:
+                return InactiveOutlineColour;
+            case HighlightColours.ITEM_USE_COLOUR:
+                return ItemUseOutlineColour;
+            default:
+                throw new NotImplementedException();
         }
     }
-
-    protected virtual void initialize() {}
 }
