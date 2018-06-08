@@ -13,6 +13,8 @@ public class DraggableItem : Photon.PunBehaviour
 {
 
     public bool freeMovement = true;
+    public bool IsPuzzleElement = false;
+    public string PuzzleElementId;
     [HideInInspector]
     public Vector3 defaultPosition;
     public GOEvent OnDetached;
