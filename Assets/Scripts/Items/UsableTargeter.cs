@@ -24,7 +24,7 @@ public class UsableTargeter : Photon.PunBehaviour
     void LateUpdate()
     {
         bool distanceCondition = false;
-        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 50f, raycastMask))
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 50f, raycastMask, QueryTriggerInteraction.Ignore))
         {
             if (targetedItem != hitInfo.collider.gameObject)
             {
