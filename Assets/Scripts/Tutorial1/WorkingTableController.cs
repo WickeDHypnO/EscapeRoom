@@ -2,34 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorkingTableController : MonoBehaviour {
+public class WorkingTableController : UsableTarget {
 
-    private List<GameObject> ladderParts = new List<GameObject>();
+    public List<GameObject> ladderParts = new List<GameObject>();
     public GameObject LadderStep;
-
-	void OnTriggerEnter(Collider col)
+    
+    public override bool CheckItemOnTrace(string itemId)
     {
-        if(!ladderParts.Contains(col.gameObject) && col.CompareTag("Ladder"))
+        return (itemId == "Hammer") && (ladderParts.Count == 3);
+    }
+    public override void Use()
+    {
+        return;
+    }
+    public override bool UseItem(string itemId)
+    {
+        if((itemId == "Hammer") && (ladderParts.Count == 3))
         {
-            ladderParts.Add(col.gameObject);
+            foreach (GameObject part in ladderParts)
+            {
+                Destroy(part);
+            }
+            ladderParts.Clear();
+            PhotonNetwork.Instantiate(LadderStep.name, this.transform.position + new Vector3(0,1,0), Quaternion.identity, 0);
+            return true;
         }
+        return false;
+    }
+
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        return;
     }
 
     public void ObjectReleased(GameObject obj)
     {
-        if (obj.name.Equals("DraggableHammer"))
+        if (obj.tag.Equals("Ladder") && ladderParts.Contains(obj))
         {
-            if (ladderParts.Count == 3)
-            {
-                foreach (GameObject part in ladderParts)
-                {
-                    Destroy(part);
-                }
-                ladderParts.Clear();
-                Instantiate(LadderStep, this.transform.position, Quaternion.identity);
-            }
-
+            obj.GetComponent<DraggableItem>().enabled = false;
         }
     }
-
 }
