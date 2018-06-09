@@ -9,6 +9,14 @@ public class LadderController : MonoBehaviour {
     private GameObject player;
     private bool moving = false;
     private bool LadderFinished = false;
+    public void Start()
+    {
+        foreach(GameObject step in LadderSteps)
+        {
+            if (step.GetActive())
+                iterator++;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.name.Contains("LadderStep") && iterator < LadderSteps.Count)
