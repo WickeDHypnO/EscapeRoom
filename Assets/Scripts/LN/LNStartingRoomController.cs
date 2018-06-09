@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LNStartingRoomController : RoomController {
 
-    public GameObject[] Lights;
+    public GameObject[] LampLights;
+    public GameObject[] SpotLights;
     public GameObject[] MovingFloors;
     public GameObject TrapTrigger;
     public GameObject[] WardrobeDoors;
@@ -18,9 +19,6 @@ public class LNStartingRoomController : RoomController {
         activatedGems = 0;
         trapActivated = false;
     }
-	
-	// Update is called once per frame
-	void Update () {}
 
     public void ActivateGem()
     {
@@ -50,20 +48,14 @@ public class LNStartingRoomController : RoomController {
         TrapTrigger.SetActive(false);
     }
 
-    public void EnableLights()
+    public void EnableLampLights(bool enable)
     {
-        foreach (GameObject light in Lights)
-        {
-            light.SetActive(true);
-        }
+        setObjectsActive(enable, LampLights);
     }
 
-    public void DisableLights()
+    public void EnableSpotLights(bool enable)
     {
-        foreach (GameObject light in Lights)
-        {
-            light.SetActive(false);
-        }
+        setObjectsActive(enable, SpotLights);
     }
 
     private void activateTrap()
@@ -84,6 +76,14 @@ public class LNStartingRoomController : RoomController {
             UsableDoorController udc = door.GetComponent<UsableDoorController>();
             udc.Unlock();
             udc.Use();
+        }
+    }
+
+    private void setObjectsActive(bool active, GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            obj.SetActive(active);
         }
     }
 }

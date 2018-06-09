@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class LNBasementController : RoomController
 {
-    public GameObject Lever;
-    public GameObject ElevatorDoors;
+    public GameObject ElevatorOpenLever;
+    public GameObject ElevatorOpenLeverHandle;
+    public GameObject PowerSwitcherLever;
+    public GameObject PowerSwitcherLeverHandle;
+    private bool puzzleFinished;
 
-    public void EnableLever()
+    public void EnableLever(bool enable)
     {
-        Lever.GetComponent<LeverController>().canUse = true;
+        if (!puzzleFinished) return;
+        ElevatorOpenLever.GetComponent<LeverController>().canUse = enable;
     }
 
-    public void UnlockElevator()
+    public void FinishPuzzle()
     {
-        ElevatorDoors.GetComponent<ElevatorDoorController>().Open();
+        puzzleFinished = true;
+        ElevatorOpenLever.GetComponent<LeverController>().canUse = true;
+    }
+
+    public void DropLeverHandle()
+    {
+        GameObject.Destroy(PowerSwitcherLever.GetComponent<LeverController>());
+        GameObject.Destroy(PowerSwitcherLever.GetComponent<HighlightItem>().outline);
+        GameObject.Destroy(PowerSwitcherLever.GetComponent<HighlightItem>());
+        GameObject.Destroy(PowerSwitcherLeverHandle);
+        ElevatorOpenLeverHandle.SetActive(true);
     }
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Start ()
+    {
+        puzzleFinished = false;
+    }
 }
