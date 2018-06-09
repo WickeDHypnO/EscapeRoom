@@ -62,7 +62,9 @@ public class PlayerInventory : Photon.PunBehaviour {
     {
         itemImages[index].sprite = null;
         itemImages[index].enabled = false;
+        Image.Destroy(itemImages[index]);
         itemImages.RemoveAt(index);
+        GameObject.Destroy(items[index]);
         items.RemoveAt(index);
     }
 }

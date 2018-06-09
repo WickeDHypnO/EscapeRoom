@@ -75,4 +75,9 @@ public class LeverController : UsableTarget {
             canUse = (bool)stream.ReceiveNext();
         }
     }
+
+    public void SetCanUse(bool canUse)
+    {
+        this.canUse = canUse;
+    }
 }
