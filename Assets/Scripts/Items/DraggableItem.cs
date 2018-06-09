@@ -6,7 +6,6 @@ using UnityEngine.Events;
 [System.Serializable]
 public class GOEvent : UnityEvent<GameObject>
 {
-
 }
 
 public class DraggableItem : Photon.PunBehaviour
