@@ -7,12 +7,12 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
 {
     public float ZOffset = -0.3f;
     public float XOffset = 1.0f;
-    public float OpenTime = 0.5f;
+    public float OpenTime = 1.0f;
+    public GameObject Collider;
     private Vector3 initialPosition;
     private bool opened;
     private bool moving;
     private float elapsedTime;
-    private float xDistance;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -21,28 +21,44 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
             stream.SendNext(opened);
             stream.SendNext(moving);
             stream.SendNext(elapsedTime);
-            stream.SendNext(xDistance);
         }
         else
         {
             opened = (bool)stream.ReceiveNext();
             moving = (bool)stream.ReceiveNext();
             elapsedTime = (float)stream.ReceiveNext();
-            xDistance = (float)stream.ReceiveNext();
         }
     }
 
     public void OpenDoor()
     {
-        if (moving || opened) return;
-        startMoving();
-        moveOnZ(1.0f);
+        if (moving)
+        {
+            elapsedTime = OpenTime - elapsedTime;
+            opened = false;
+        }
+        else if (!opened)
+        {
+            startMoving();
+            moveOnZ(1.0f);
+        }
     }
 
     public void CloseDoor()
     {
-        if (moving || !opened) return;
-        startMoving();
+        if (moving)
+        {
+            elapsedTime = OpenTime - elapsedTime;
+            opened = true;
+        }
+        else if (opened)
+        {
+            startMoving();
+        }
+        if (Collider != null)
+        {
+            Collider.SetActive(true);
+        }
     }
 
     // Use this for initialization
@@ -78,9 +94,19 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
         }
         x += xInc;
         transform.localPosition = new Vector3(x, currentPos.y, currentPos.z);
-        if (!moving && !opened)
+        if (!moving)
         {
-            moveOnZ(-1.0f);
+            if (opened)
+            {
+                if (Collider != null)
+                {
+                    Collider.SetActive(false);
+                }
+            }
+            else
+            {
+                moveOnZ(-1.0f);
+            }
         }
     }
 
