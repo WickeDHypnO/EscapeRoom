@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
+public class SlidingDoorController : BaseDoorController
 {
     public float ZOffset = -0.3f;
     public float XOffset = 1.0f;
@@ -14,7 +14,7 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
     private bool moving;
     private float elapsedTime;
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
@@ -30,7 +30,7 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
         }
     }
 
-    public void Open()
+    public override void Open()
     {
         if (moving)
         {
@@ -44,7 +44,7 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
         }
     }
 
-    public void Close()
+    public override void Close()
     {
         if (moving)
         {

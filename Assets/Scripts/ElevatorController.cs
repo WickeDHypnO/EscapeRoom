@@ -85,48 +85,28 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
         startMove(-1.0f);
     }*/
 
-    private MonoBehaviour getDoorForFloorComponent(int floorNumber)
+    private BaseDoorController getDoorsForFloorComponent(int floorNumber)
     {
         if (FloorsDoors.Length != FloorsCount) return null;
         GameObject fd = FloorsDoors[floorNumber - 1];
         if (fd == null) return null;
-        WallWithHiddenDoors wd = fd.GetComponent<WallWithHiddenDoors>();
-        if (wd != null)
-        {
-            return wd;
-        }
-        ElevatorDoorController edc = fd.GetComponent<ElevatorDoorController>();
-        return edc;
+        return fd.GetComponent<BaseDoorController>();
     }
 
     private void openDoor()
     {
         elevatorDoorComp.Open();
-        MonoBehaviour wd = getDoorForFloorComponent(CurrentFloor);
+        BaseDoorController wd = getDoorsForFloorComponent(CurrentFloor);
         if (wd == null) return;
-        if (wd is WallWithHiddenDoors)
-        {
-            ((WallWithHiddenDoors)wd).Open();
-        }
-        else
-        {
-            ((ElevatorDoorController)wd).Open();
-        }
+        wd.Open();
     }
 
     private void closeDoor()
     {
         elevatorDoorComp.Close();
-        MonoBehaviour wd = getDoorForFloorComponent(CurrentFloor);
+        BaseDoorController wd = getDoorsForFloorComponent(CurrentFloor);
         if (wd == null) return;
-        if (wd is WallWithHiddenDoors)
-        {
-            ((WallWithHiddenDoors)wd).Close();
-        }
-        else
-        {
-            ((ElevatorDoorController)wd).Close();
-        }
+        wd.Close();
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
