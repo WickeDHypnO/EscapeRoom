@@ -29,7 +29,7 @@ public class UsableDoorController : UsableTarget
         }
     }
     [PunRPC]
-    private void RPCUse()
+    public void RPCUse()
     {
         if (moving || Locked) return;
         startMoving();

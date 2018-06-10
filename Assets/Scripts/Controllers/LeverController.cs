@@ -84,5 +84,14 @@ public class LeverController : UsableTarget {
     public void SetCanUse(bool canUse)
     {
         this.canUse = canUse;
+        SetOutlineColour(canUse ? HighlightColours.DEFAULT_COLOUR : HighlightColours.INACTIVE_COLOUR);
+    }
+
+    protected override void initialize()
+    {
+        if (!canUse)
+        {
+            SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
+        }
     }
 }
