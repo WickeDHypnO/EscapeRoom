@@ -30,7 +30,7 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
         }
     }
 
-    public void OpenDoor()
+    public void Open()
     {
         if (moving)
         {
@@ -44,7 +44,7 @@ public class SlidingDoorController : Photon.PunBehaviour, IPunObservable
         }
     }
 
-    public void CloseDoor()
+    public void Close()
     {
         if (moving)
         {
