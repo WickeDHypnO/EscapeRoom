@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ButtonController" Collapsed="true">
+    <Position X="12" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAwAAAAAAAAAAQAACAAAEAAAAgAAIAAAICAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\ButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConstantButtonController" Collapsed="true">
+    <Position X="9.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAQAAAAQACAAAAAAAAAAQAAAQUAEAAAAAAAIAAACCAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\ConstantButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeverController" Collapsed="true">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAABAAAAAAAZCAAAAAEAAAAQAAAIAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\LeverController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotatingHandleController" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwABAAAACAAAAAABIACQAAAAIAEAACCAAAAQBBAAgA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\RotatingHandleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsableDoorController" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQwAAAgAQAAAIAAAAEAQAAAAAAEABCAAAAAKAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\UsableDoorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsableDrawerController" Collapsed="true">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQgAAAgAQAAAIAAAAGAQAAAAAAEABAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\UsableDrawerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConstantUsableTarget" Collapsed="true">
+    <Position X="8.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Items\ConstantUsableTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsableTarget" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQIICAAEAAIEAEAQAAAAAAFAAEIAAwAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Items\UsableTarget.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LNWardrobeDoorsController" Collapsed="true">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAABAAAAAAAAAAAAAIAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LN\LNWardrobeDoorsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomController" Collapsed="true">
+    <Position X="14.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\RoomController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LNStartingRoomController" Collapsed="true">
+    <Position X="14.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAABAEgAAAAAAEAAhAIAAAAgQAAo=</HashCode>
+      <FileName>Assets\Scripts\LN\LNStartingRoomController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Photon.PunBehaviour" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEIADAACAEJAAAAgAESCEIAAAAEAAAAEECKDAABCYAA=</HashCode>
+      <FileName>Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonClasses.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NextLevelTrigger" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAEABAAAQAAAAAAAAIAAQAAAAAABAAA=</HashCode>
+      <FileName>Assets\NextLevelTrigger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PunTurnManager" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEQAAIAAECQAAIAEAEACBABAAAAAAAAEAAMIABAAgAQ=</HashCode>
+      <FileName>Assets\Photon Unity Networking\UtilityScripts\PunTurnManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElevatorController" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA4gQAAAASACAAREAAAAyACAAAAgAIACyAQAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\ElevatorController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlayerInventory" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAASAQAAAgAAAAAgAAAAAQEAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Inventory\PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DraggableItem" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAiQEAAEAAAAAgABAAAAJAAAAAAAAAAAASAA=</HashCode>
+      <FileName>Assets\Scripts\Items\DraggableItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlashlightController" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAEAAAAAAAABgAAABAAACAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Items\FlashlightController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAAAAAAAAAAAgAAgAAAAAAAAAKAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Items\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsableTargeter" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAAICAAAAAANACgIBACACAAECISAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Items\UsableTargeter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElevatorDoorController" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACQAIAAAACAAQAAAEAAAEBAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\LN\ElevatorDoorController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ItemsElevatorController" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACEBDAAACAAAAgAQAAAAKAIAAASBAADABBAAAA=</HashCode>
+      <FileName>Assets\Scripts\LN\ItemsElevatorController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MovingFloor" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEUgAAAAASAAAIAAAAAAQACAAAAAAAAAwAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\LN\MovingFloor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RigidbodyFirstPersonController" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAhAIgEiAIAMEAgAAgAEACAAACgAIIEAAAAAAUIQA=</HashCode>
+      <FileName>Assets\Scripts\Movement\RigidbodyFirstPersonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConnectionManager" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAAAAAAQAAAAECAAAACAVAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStarter" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAgAAAAACAAAAAAQAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\GameStarter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingDissapear" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAWAAgAAAAAAAAAAACAQQAIAAgAECAgAAAgEAAQQCgA=</HashCode>
+      <FileName>Assets\Scripts\Ping\PingDissapear.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pinger" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQgAAAAAAAAhAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Ping\Pinger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Room2Controller" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiQBgAAAAIARAAAAAAAARAAAAIAAAgEAQAEAAAAGAAA=</HashCode>
+      <FileName>Assets\Scripts\Room2Controller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UIController" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABICAABBCAIGAEgAAAAAACgAAAQEACAEAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExitGames.UtilityScripts.PlayerRoomIndexing" Collapsed="true">
+    <Position X="28" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAACABAAAAAEAggEAUAIAAAEABAABAEEAIKAAAAAGA=</HashCode>
+      <FileName>Assets\Photon Unity Networking\UtilityScripts\PhotonPlayer\PlayerRoomIndexing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
