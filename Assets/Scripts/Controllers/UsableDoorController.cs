@@ -28,11 +28,15 @@ public class UsableDoorController : UsableTarget
             moving = (bool)stream.ReceiveNext();
         }
     }
-
-    public override void Use()
+    [PunRPC]
+    private void RPCUse()
     {
         if (moving || Locked) return;
         startMoving();
+    }
+    public override void Use()
+    {
+        photonView.RPC("RPCUse", PhotonTargets.All);
     }
 
     public void Lock()

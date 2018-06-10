@@ -12,11 +12,12 @@ public class LeverController : UsableTarget {
     public bool standalone;
     public UnityEvent onLeverDown;
     public UnityEvent onLeverUp;
-
-	public override void Use () {
-		if(canUse)
+    [PunRPC]
+    private void RPCUse()
+    {
+        if (canUse)
         {
-            if(!position)
+            if (!position)
             {
                 StartCoroutine(MoveDown());
             }
@@ -25,7 +26,11 @@ public class LeverController : UsableTarget {
                 StartCoroutine(MoveUp());
             }
         }
-	}
+
+    }
+	public override void Use () {
+        photonView.RPC("RPCUse", PhotonTargets.All);
+    }
 	
     public void Reset()
     {

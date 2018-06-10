@@ -28,6 +28,7 @@ public class Tutorial1Controller : Photon.PunBehaviour, IPunObservable
         if (!leverDown)
             door.Close();
     }
+
     public void PlatePressed(int id)
     {
 
@@ -37,11 +38,15 @@ public class Tutorial1Controller : Photon.PunBehaviour, IPunObservable
             door.Open();
         }
     }
-
-	public void LeverSetDown()
+    [PunRPC]
+    private void RPCLeverSetDown()
     {
         leverDown = true;
         blockingVolume.SetActive(false);
+    }
+    public void LeverSetDown()
+    {
+        photonView.RPC("RPCLeverSetDown", PhotonTargets.All);
     }
 
     public void PlateReleased(int id)

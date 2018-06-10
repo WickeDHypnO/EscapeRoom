@@ -21,7 +21,7 @@ public class WorkingTableController : UsableTarget {
         {
             foreach (GameObject part in ladderParts)
             {
-                Destroy(part);
+                PhotonNetwork.Destroy(part);
             }
             ladderParts.Clear();
             PhotonNetwork.Instantiate(LadderStep.name, this.transform.position + new Vector3(0,1,0), Quaternion.identity, 0);
