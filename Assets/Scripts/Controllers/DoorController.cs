@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : BaseDoorController
 {
 
     public float openDegrees;
@@ -14,13 +15,13 @@ public class DoorController : MonoBehaviour
         defaultRotation = transform.localEulerAngles.y;
     }
 
-    public void Open()
+    public override void Open()
     {
         StopAllCoroutines();
         StartCoroutine(OpenDoor());
     }
 
-    public void Close()
+    public override void Close()
     {
         StopAllCoroutines();
         StartCoroutine(CloseDoor());
@@ -55,4 +56,6 @@ public class DoorController : MonoBehaviour
         }
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, defaultRotation, transform.localEulerAngles.z);
     }
+
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {}
 }

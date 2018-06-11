@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorDoorController : Photon.PunBehaviour, IPunObservable
+public class ElevatorDoorController : BaseDoorController
 {
     public bool Opened { get; private set; }
     public BoxCollider wholeDoorCollider;
@@ -10,6 +10,38 @@ public class ElevatorDoorController : Photon.PunBehaviour, IPunObservable
     protected const string OPEN_PARAMETER_NAME = "OpenDoor";
     protected bool isOpening;
     protected Animator animatorComponent;
+
+    public override void Open()
+    {
+        if (Opened) return;
+        isOpening = true;
+        animatorComponent.SetBool(OPEN_PARAMETER_NAME, true);
+    }
+
+    public override void Close()
+    {
+        if (!Opened && !isOpening) return;
+        if (wholeDoorCollider != null)
+        {
+            wholeDoorCollider.enabled = true;
+        }
+        Opened = false;
+        animatorComponent.SetBool(OPEN_PARAMETER_NAME, false);
+    }
+
+    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(Opened);
+            stream.SendNext(isOpening);
+        }
+        else
+        {
+            Opened = (bool)stream.ReceiveNext();
+            isOpening = (bool)stream.ReceiveNext();
+        }
+    }
 
     // Use this for initialization
     protected virtual void Start ()
@@ -28,38 +60,6 @@ public class ElevatorDoorController : Photon.PunBehaviour, IPunObservable
             {
                 wholeDoorCollider.enabled = false;
             }
-        }
-    }
-
-    public void Open()
-    {
-        if (Opened) return;
-        isOpening = true;
-        animatorComponent.SetBool(OPEN_PARAMETER_NAME, true);
-    }
-
-    public void Close()
-    {
-        if (!Opened && !isOpening) return;
-        if (wholeDoorCollider != null)
-        {
-            wholeDoorCollider.enabled = true;
-        }
-        Opened = false;
-        animatorComponent.SetBool(OPEN_PARAMETER_NAME, false);
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.isWriting)
-        {
-            stream.SendNext(Opened);
-            stream.SendNext(isOpening);
-        }
-        else
-        {
-            Opened = (bool)stream.ReceiveNext();
-            isOpening = (bool)stream.ReceiveNext();
         }
     }
 }
