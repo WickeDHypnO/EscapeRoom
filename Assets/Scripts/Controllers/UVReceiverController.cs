@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UVReceiverController : MonoBehaviour {
 
-    [SerializeField] private GameObject[] m_ObjectsToShow;
+    [SerializeField] private UnityEvent m_onActivation;
+    [SerializeField] private UnityEvent m_onDeactivation;
     [SerializeField] private UVLightColor[] m_TriggeringColors;
 
-    public int[] m_LightsOnReceiver;
+    private int[] m_LightsOnReceiver;
     private bool m_isOn;
 
 	void Start ()
@@ -54,19 +56,13 @@ public class UVReceiverController : MonoBehaviour {
 
     private void ActivateObjects()
     {
-        foreach (GameObject gameobject in m_ObjectsToShow)
-        {
-            gameobject.SetActive(true);
-        }
+        m_onActivation.Invoke();
         m_isOn = true;
     }
 
     private void DeactivateObjects()
     {
-        foreach (GameObject gameobject in m_ObjectsToShow)
-        {
-            gameobject.SetActive(false);
-        }
+        m_onDeactivation.Invoke();
         m_isOn = false;
     }
 }
