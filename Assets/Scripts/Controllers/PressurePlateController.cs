@@ -20,6 +20,12 @@ public class PressurePlateController : MonoBehaviour
     float defaultHeight;
     public IntEvent onPressed;
     public IntEvent onReleased;
+    public bool InvokeEvents = true;
+
+    public void SetInvokeEvents(bool invokeEvents)
+    {
+        InvokeEvents = invokeEvents;
+    }
 
     void Start()
     {
@@ -35,7 +41,10 @@ public class PressurePlateController : MonoBehaviour
         if (currentWeight >= neededWeight)
         {
             pressed = true;
-            onPressed.Invoke(id);
+            if (InvokeEvents)
+            {
+                onPressed.Invoke(id);
+            }
         }
         else
         {
@@ -58,7 +67,10 @@ public class PressurePlateController : MonoBehaviour
         else if (wasPressed)
         {
             pressed = false;
-            onReleased.Invoke(id);
+            if (InvokeEvents)
+            {
+                onReleased.Invoke(id);
+            }
         }
         ChangeVisualState(!pressed);
     }
