@@ -15,7 +15,7 @@ public class PartsCollector : MonoBehaviour {
 
     void OnTriggerExit(Collider col)
     {
-        if (!table.ladderParts.Contains(col.gameObject) && col.CompareTag("Ladder"))
+        if (table.ladderParts.Contains(col.gameObject))
         {
             table.ladderParts.Remove(col.gameObject);
         }

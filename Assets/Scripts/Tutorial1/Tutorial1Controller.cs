@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Tutorial1Controller : Photon.PunBehaviour, IPunObservable {
 
     public DoorController door;
-    public GameObject blockingVolume;
     private bool leverDown = false;
     private bool[] platesPressed = { false, false };
     void Start () {
@@ -35,7 +34,6 @@ public class Tutorial1Controller : Photon.PunBehaviour, IPunObservable {
     [PunRPC]
     private void RPCLeverSetDown () {
         leverDown = true;
-        blockingVolume.SetActive (false);
     }
     public void LeverSetDown () {
         if (PhotonNetwork.isMasterClient) {

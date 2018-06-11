@@ -7,7 +7,7 @@ public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 
 	int count = 0;
 	private void OnTriggerEnter (Collider other) {
-		if (other.GetComponent<RigidbodyFirstPersonController> ()) {
+		if (other.tag == "Player") {
 			count++;
 		}
 		if (count == 2) {
@@ -16,7 +16,7 @@ public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 	}
 
 	private void OnTriggerExit (Collider other) {
-		if (other.GetComponent<RigidbodyFirstPersonController> ()) {
+		if (other.tag == "Player") {
 			count--;
 		}
 	}
