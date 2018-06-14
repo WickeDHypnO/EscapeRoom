@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8324069a0b5c04cb7bf68afde32284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 754885809}
+  outline: {fileID: 46065100}
   outlineOn: 0
 --- !u!114 &39837265
 MonoBehaviour:
@@ -10449,8 +10449,8 @@ MonoBehaviour:
   - {fileID: 440535619}
   - {fileID: 440535620}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 29
-  instantiationId: 29
+  viewIdField: 23
+  instantiationId: 23
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &440535619
@@ -12624,7 +12624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &534727622
 Transform:
   m_ObjectHideFlags: 0
@@ -13843,71 +13843,21 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &583848258
-MonoBehaviour:
+--- !u!54 &583848258
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 583848248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 0
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 2
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 1
-    InterpolateMoveTowardsAcceleration: 2
-    InterpolateMoveTowardsDeceleration: 2
-    InterpolateSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: -1
-        value: 0
-        inSlope: 0
-        outSlope: Infinity
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 4
-        value: 4
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-    DrawErrorGizmo: 1
-  m_RotationModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 1
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
-  m_ScaleModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &583848259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13930,8 +13880,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 583848257}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 16
-  instantiationId: 16
+  viewIdField: 47
+  instantiationId: 47
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &583848260
@@ -19675,8 +19625,8 @@ MonoBehaviour:
   - {fileID: 854714251}
   - {fileID: 854714252}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 32
-  instantiationId: 32
+  viewIdField: 48
+  instantiationId: 48
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &854714251
@@ -30289,6 +30239,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1473098557840720, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64307688646420788, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3cee4230548fb354581800fd1bc63562, type: 2}
@@ -37252,21 +37206,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1260126396757016, guid: ffbf81dff19363b44a56ad8d82506385,
     type: 2}
   m_PrefabInternal: {fileID: 546526356}
---- !u!54 &1595394460
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1595394461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37315,36 +37254,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.83600014, y: 0.02, z: 0.6262905}
   m_Center: {x: 0, y: -0.06, z: 0}
---- !u!54 &1595394465
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &1595394466
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1595394467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37371,21 +37280,6 @@ MonoBehaviour:
   instantiationId: 20
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!54 &1595394468
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1595394469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37417,81 +37311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 452298443}
   outlineOn: 0
---- !u!54 &1595394471
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &1595394472
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &1595394473
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &1595394474
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &1595394477
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595394459}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1596367712 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1078414655827124, guid: f18d3f6d97282a645906b4d70da54f54,
@@ -39247,12 +39066,12 @@ Prefab:
     - target: {fileID: 114397838829692302, guid: 5498759a9f01fa6488b63a8b765c9df6,
         type: 2}
       propertyPath: viewIdField
-      value: 23
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 114397838829692302, guid: 5498759a9f01fa6488b63a8b765c9df6,
         type: 2}
       propertyPath: instantiationId
-      value: 23
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 114913769922759296, guid: 5498759a9f01fa6488b63a8b765c9df6,
         type: 2}
@@ -44390,8 +44209,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 33
-  instantiationId: 33
+  viewIdField: 49
+  instantiationId: 49
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &1935612875
@@ -52614,8 +52433,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 35
-  instantiationId: 35
+  viewIdField: 50
+  instantiationId: 50
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &2146836002
