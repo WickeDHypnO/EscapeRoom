@@ -9,6 +9,7 @@ public class MRRoomController : MonoBehaviour {
     public DoorController bookDoor;
     public DoorController studyDoor;
     public DoorController galleryDoor;
+    public DoorController exitDoor;
     private bool[] gallerySwitchesDown = { false, false, false, false, false, false };
     private bool[] platesPressed = { false, false, false, false, false, false, false };
 
@@ -71,7 +72,11 @@ public class MRRoomController : MonoBehaviour {
         platesPressed[id] = true;
         if (!platesPressed[0] && platesPressed[1] && !platesPressed[2] && !platesPressed[3] && platesPressed[4] && !platesPressed[5] && platesPressed[6])
         {
-            End();
+            exitDoor.Open();
+        }
+        else
+        {
+            exitDoor.Close();
         }
     }
 
@@ -80,12 +85,11 @@ public class MRRoomController : MonoBehaviour {
         platesPressed[id] = false;
         if (!platesPressed[0] && platesPressed[1] && !platesPressed[2] && !platesPressed[3] && platesPressed[4] && !platesPressed[5] && platesPressed[6])
         {
-            End();
+            exitDoor.Open();
         }
-    }
-
-    private void End()
-    {
-
+        else
+        {
+            exitDoor.Close();
+        }
     }
 }
