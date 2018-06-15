@@ -45,7 +45,7 @@ public class UsableTargeter : Photon.PunBehaviour
             bool isUsable = targetedItem.GetComponent<UsableTarget>();
             bool isPickable = !isUsable && (targetedItem.GetComponent<Item>() || targetedItem.GetComponent<Item>() || targetedItem.GetComponent<DraggableItem>());
             bool isPuzzle = !isUsable && !isPickable && targetedItem.GetComponent<PuzzleElementPlaceholder>();
-            float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable || isPuzzle ? itemPickupDistance : float.MaxValue));
+            float requiredDistance = (isUsable ? targetedItem.GetComponent<UsableTarget>().UseDistance : (isPickable ? targetedItem.GetComponent<DraggableItem>().UseDistance : (isPickable || isPuzzle ? itemPickupDistance : float.MaxValue)));
             float distance = Vector3.Distance(transform.position, targetedItem.transform.position);
             distanceCondition = distance <= requiredDistance;
             if (distanceCondition)

@@ -10,6 +10,7 @@ public class GOEvent : UnityEvent<GameObject>
 
 public class DraggableItem : Photon.PunBehaviour
 {
+    public float UseDistance = UsableTargeter.DefaultItemUseDistance;
 
     public bool freeMovement = true;
     public bool IsPuzzleElement = false;
@@ -17,6 +18,7 @@ public class DraggableItem : Photon.PunBehaviour
     [HideInInspector]
     public Vector3 defaultPosition;
     public GOEvent OnDetached;
+    public GOEvent OnAttached;
     void Start()
     {
         defaultPosition = transform.position;
@@ -57,6 +59,7 @@ public class DraggableItem : Photon.PunBehaviour
         {
             GetComponent<ConfigurableJoint>().connectedBody = PhotonView.Find(viewID).GetComponent<Rigidbody>();
         }
+        OnAttached.Invoke(this.gameObject);
     }
 
     [PunRPC]
