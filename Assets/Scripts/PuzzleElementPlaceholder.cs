@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PuzzleElementPlaceholder : MonoBehaviour
+public class PuzzleElementPlaceholder : Photon.PunBehaviour
 {
     public string PuzzleElementId;
     // Obiekt jaki ma się odsłonić po ułożeniu elementu na właściwym miejscu
@@ -21,12 +21,18 @@ public class PuzzleElementPlaceholder : MonoBehaviour
         return (!string.IsNullOrEmpty(itemId) && !string.IsNullOrEmpty(PuzzleElementId) && (itemId == PuzzleElementId));
     }
 
-    public void PlaceElement(GameObject elementObject)
+    [PunRPC]
+    public void RPCPlaceElement(GameObject elementObject)
     {
         ActualObject.SetActive(true);
         OnElementPlaced.Invoke();
         GameObject.Destroy(elementObject);
         GameObject.Destroy(gameObject);
+    }
+
+    public void PlaceElement(GameObject elementObject)
+    {
+        photonView.RPC("RPCPlaceElement", PhotonTargets.All, elementObject);
     }
 
     public void SetOutlineColour(HighlightColours colourType)

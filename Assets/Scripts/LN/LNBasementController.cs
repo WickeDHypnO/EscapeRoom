@@ -19,7 +19,7 @@ public class LNBasementController : RoomController
     public void FinishPuzzle()
     {
         puzzleFinished = true;
-        ElevatorOpenLever.GetComponent<LeverController>().canUse = true;
+        ElevatorOpenLever.GetComponent<LeverController>().SetCanUse(true);
     }
 
     public void DropLeverHandle()

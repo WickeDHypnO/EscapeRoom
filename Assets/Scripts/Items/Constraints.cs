@@ -21,9 +21,10 @@ public class Constraints : Photon.PunBehaviour
         m_originalPosition = transform.position;
         m_originalAngles = transform.eulerAngles;
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    // Update is called once per frame
+    //void FixedUpdate()
+    void Update ()
     {
         float posX, posY, posZ, rotX, rotY, rotZ;
 

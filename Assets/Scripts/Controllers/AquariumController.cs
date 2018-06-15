@@ -39,6 +39,12 @@ public class AquariumController : MonoBehaviour {
     IEnumerator FillWater()
     {
         float timer = 0.0f;
+
+        m_realKey.gameObject.SetActive(true);
+        m_realKey.transform.position = m_fakeKey.transform.position;
+        Destroy(m_fakeKey.gameObject);
+        
+
         while (timer < 1.0f)
         {
             yield return new WaitForSeconds(0.01f);
@@ -47,9 +53,7 @@ public class AquariumController : MonoBehaviour {
             m_waterObject.transform.position = Vector3.Lerp(m_originalPos, m_targetPos, timer);
             m_waterObject.transform.localScale = Vector3.Lerp(m_originalScale, m_targetScale, timer);
         }
-        m_realKey.transform.position = m_fakeKey.transform.position;
-        Destroy(m_fakeKey.gameObject);
-        m_realKey.gameObject.SetActive(true);
+        
     }
 
     void OnParticleCollision(GameObject other)
