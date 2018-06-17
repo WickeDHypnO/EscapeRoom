@@ -53,7 +53,7 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
     {
         if (other.tag == "Player")
         {
-            if (player.transform.position.y < -2)
+            if (player && player.transform.position.y < -2)
                 player = null;
             else
                 movingOnlyDownOrForward = true;

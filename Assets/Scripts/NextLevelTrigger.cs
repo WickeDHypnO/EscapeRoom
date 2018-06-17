@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 
-	int count = 0;
+	public int count = 0;
 	private void OnTriggerEnter (Collider other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && other.gameObject.GetPhotonView().owner == PhotonNetwork.player) {
 			count++;
 		}
 		if (count == 2) {
@@ -49,5 +49,14 @@ public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 		} else {
 			count = (int) stream.ReceiveNext ();
 		}
+	}
+
+	private void Update() {
+		#if DEBUG_VERSION
+		if(Input.GetKeyDown(KeyCode.Alpha9))
+		{
+			LoadRoom();
+		}
+		#endif
 	}
 }

@@ -28,37 +28,29 @@ MonoBehaviour:
   RunInBackground: 1
   RpcList:
   - Chat
-  - ColorRpc
   - DestroyRpc
-  - DoJump
-  - Flash
   - InstantiateRpc
-  - Marco
   - PickupItemInit
-  - Polo
   - PunPickup
   - PunPickupSimple
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
   - RpcAttachToPlayer
+  - RpcCheckLevers
+  - RPCCloseDoor
   - RpcCreatePlayer
+  - RpcDestroyPart
   - RpcDetachFromPlayer
   - RpcHideItem
-  - RpcShowPing
-  - TaggedPlayer
-  - RpcSwitchFlashlight
-  - RpcLoadRoom
-  - RpcStartLoading
-  - RpcCheckLevers
-  - RpcNextLevel
-  - RPCCloseDoor
   - RPCLeverSetDown
-  - RPCUse
-  - RPCUseWardrobeDoor
+  - RpcNextLevel
+  - RPCPlaceElement
+  - RpcShowPing
+  - RpcStartLoading
+  - RpcSwitchFlashlight
   - RPCSwitchPushed
   - RPCSwitchReleased
   - RPCUpperPlatePressed
-  - RPCPlaceElement
-  - RPCUseItem
+  - RPCUse
   DisableAutoOpenWizard: 0

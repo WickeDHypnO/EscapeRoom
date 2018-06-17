@@ -127,6 +127,7 @@ public class RigidbodyFirstPersonController : Photon.PunBehaviour
             GetComponentInChildren<Camera>().enabled = false;
             GetComponentInChildren<AudioListener>().enabled = false;
             GetComponentInChildren<UsableTargeter>().enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
             Destroy(this);
         }
         if(testMode)
