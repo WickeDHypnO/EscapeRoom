@@ -11,6 +11,11 @@ public class UsableDoorController : UsableTarget {
     private bool opened;
     private bool moving;
 
+    public void Start()
+    {
+        if (gameObject.transform.localRotation.eulerAngles.y.AlmostEquals(OpenAngle, 0.1f))
+            opened = true;
+    }
     public override void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info) {
         if (stream.isWriting) {
             stream.SendNext (opened);
