@@ -42,8 +42,10 @@ MonoBehaviour:
   - RpcCreatePlayer
   - RpcDestroyPart
   - RpcDetachFromPlayer
+  - RpcDropLeverHandle
   - RpcHideItem
   - RPCLeverSetDown
+  - RpcLockDoor
   - RpcNextLevel
   - RPCPlaceElement
   - RpcShowPing
@@ -51,6 +53,8 @@ MonoBehaviour:
   - RpcSwitchFlashlight
   - RPCSwitchPushed
   - RPCSwitchReleased
+  - RpcUnlockDoor
   - RPCUpperPlatePressed
   - RPCUse
+  - RpcUseDoor
   DisableAutoOpenWizard: 0

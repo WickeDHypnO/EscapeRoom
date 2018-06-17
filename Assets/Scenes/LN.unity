@@ -1552,6 +1552,10 @@ Prefab:
       propertyPath: onLeverDown.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1731384082843048, guid: ed68272ecc703b1468859a56727ee599, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed68272ecc703b1468859a56727ee599, type: 2}
   m_IsPrefabParent: 0
@@ -41303,6 +41307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806821077}
   - component: {fileID: 1806821078}
+  - component: {fileID: 1806821079}
   m_Layer: 0
   m_Name: BasementRoom
   m_TagString: Untagged
@@ -41344,6 +41349,32 @@ MonoBehaviour:
   ElevatorOpenLeverHandle: {fileID: 1479035370}
   PowerSwitcherLever: {fileID: 1678203648}
   PowerSwitcherLeverHandle: {fileID: 1502568572}
+--- !u!114 &1806821079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806821076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 15
+  instantiationId: 15
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1807324540
 GameObject:
   m_ObjectHideFlags: 0

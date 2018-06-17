@@ -23,11 +23,12 @@ public class PuzzleElementPlaceholder : Photon.PunBehaviour {
     public void RPCPlaceElement (int viewID) {
         ActualObject.SetActive (true);
         OnElementPlaced.Invoke ();
-        if (PhotonNetwork.isMasterClient) {
-            var go = PhotonView.Find (viewID);
-            PhotonNetwork.Destroy (go);
-            PhotonNetwork.Destroy (photonView);
+        var go = PhotonView.Find (viewID);
+        if (PhotonNetwork.player == go.owner) {
+            PhotonNetwork.Destroy (go.gameObject);
         }
+        if (PhotonNetwork.isMasterClient)
+            PhotonNetwork.Destroy (photonView.gameObject);
     }
 
     public void PlaceElement (GameObject elementObject) {

@@ -1,99 +1,63 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
-public class UsableDoorController : UsableTarget
-{
+public class UsableDoorController : UsableTarget {
     public bool Locked = false;
     public float OpenAngle = 120;
     public float OpenTime = 1.0f;
-    private Vector3 initialRotation;
     private bool opened;
-    private float elapsedTime;
     private bool moving;
 
-    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.isWriting)
-        {
-            stream.SendNext(opened);
-            stream.SendNext(elapsedTime);
-            stream.SendNext(moving);
-        }
-        else
-        {
-            opened = (bool)stream.ReceiveNext();
-            elapsedTime = (float)stream.ReceiveNext();
-            moving = (bool)stream.ReceiveNext();
+    public override void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info) {
+        if (stream.isWriting) {
+            stream.SendNext (opened);
+        } else {
+            opened = (bool) stream.ReceiveNext ();
         }
     }
-    [PunRPC]
-    public void RPCUse()
-    {
+    public override void Use () {
         if (moving || Locked) return;
-        startMoving();
-    }
-    public override void Use()
-    {
-        photonView.RPC("RPCUse", PhotonTargets.All);
+        photonView.RPC ("RpcUseDoor", PhotonTargets.MasterClient);
     }
 
-    public void Lock()
-    {
-        if (opened)
-        {
-            startMoving();
+    public void Lock () {
+        if (opened) {
+            photonView.RPC ("RpcUseDoor", PhotonTargets.MasterClient);
         }
-        SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
-        Locked = true;
+        photonView.RPC ("RpcLockDoor", PhotonTargets.All);
     }
-    
-    public void Unlock()
-    {
-        SetOutlineColour(HighlightColours.DEFAULT_COLOUR);
+
+    public void Unlock () {
+        photonView.RPC ("RpcUnlockDoor", PhotonTargets.All);
+    }
+
+    protected override void initialize () {
+        if (Locked) {
+            SetOutlineColour (HighlightColours.INACTIVE_COLOUR);
+        }
+    }
+
+    public void startMoving () {
+        transform.DOLocalRotate (opened ? Vector3.zero : new Vector3 (0, OpenAngle, 0), OpenTime).OnComplete (() => opened = !opened);
+    }
+
+    [PunRPC]
+    public void RpcUseDoor () {
+        startMoving ();
+    }
+
+    [PunRPC]
+    public void RpcUnlockDoor () {
+        SetOutlineColour (HighlightColours.DEFAULT_COLOUR);
         Locked = false;
     }
 
-    // Use this for initialization
-    protected override void initialize()
-    {
-        initialRotation = transform.localRotation.eulerAngles;
-        if (Locked)
-        {
-            SetOutlineColour(HighlightColours.INACTIVE_COLOUR);
-        }
-    }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        if (!moving) return;
-        float delta = Time.deltaTime;
-        float dir = (opened ? -1.0f : 1.0f);
-        float y = transform.localRotation.eulerAngles.y;
-        float yInc = dir * (OpenAngle * delta / OpenTime);
-        elapsedTime += delta;
-        if (elapsedTime >= OpenTime)
-        {
-            if (opened)
-            {
-                yInc = initialRotation.y - y;
-            }
-            else
-            {
-                yInc = initialRotation.y + OpenAngle - y;
-            }
-            opened = !opened;
-            moving = false;
-        }
-        y += yInc;
-        transform.localRotation = Quaternion.Euler(initialRotation.x, y, initialRotation.z);
-	}
-
-    private void startMoving()
-    {
-        elapsedTime = 0.0f;
-        moving = true;
+    [PunRPC]
+    public void RpcLockDoor () {
+        SetOutlineColour (HighlightColours.INACTIVE_COLOUR);
+        Locked = true;
     }
 }
