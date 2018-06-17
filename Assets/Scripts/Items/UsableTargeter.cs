@@ -188,6 +188,12 @@ public class UsableTargeter : Photon.PunBehaviour
     private void usableTargetUse()
     {
         UsableTarget ut = targetedItem.GetComponent<UsableTarget>();
+        bool isReadable = targetedItem.GetComponent<TextViewer>();
+        
+        if (isReadable)
+        {
+            targetedItem.GetComponent<TextViewer>().SetPlayerRigidbody(GetComponentInParent<RigidbodyFirstPersonController>());
+        }
         if (string.IsNullOrEmpty(itemToUse) || !tryUsingItem(ut))
         {
             ut.Use();
