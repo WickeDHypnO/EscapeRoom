@@ -77,8 +77,7 @@ public class ConstantButtonController : ConstantUsableTarget {
         }
         if (released)
         {
-            released = false;
-            OnButtonPushed.Invoke();
+            photonView.RPC("RPCPush", PhotonTargets.All);
         }
     }
 
@@ -92,6 +91,19 @@ public class ConstantButtonController : ConstantUsableTarget {
         {
             transform.localPosition = startingPosition;
         }
+        photonView.RPC("RPCRelease", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    public void RPCPush()
+    {
+        released = false;
+        OnButtonPushed.Invoke();
+    }
+
+    [PunRPC]
+    public void RPCRelease()
+    {
         released = true;
         OnButtonReleased.Invoke();
     }

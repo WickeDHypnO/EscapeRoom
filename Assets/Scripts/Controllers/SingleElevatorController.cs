@@ -10,8 +10,8 @@ public class SingleElevatorController : Photon.PunBehaviour, IPunObservable
 
     [SerializeField] private float m_speed;
 
-    private bool m_isMovingUp;
-    private bool m_isMovingDown;
+    public bool m_isMovingUp;
+    public bool m_isMovingDown;
 
     // Use this for initialization
     void Start ()
