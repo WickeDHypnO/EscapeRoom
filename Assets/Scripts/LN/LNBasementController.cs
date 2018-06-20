@@ -7,8 +7,10 @@ public class LNBasementController : RoomController {
     public GameObject ElevatorOpenLeverHandle;
     public GameObject PowerSwitcherLever;
     public GameObject PowerSwitcherLeverHandle;
+    private const int ELECTRICAL_PUZZLE_ELEMENTS_COUNT = 4;
     private bool puzzleFinished;
     private PhotonView view;
+    private int placedPuzzleElementsCount;
 
     public void EnableLever (bool enable) {
         if (!puzzleFinished) return;
@@ -35,9 +37,20 @@ public class LNBasementController : RoomController {
         ElevatorOpenLeverHandle.SetActive (true);
     }
 
+    [PunRPC]
+    void RpcPuzzleElementPlaced()
+    {
+        ++placedPuzzleElementsCount;
+        if (placedPuzzleElementsCount >= ELECTRICAL_PUZZLE_ELEMENTS_COUNT)
+        {
+            // TODO
+        }
+    }
+
     // Use this for initialization
     void Start () {
         view = GetComponent<PhotonView> ();
         puzzleFinished = false;
+        placedPuzzleElementsCount = 0;
     }
 }
