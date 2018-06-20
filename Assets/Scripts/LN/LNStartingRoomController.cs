@@ -5,7 +5,7 @@ using UnityEngine;
 public class LNStartingRoomController : RoomController {
 
     public GameObject[] LampLights;
-    public GameObject[] SpotLights;
+    public GameObject[] LightsToDisable;
     public GameObject[] MovingFloors;
     public GameObject TrapTrigger;
     public GameObject[] WardrobeDoors;
@@ -55,7 +55,7 @@ public class LNStartingRoomController : RoomController {
 
     public void EnableSpotLights(bool enable)
     {
-        setObjectsActive(enable, SpotLights);
+        setObjectsActive(enable, LightsToDisable);
     }
 
     private void activateTrap()
