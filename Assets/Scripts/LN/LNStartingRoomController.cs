@@ -12,29 +12,24 @@ public class LNStartingRoomController : RoomController {
     private const int GEMS_COUNT = 3;
     private int activatedGems;
     private bool trapActivated;
+    private PhotonView view;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         activatedGems = 0;
         trapActivated = false;
+        view = GetComponent<PhotonView>();
     }
 
     public void ActivateGem()
     {
-        if (trapActivated) return;
-        ++activatedGems;
-        if (activatedGems >= GEMS_COUNT)
-        {
-            activateTrap();
-            openWardrobeDoors();
-        }
+        view.RPC("activateGem", PhotonTargets.All, true);
     }
 
     public void DeactivateGem()
     {
-        if (trapActivated) return;
-        --activatedGems;
+        view.RPC("activateGem", PhotonTargets.All, false);
     }
 
     public void DeactivateTrap()
@@ -50,12 +45,12 @@ public class LNStartingRoomController : RoomController {
 
     public void EnableLampLights(bool enable)
     {
-        setObjectsActive(enable, LampLights);
+        view.RPC("setObjectsActive", PhotonTargets.All, enable, LampLights);
     }
 
     public void EnableSpotLights(bool enable)
     {
-        setObjectsActive(enable, LightsToDisable);
+        view.RPC("setObjectsActive", PhotonTargets.All, enable, LightsToDisable);
     }
 
     private void activateTrap()
@@ -79,11 +74,32 @@ public class LNStartingRoomController : RoomController {
         }
     }
 
+    [PunRPC]
     private void setObjectsActive(bool active, GameObject[] objects)
     {
         foreach (GameObject obj in objects)
         {
             obj.SetActive(active);
+        }
+    }
+
+    [PunRPC]
+    private void activateGem(bool activate)
+    {
+        if (trapActivated) return;
+        if (activate)
+        {
+            ++activatedGems;
+            if (activatedGems >= GEMS_COUNT)
+            {
+                activateTrap();
+                openWardrobeDoors();
+            }
+        }
+        else
+        {
+            if (trapActivated) return;
+            --activatedGems;
         }
     }
 }
