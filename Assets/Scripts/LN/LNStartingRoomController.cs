@@ -48,7 +48,7 @@ public class LNStartingRoomController : RoomController {
         view.RPC("setObjectsActive", PhotonTargets.All, enable, LampLights);
     }
 
-    public void EnableSpotLights(bool enable)
+    public void EnableOutsideLights(bool enable)
     {
         view.RPC("setObjectsActive", PhotonTargets.All, enable, LightsToDisable);
     }
