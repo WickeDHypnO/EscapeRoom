@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class LeverController : UsableTarget {
 
@@ -10,6 +11,8 @@ public class LeverController : UsableTarget {
     public bool canUse;
     public GameObject lever;
     public bool standalone;
+    public float DownAngle = -35.0f;    // angle on lever down
+    public float MoveTime = 0.25f;
     public UnityEvent onLeverDown;
     public UnityEvent onLeverUp;
     [PunRPC]
@@ -17,14 +20,15 @@ public class LeverController : UsableTarget {
     {
         if (canUse)
         {
-            if (!position)
+            /*if (!position)
             {
                 StartCoroutine(MoveDown());
             }
             else
             {
                 StartCoroutine(MoveUp());
-            }
+            }*/
+            startMoving();
         }
 
     }
@@ -34,10 +38,21 @@ public class LeverController : UsableTarget {
 	
     public void Reset()
     {
-        StartCoroutine(MoveUp());
+        //StartCoroutine(MoveUp());
+        position = true;
+        startMoving();
+    } 
+
+    private void startMoving()
+    {
+        lever.transform.DOLocalRotate(position ? new Vector3(-DownAngle, 0.0f, 0.0f) : new Vector3(DownAngle, 0.0f, 0.0f), MoveTime).OnComplete(() => {
+            position = !position;
+            if (position) onLeverDown.Invoke();
+            else onLeverUp.Invoke();
+            });
     }
 
-    IEnumerator MoveDown()
+    /*IEnumerator MoveDown()
     {
         float currentRotation = lever.transform.localEulerAngles.x;
         canUse = false;
@@ -65,7 +80,7 @@ public class LeverController : UsableTarget {
         }
         canUse = true;
         onLeverUp.Invoke();
-    }
+    }*/
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {

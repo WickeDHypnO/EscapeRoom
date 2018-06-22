@@ -9,10 +9,12 @@ public class LNStartingRoomController : RoomController {
     public GameObject[] MovingFloors;
     public GameObject TrapTrigger;
     public GameObject[] WardrobeDoors;
+    public GameObject[] HalfSpheres;
     private const int GEMS_COUNT = 3;
     private int activatedGems;
     private bool trapActivated;
     private PhotonView view;
+    private Material halfSpheresShaderMaterial;
 
     // Use this for initialization
     void Start ()
@@ -20,6 +22,11 @@ public class LNStartingRoomController : RoomController {
         activatedGems = 0;
         trapActivated = false;
         view = GetComponent<PhotonView>();
+        halfSpheresShaderMaterial = Material.Instantiate(HalfSpheres[0].GetComponent<Renderer>().sharedMaterial);
+        foreach (GameObject obj in HalfSpheres)
+        {
+            obj.GetComponent<Renderer>().sharedMaterial = halfSpheresShaderMaterial;
+        }
     }
 
     public void ActivateGem()
@@ -48,9 +55,10 @@ public class LNStartingRoomController : RoomController {
         view.RPC("setObjectsActive", PhotonTargets.All, enable, LampLights);
     }
 
-    public void EnableSpotLights(bool enable)
+    public void EnableOutsideLights(bool enable)
     {
         view.RPC("setObjectsActive", PhotonTargets.All, enable, LightsToDisable);
+        view.RPC("modifyHalfSpheresMaterial", PhotonTargets.All, enable);
     }
 
     private void activateTrap()
@@ -101,5 +109,16 @@ public class LNStartingRoomController : RoomController {
             if (trapActivated) return;
             --activatedGems;
         }
+    }
+
+    [PunRPC]
+    private void modifyHalfSpheresMaterial(bool enable)
+    {
+        halfSpheresShaderMaterial.SetColor(
+            "_Color",
+            enable ? new Color(1.0f, 1.0f, 1.0f, 1.0f) : new Color(0.0f, 0.0f, 0.0f, 1.0f));
+        halfSpheresShaderMaterial.SetColor(
+            "_EmissionColor",
+            enable ? new Color(1.0f, 1.0f, 1.0f, 1.0f) : new Color(0.0f, 0.0f, 0.0f, 0.0f));
     }
 }
