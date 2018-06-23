@@ -57,7 +57,12 @@ MonoBehaviour:
   - RPCUpperPlatePressed
   - RPCUse
   - RpcUseDoor
-  - RPCPush
-  - RPCRelease
-  - RPCPushed
+  - RpcPuzzleElementPlaced
+  - setObjectsActive
+  - activateGem
+  - deactivateTrap
+  - rpcPuzzleElementPlaced
+  - completeElevatorOpenStep
+  - puzzleElementPlaced
+  - modifyHalfSpheresMaterial
   DisableAutoOpenWizard: 0

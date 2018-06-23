@@ -5,36 +5,38 @@ using UnityEngine;
 public class LNStartingRoomController : RoomController {
 
     public GameObject[] LampLights;
-    public GameObject[] SpotLights;
+    public GameObject[] LightsToDisable;
     public GameObject[] MovingFloors;
     public GameObject TrapTrigger;
     public GameObject[] WardrobeDoors;
+    public GameObject[] HalfSpheres;
     private const int GEMS_COUNT = 3;
     private int activatedGems;
     private bool trapActivated;
+    private PhotonView view;
+    private Material halfSpheresShaderMaterial;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         activatedGems = 0;
         trapActivated = false;
+        view = GetComponent<PhotonView>();
+        halfSpheresShaderMaterial = Material.Instantiate(HalfSpheres[0].GetComponent<Renderer>().sharedMaterial);
+        foreach (GameObject obj in HalfSpheres)
+        {
+            obj.GetComponent<Renderer>().sharedMaterial = halfSpheresShaderMaterial;
+        }
     }
 
     public void ActivateGem()
     {
-        if (trapActivated) return;
-        ++activatedGems;
-        if (activatedGems >= GEMS_COUNT)
-        {
-            activateTrap();
-            openWardrobeDoors();
-        }
+        view.RPC("activateGem", PhotonTargets.All, true);
     }
 
     public void DeactivateGem()
     {
-        if (trapActivated) return;
-        --activatedGems;
+        view.RPC("activateGem", PhotonTargets.All, false);
     }
 
     public void DeactivateTrap()
@@ -50,12 +52,13 @@ public class LNStartingRoomController : RoomController {
 
     public void EnableLampLights(bool enable)
     {
-        setObjectsActive(enable, LampLights);
+        view.RPC("setObjectsActive", PhotonTargets.All, enable, LampLights);
     }
 
-    public void EnableSpotLights(bool enable)
+    public void EnableOutsideLights(bool enable)
     {
-        setObjectsActive(enable, SpotLights);
+        view.RPC("setObjectsActive", PhotonTargets.All, enable, LightsToDisable);
+        view.RPC("modifyHalfSpheresMaterial", PhotonTargets.All, enable);
     }
 
     private void activateTrap()
@@ -79,11 +82,43 @@ public class LNStartingRoomController : RoomController {
         }
     }
 
+    [PunRPC]
     private void setObjectsActive(bool active, GameObject[] objects)
     {
         foreach (GameObject obj in objects)
         {
             obj.SetActive(active);
         }
+    }
+
+    [PunRPC]
+    private void activateGem(bool activate)
+    {
+        if (trapActivated) return;
+        if (activate)
+        {
+            ++activatedGems;
+            if (activatedGems >= GEMS_COUNT)
+            {
+                activateTrap();
+                openWardrobeDoors();
+            }
+        }
+        else
+        {
+            if (trapActivated) return;
+            --activatedGems;
+        }
+    }
+
+    [PunRPC]
+    private void modifyHalfSpheresMaterial(bool enable)
+    {
+        halfSpheresShaderMaterial.SetColor(
+            "_Color",
+            enable ? new Color(1.0f, 1.0f, 1.0f, 1.0f) : new Color(0.0f, 0.0f, 0.0f, 1.0f));
+        halfSpheresShaderMaterial.SetColor(
+            "_EmissionColor",
+            enable ? new Color(1.0f, 1.0f, 1.0f, 1.0f) : new Color(0.0f, 0.0f, 0.0f, 0.0f));
     }
 }

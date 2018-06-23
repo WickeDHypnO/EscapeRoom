@@ -45,7 +45,7 @@ public class MRRoomController : MonoBehaviour {
             bookDoor.Open();
             galleryDoor.Close();
         }
-        else if (gallerySwitchesDown[0] && !gallerySwitchesDown[1] && gallerySwitchesDown[2] && !gallerySwitchesDown[3] && !gallerySwitchesDown[4] && gallerySwitchesDown[5])
+        else if (!gallerySwitchesDown[0] && gallerySwitchesDown[1] && gallerySwitchesDown[2] && !gallerySwitchesDown[3] && gallerySwitchesDown[4] && !gallerySwitchesDown[5])
         {
             bookDoor.Close();
             galleryDoor.Open();

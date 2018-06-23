@@ -9,13 +9,7 @@ public class UsableDoorController : UsableTarget {
     public float OpenAngle = 120;
     public float OpenTime = 1.0f;
     private bool opened;
-    private bool moving;
 
-    public void Start()
-    {
-        if (gameObject.transform.localRotation.eulerAngles.y.AlmostEquals(OpenAngle, 0.1f))
-            opened = true;
-    }
     public override void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info) {
         if (stream.isWriting) {
             stream.SendNext (opened);
@@ -24,7 +18,7 @@ public class UsableDoorController : UsableTarget {
         }
     }
     public override void Use () {
-        if (moving || Locked) return;
+        if (Locked) return;
         photonView.RPC ("RpcUseDoor", PhotonTargets.MasterClient);
     }
 
@@ -40,6 +34,8 @@ public class UsableDoorController : UsableTarget {
     }
 
     protected override void initialize () {
+        if (gameObject.transform.localRotation.eulerAngles.y.AlmostEquals(OpenAngle, 0.1f))
+            opened = true;
         if (Locked) {
             SetOutlineColour (HighlightColours.INACTIVE_COLOUR);
         }

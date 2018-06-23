@@ -29,7 +29,8 @@ public class Room2Controller : Photon.PunBehaviour, IPunObservable {
                 continue;
             } else {
                 foreach (LeverController lev in levers) {
-                    lev.StartCoroutine (lev.MoveUp ());
+                    //lev.StartCoroutine (lev.MoveUp ());
+                    lev.Reset();
                 }
                 break;
             }

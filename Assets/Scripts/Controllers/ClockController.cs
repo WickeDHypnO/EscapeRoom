@@ -11,7 +11,6 @@ public class ClockController : MonoBehaviour
     // Ile sekund w rzeczywistości trwa jedna sekunda w grze.
     public float TimeScale = 1.0f;
     private const float MINUTE_POINTER_FULL_ROTATION_TIME = 60.0f * 60.0f;
-    //private const float HOUR_POINTER_FULL_ROTATION_TIME = 24.0f * MINUTE_POINTER_FULL_ROTATION_TIME;
     private float elapsedTime;
     private float direction;
 
@@ -28,7 +27,7 @@ public class ClockController : MonoBehaviour
         float delta = Time.deltaTime;
         float scaledDelta = delta / TimeScale;
         float minuteZInc = scaledDelta * 360.0f / MINUTE_POINTER_FULL_ROTATION_TIME;
-        float hourZInc = minuteZInc / 24.0f;//delta * 360.0f / HOUR_POINTER_FULL_ROTATION_TIME;
+        float hourZInc = minuteZInc / 24.0f;
         float pendulumZInc = PendulumAngle * 2.0f * scaledDelta;
         Vector3 minuteRotation = MinutePointer.transform.localRotation.eulerAngles;
         Vector3 hourRotation = HourPointer.transform.localRotation.eulerAngles;
