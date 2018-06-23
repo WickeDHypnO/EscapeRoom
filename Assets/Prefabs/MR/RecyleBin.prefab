@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4052577562900964}
   - component: {fileID: 33662632515511144}
   - component: {fileID: 23693437176263050}
-  - component: {fileID: 95310930132487478}
   - component: {fileID: 64431093242754746}
   m_Layer: 0
   m_Name: RecyleBin
@@ -38,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1836264485315658}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +82,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1836264485315658}
-  m_Mesh: {fileID: 4300000, guid: 7aed7574063688642b47947547fc62b8, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 7a4bbdbed5ef5144aa8a2bc79555948b, type: 3}
 --- !u!64 &64431093242754746
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -97,21 +96,4 @@ MeshCollider:
   m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 7aed7574063688642b47947547fc62b8, type: 3}
---- !u!95 &95310930132487478
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1836264485315658}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7aed7574063688642b47947547fc62b8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Mesh: {fileID: 4300000, guid: 7a4bbdbed5ef5144aa8a2bc79555948b, type: 3}
