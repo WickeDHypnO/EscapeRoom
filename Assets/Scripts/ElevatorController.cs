@@ -133,21 +133,28 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
 
     void OnTriggerEnter(Collider other)
     {
-        objectsInside.Add(other.gameObject);
+        GameObject obj = other.gameObject;
+        obj.transform.parent = transform;
+        objectsInside.Add(obj);
     }
 
     void OnTriggerExit(Collider other)
     {
-        objectsInside.Remove(other.gameObject);
+        GameObject obj = other.gameObject;
+        if (obj.transform.parent == transform)
+        {
+            obj.transform.parent = null;
+        }
+        objectsInside.Remove(obj);
     }
 
     private void updateObjectsInside(float yDist)
     {
-        foreach (GameObject obj in objectsInside)
+        /*foreach (GameObject obj in objectsInside)
         {
             Vector3 objPos = obj.transform.position;
             float y = objPos.y + yDist;
             obj.transform.position = new Vector3(objPos.x, y, objPos.z);
-        }
+        }*/
     }
 }

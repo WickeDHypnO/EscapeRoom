@@ -15,23 +15,43 @@ public class MoveObjectsInside : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {}
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
+        GameObject obj = other.gameObject;
+        if (obj.transform.parent == null)
+        {
+            obj.transform.parent = transform;
+        }
         objectsInside.Add(other.gameObject);
+    }*/
+
+    void OnTriggerStay(Collider other)
+    {
+        GameObject obj = other.gameObject;
+        if (!objectsInside.Contains(obj) && (obj.transform.parent == null))
+        {
+            obj.transform.parent = transform;
+            objectsInside.Add(obj);
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        objectsInside.Remove(other.gameObject);
+        GameObject obj = other.gameObject;
+        if (obj.transform.parent == transform)
+        {
+            obj.transform.parent = null;
+        }
+        objectsInside.Remove(obj);
     }
 
     public void MoveObjectsInsideBy(float yDist)
     {
-        foreach (GameObject obj in objectsInside)
+        /*foreach (GameObject obj in objectsInside)
         {
             Vector3 objPos = obj.transform.position;
             float y = objPos.y + yDist;
             obj.transform.position = new Vector3(objPos.x, y, objPos.z);
-        }
+        }*/
     }
 }
