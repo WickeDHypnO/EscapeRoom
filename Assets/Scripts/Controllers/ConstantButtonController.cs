@@ -13,6 +13,9 @@ public class ConstantButtonController : ConstantUsableTarget {
      */
     public bool Complex = false;
     public GameObject ActualButtonObject;
+
+    public bool synchronizeAction = true;
+
     public UnityEvent OnButtonPushed;
     public UnityEvent OnButtonReleased;
     private Vector3 startingPosition;
@@ -48,14 +51,14 @@ public class ConstantButtonController : ConstantUsableTarget {
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.isWriting)
+        /*if (stream.isWriting)
         {
             stream.SendNext(pressed);
         }
         else
         {
             pressed = (bool)stream.ReceiveNext();
-        }
+        }*/
     }
 
     public override void Use()
@@ -63,7 +66,7 @@ public class ConstantButtonController : ConstantUsableTarget {
         pressed = true;
     }
 
-    private void push()
+    public void push()
     {
         float y = startingPosition.y - MoveDistance;
         Vector3 newPosition = new Vector3(startingPosition.x, y, startingPosition.z);
@@ -77,12 +80,18 @@ public class ConstantButtonController : ConstantUsableTarget {
         }
         if (released)
         {
-            released = false;
-            OnButtonPushed.Invoke();
+            if(synchronizeAction)
+            {
+                photonView.RPC("RPCPush", PhotonTargets.All);
+            }
+            else
+            {
+                RPCPush();
+            }
         }
     }
 
-    private void release()
+    public void release()
     {
         if (Complex)
         {
@@ -92,6 +101,27 @@ public class ConstantButtonController : ConstantUsableTarget {
         {
             transform.localPosition = startingPosition;
         }
+        if(synchronizeAction)
+        {
+            photonView.RPC("RPCRelease", PhotonTargets.All);
+        }
+        else
+        {
+            RPCRelease();
+        }
+
+    }
+
+    [PunRPC]
+    public void RPCPush()
+    {
+        released = false;
+        OnButtonPushed.Invoke();
+    }
+
+    [PunRPC]
+    public void RPCRelease()
+    {
         released = true;
         OnButtonReleased.Invoke();
     }
