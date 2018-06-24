@@ -23,7 +23,7 @@ public class SingleElevatorController : Photon.PunBehaviour, IPunObservable
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-		if(m_isMovingUp && !m_isMovingDown)
+		if(m_isMovingUp && !m_isMovingDown && GetComponent<PhotonView>().ownerId == PhotonNetwork.player.ID)
         {
             float height = Mathf.Min(m_maxHeight, this.transform.position.y + Time.fixedDeltaTime * m_speed);
             this.transform.position = new Vector3(this.transform.position.x, height, this.transform.position.z);
@@ -35,15 +35,42 @@ public class SingleElevatorController : Photon.PunBehaviour, IPunObservable
             this.transform.position = new Vector3(this.transform.position.x, height, this.transform.position.z);
         }
     }
-
-    public void MoveUp(bool move)
+    [PunRPC]
+    public void RPCMoveUp(bool move)
     {
         m_isMovingUp = move;
     }
 
-    public void MoveDown(bool move)
+    [PunRPC]
+    public void RPCMoveDown(bool move)
     {
         m_isMovingDown = move;
+    }
+
+    public void MoveUp(bool move)
+    { 
+        if (GetComponent<PhotonView>().ownerId == PhotonNetwork.player.ID)
+        {
+            photonView.RPC("RPCMoveUp", PhotonTargets.All, move);
+        }
+        else
+        {
+            GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.player.ID);
+            photonView.RPC("RPCMoveUp", PhotonTargets.All, move);
+        }
+    }
+
+    public void MoveDown(bool move)
+    {
+        if (GetComponent<PhotonView>().ownerId == PhotonNetwork.player.ID)
+        {
+            photonView.RPC("RPCMoveDown", PhotonTargets.All, move);
+        }
+        else
+        {
+            GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.player.ID);
+            photonView.RPC("RPCMoveDown", PhotonTargets.All, move);
+        }
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
