@@ -16,7 +16,7 @@ public class ButtonController : UsableTarget
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.isWriting)
+        /*if (stream.isWriting)
         {
             stream.SendNext(moving);
             stream.SendNext(elapsedTime);
@@ -25,7 +25,7 @@ public class ButtonController : UsableTarget
         {
             moving = (bool)stream.ReceiveNext();
             elapsedTime = (float)stream.ReceiveNext();
-        }
+        }*/
     }
 
     public override void Use()
@@ -54,7 +54,8 @@ public class ButtonController : UsableTarget
             moving = false;
             highlightObject.SetActive(true);
             GetComponent<HighlightItem>().OutlineOff();
-            onButtonPushed.Invoke();
+            //onButtonPushed.Invoke();
+            photonView.RPC("RPCPushed", PhotonTargets.All);
         }
         setPosition(-distance);
         elapsedTime = time;
@@ -66,5 +67,11 @@ public class ButtonController : UsableTarget
         float z = currentPos.z + zOffset;
         Vector3 newPos = new Vector3(currentPos.x, currentPos.y, z);
         buttonObject.transform.localPosition = newPos;
+    }
+
+    [PunRPC]
+    public void RPCPushed()
+    {
+        onButtonPushed.Invoke();
     }
 }
