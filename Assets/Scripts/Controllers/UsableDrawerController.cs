@@ -42,7 +42,7 @@ public class UsableDrawerController : UsableTarget
     // Use this for initialization
     protected override void initialize()
     {
-        initialPosition = transform.position;
+        initialPosition = transform.localPosition;
     }
 	
 	// Update is called once per frame
@@ -51,7 +51,7 @@ public class UsableDrawerController : UsableTarget
         if (!moving) return;
         float delta = Time.deltaTime;
         float dir = (opened ? -1.0f : 1.0f);
-        float z = transform.position.z;
+        float z = transform.localPosition.z;
         float zInc = dir * (OpenDistance * delta / OpenTime);
         elapsedTime += delta;
         if (elapsedTime >= OpenTime)
@@ -68,7 +68,7 @@ public class UsableDrawerController : UsableTarget
             moving = false;
         }
         z += zInc;
-        transform.position = new Vector3(initialPosition.x, initialPosition.y, z);
+        transform.localPosition = new Vector3(initialPosition.x, initialPosition.y, z);
     }
 
     private void startMoving()

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TextViewer : UsableTarget {
 
     public Canvas canvas;
+    [Multiline]
     public string text;
     private bool isReading = false;
     private RigidbodyFirstPersonController playerRigidbody;
