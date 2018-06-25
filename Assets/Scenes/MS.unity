@@ -8521,47 +8521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd18dae51c675c4398b91a29cb2209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseDistance: 1.25
-  InactiveOutlineColour: {x: 0.4, y: 0.4, z: 0.4, w: 0.5}
-  ItemUseOutlineColour: {x: 0, y: 0.8, z: 0, w: 0.2}
-  UsesItems: 0
-  MoveDistance: 0.006
-  Complex: 1
-  ActualButtonObject: {fileID: 142116163}
-  synchronizeAction: 1
-  OnButtonPushed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 586859273}
-        m_MethodName: RPCMoveDown
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnButtonReleased:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 586859273}
-        m_MethodName: MoveDown
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  m_elevator: {fileID: 586859269}
 --- !u!114 &220773101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9597,7 +9556,7 @@ MonoBehaviour:
     SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 1
+    InterpolateOption: 4
     InterpolateMoveTowardsSpeed: 2
     InterpolateLerpSpeed: 3
     InterpolateMoveTowardsAcceleration: 2
@@ -17661,7 +17620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00911d7b335b4f4cb7df193741dd4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseDistance: 2.5
+  UseDistance: 2
   freeMovement: 1
   IsPuzzleElement: 0
   PuzzleElementId: 
@@ -17844,7 +17803,7 @@ MonoBehaviour:
     SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 1
+    InterpolateOption: 4
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 3
     InterpolateMoveTowardsAcceleration: 2
@@ -28689,6 +28648,7 @@ GameObject:
   - component: {fileID: 1075281540}
   - component: {fileID: 1075281539}
   - component: {fileID: 1075281538}
+  - component: {fileID: 1075281541}
   m_Layer: 0
   m_Name: LampPlaceholder
   m_TagString: Untagged
@@ -28765,6 +28725,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 1220415137}
   outlineOn: 1
+--- !u!114 &1075281541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075281536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1075281539}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 75
+  instantiationId: 75
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1075953803
 GameObject:
   m_ObjectHideFlags: 0
@@ -42131,7 +42117,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1582660980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.03000009, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.020000005, y: 0.02, z: 0.020000005}
   m_Children: []
   m_Father: {fileID: 2108949019}
@@ -50341,6 +50327,7 @@ GameObject:
   - component: {fileID: 1924304395}
   - component: {fileID: 1924304394}
   - component: {fileID: 1924304393}
+  - component: {fileID: 1924304396}
   m_Layer: 0
   m_Name: LampPlaceholder
   m_TagString: Untagged
@@ -50417,6 +50404,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 1709679338}
   outlineOn: 1
+--- !u!114 &1924304396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924304391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1924304394}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 74
+  instantiationId: 74
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1927298816
 GameObject:
   m_ObjectHideFlags: 0
@@ -59228,6 +59241,7 @@ GameObject:
   - component: {fileID: 2146836002}
   - component: {fileID: 2146836001}
   - component: {fileID: 2146836000}
+  - component: {fileID: 2146836008}
   m_Layer: 0
   m_Name: SpotLamp
   m_TagString: Untagged
@@ -59264,12 +59278,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 2146836008}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 50
   instantiationId: 50
@@ -59391,3 +59405,68 @@ Transform:
   m_Father: {fileID: 583848254}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2146836008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146835999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 0
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsAcceleration: 2
+    InterpolateMoveTowardsDeceleration: 2
+    InterpolateSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: -1
+        value: 0
+        inSlope: 0
+        outSlope: Infinity
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4
+        value: 4
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+    DrawErrorGizmo: 1
+  m_RotationModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
