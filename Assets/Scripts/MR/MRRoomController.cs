@@ -10,6 +10,7 @@ public class MRRoomController : MonoBehaviour {
     public DoorController studyDoor;
     public DoorController galleryDoor;
     public DoorController exitDoor;
+    public LeverController elevatorController;
     private bool[] gallerySwitchesDown = { false, false, false, false, false, false };
     private bool[] platesPressed = { false, false, false, false, false, false, false };
 
@@ -91,5 +92,10 @@ public class MRRoomController : MonoBehaviour {
         {
             exitDoor.Close();
         }
+    }
+
+    public void UnlockElevator()
+    {
+        elevatorController.SetCanUse(true);
     }
 }
