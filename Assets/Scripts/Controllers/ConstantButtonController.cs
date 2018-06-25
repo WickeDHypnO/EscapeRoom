@@ -63,7 +63,14 @@ public class ConstantButtonController : ConstantUsableTarget {
 
     public override void Use()
     {
-        pressed = true;
+        if (synchronizeAction)
+        {
+            photonView.RPC("rpcUse", PhotonTargets.All);
+        }
+        else
+        {
+            rpcUse();
+        }
     }
 
     public void push()
@@ -80,14 +87,15 @@ public class ConstantButtonController : ConstantUsableTarget {
         }
         if (released)
         {
-            if(synchronizeAction)
+            /*if(synchronizeAction)
             {
                 photonView.RPC("RPCPush", PhotonTargets.All);
             }
             else
             {
                 RPCPush();
-            }
+            }*/
+            RPCPush();
         }
     }
 
@@ -101,14 +109,15 @@ public class ConstantButtonController : ConstantUsableTarget {
         {
             transform.localPosition = startingPosition;
         }
-        if(synchronizeAction)
+        /*if(synchronizeAction)
         {
             photonView.RPC("RPCRelease", PhotonTargets.All);
         }
         else
         {
             RPCRelease();
-        }
+        }*/
+        RPCRelease();
 
     }
 
@@ -124,5 +133,11 @@ public class ConstantButtonController : ConstantUsableTarget {
     {
         released = true;
         OnButtonReleased.Invoke();
+    }
+
+    [PunRPC]
+    private void rpcUse()
+    {
+        pressed = true;
     }
 }
