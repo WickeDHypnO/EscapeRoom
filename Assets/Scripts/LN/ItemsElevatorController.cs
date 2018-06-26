@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
+public class ItemsElevatorController : MonoBehaviour//Photon.PunBehaviour, IPunObservable
 {
     public GameObject BottomLeftDoor;
     public GameObject BottomRightDoor;
@@ -34,6 +34,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
 
     public void UpdatePosition(float angle)
     {
+        setOwnership();
         float angleDiff = Mathf.Abs(angle - previousAngle);
         float direction = (angle > previousAngle ? 1.0f : -1.0f);
 
@@ -97,7 +98,7 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
         moveObjectsComponent.MoveObjectsInsideBy(distanceIncrement);
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    /*public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
@@ -106,6 +107,23 @@ public class ItemsElevatorController : Photon.PunBehaviour, IPunObservable
         else
         {
             previousAngle = (float)stream.ReceiveNext();
+        }
+    }*/
+
+    private void setOwnership()
+    {
+        setViewOwnership(BottomLeftDoor.GetComponent<PhotonView>());
+        setViewOwnership(BottomRightDoor.GetComponent<PhotonView>());
+        setViewOwnership(TopLeftDoor.GetComponent<PhotonView>());
+        setViewOwnership(TopRightDoor.GetComponent<PhotonView>());
+        setViewOwnership(BoxObject.GetComponent<PhotonView>());
+    }
+
+    private void setViewOwnership(PhotonView view)
+    {
+        if (view.ownerId != PhotonNetwork.player.ID)
+        {
+            view.TransferOwnership(PhotonNetwork.player.ID);
         }
     }
 }

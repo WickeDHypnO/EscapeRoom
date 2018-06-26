@@ -8,18 +8,17 @@ public class LNBasementController : RoomController {
     private const int STEPS_TO_OPEN_ELEVATOR_COUNT = 3;
     public UnityEvent OnElectricBoxPuzzleCompleted;
     public UnityEvent OnElevatorOpenStepsCompleted;
-    private PhotonView view;
     private int placedPuzzleElementsCount;
     private int completedSteps;
 
     public void PlaceElectircBoxElement()
     {
-        view.RPC("puzzleElementPlaced", PhotonTargets.All);
+        puzzleElementPlaced();
     }
 
     public void CompleteElevatorOpenStep()
     {
-        view.RPC("completeElevatorOpenStep", PhotonTargets.All);
+        completeElevatorOpenStep();
     }
 
     [PunRPC]
@@ -45,7 +44,6 @@ public class LNBasementController : RoomController {
 
     // Use this for initialization
     void Start () {
-        view = GetComponent<PhotonView> ();
         placedPuzzleElementsCount = 0;
         completedSteps = 0;
     }

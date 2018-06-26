@@ -21,6 +21,7 @@ public class RotatingHandleController : ConstantUsableTarget
     private bool canMoveUp;
     private bool canMoveDown;
     private float angleZ;
+    private PhotonView view;
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -38,6 +39,10 @@ public class RotatingHandleController : ConstantUsableTarget
 
     public override void Use()
     {
+        if (view.ownerId != PhotonNetwork.player.ID)
+        {
+            view.TransferOwnership(PhotonNetwork.player.ID);
+        }
         used = true;
     }
 
@@ -48,29 +53,33 @@ public class RotatingHandleController : ConstantUsableTarget
         maximumAngle = startingAngle + MaximumAngle;
         canMoveUp = true;
         angleZ = startingAngle;
+        view = GetComponent<PhotonView>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        float clockwise = (ClockwiseRotate ? -1.0f : 1.0f);
-		if (used)
+        if (GetComponent<PhotonView>().ownerId == PhotonNetwork.player.ID)
         {
-            if (canMoveUp)
+            float clockwise = (ClockwiseRotate ? -1.0f : 1.0f);
+            if (used)
             {
-                rotateHandle(clockwise * 1.0f);
+                if (canMoveUp)
+                {
+                    rotateHandle(clockwise * 1.0f);
+                }
+                canMoveDown = true;
+                used = false;
             }
-            canMoveDown = true;
-            used = false;
-        }
-        // Powrót do pozycji początkowej
-        else
-        {
-            if (canMoveDown)
+            // Powrót do pozycji początkowej
+            else
             {
-                rotateHandle(-clockwise * ReverseTimeMultiplier);
+                if (canMoveDown)
+                {
+                    rotateHandle(-clockwise * ReverseTimeMultiplier);
+                }
+                canMoveUp = true;
             }
-            canMoveUp = true;
         }
 	}
 
