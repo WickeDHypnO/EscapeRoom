@@ -15,7 +15,8 @@ public class MultiSwitchController : UsableTarget
     public UnityEvent onMSwitchDown;
     public UnityEvent onMSwitchUp;
 
-    public override void Use()
+    [PunRPC]
+    public void RPCUse()
     {
         if (canUse)
         {
@@ -28,6 +29,10 @@ public class MultiSwitchController : UsableTarget
                 StartCoroutine(MoveUp());
             }
         }
+    }
+    public override void Use()
+    {
+        photonView.RPC("RPCUse", PhotonTargets.All);
     }
 
     IEnumerator MoveDown()
