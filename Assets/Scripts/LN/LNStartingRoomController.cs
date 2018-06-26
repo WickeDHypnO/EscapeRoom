@@ -13,7 +13,6 @@ public class LNStartingRoomController : RoomController {
     private const int GEMS_COUNT = 3;
     private int activatedGems;
     private bool trapActivated;
-    private PhotonView view;
     private Material halfSpheresShaderMaterial;
 
     // Use this for initialization
@@ -21,7 +20,6 @@ public class LNStartingRoomController : RoomController {
     {
         activatedGems = 0;
         trapActivated = false;
-        view = GetComponent<PhotonView>();
         halfSpheresShaderMaterial = Material.Instantiate(HalfSpheres[0].GetComponent<Renderer>().sharedMaterial);
         foreach (GameObject obj in HalfSpheres)
         {
@@ -31,12 +29,12 @@ public class LNStartingRoomController : RoomController {
 
     public void ActivateGem()
     {
-        view.RPC("activateGem", PhotonTargets.All, true);
+        activateGem(true);
     }
 
     public void DeactivateGem()
     {
-        view.RPC("activateGem", PhotonTargets.All, false);
+        activateGem(false);
     }
 
     public void DeactivateTrap()
@@ -52,13 +50,13 @@ public class LNStartingRoomController : RoomController {
 
     public void EnableLampLights(bool enable)
     {
-        view.RPC("setObjectsActive", PhotonTargets.All, enable, LampLights);
+        setObjectsActive(enable, LampLights);
     }
 
     public void EnableOutsideLights(bool enable)
     {
-        view.RPC("setObjectsActive", PhotonTargets.All, enable, LightsToDisable);
-        view.RPC("modifyHalfSpheresMaterial", PhotonTargets.All, enable);
+        setObjectsActive(enable, LightsToDisable);
+        modifyHalfSpheresMaterial(enable);
     }
 
     private void activateTrap()
@@ -82,7 +80,6 @@ public class LNStartingRoomController : RoomController {
         }
     }
 
-    [PunRPC]
     private void setObjectsActive(bool active, GameObject[] objects)
     {
         foreach (GameObject obj in objects)
@@ -91,7 +88,6 @@ public class LNStartingRoomController : RoomController {
         }
     }
 
-    [PunRPC]
     private void activateGem(bool activate)
     {
         if (trapActivated) return;
@@ -111,7 +107,6 @@ public class LNStartingRoomController : RoomController {
         }
     }
 
-    [PunRPC]
     private void modifyHalfSpheresMaterial(bool enable)
     {
         halfSpheresShaderMaterial.SetColor(

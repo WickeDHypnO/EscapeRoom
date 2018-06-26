@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingFloor : Photon.PunBehaviour, IPunObservable
+public class MovingFloor : MonoBehaviour//Photon.PunBehaviour, IPunObservable
 {
     public Vector3 MoveDistance = new Vector3(1.0f, 0.0f, 0.0f);
     public float MoveTime = 1.0f;
@@ -12,7 +12,7 @@ public class MovingFloor : Photon.PunBehaviour, IPunObservable
     private float moveDirection;
     private bool moving;
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    /*public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
@@ -26,7 +26,7 @@ public class MovingFloor : Photon.PunBehaviour, IPunObservable
             moveDirection = (float)stream.ReceiveNext();
             moving = (bool)stream.ReceiveNext();
         }
-    }
+    }*/
 
     public void MoveUp()
     {
