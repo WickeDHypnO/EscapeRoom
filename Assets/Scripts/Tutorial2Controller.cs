@@ -24,6 +24,7 @@ public class Tutorial2Controller : Photon.PunBehaviour, IPunObservable
         {
             FindObjectOfType<LoadingScreenCanvas>().FinishLoading();
         }
+        floorInitalPos = floorPart.transform.position.z;
     }
     [PunRPC]
     public void RPCSwitchPushed()
@@ -46,17 +47,18 @@ public class Tutorial2Controller : Photon.PunBehaviour, IPunObservable
         ladderController.DoorUpOpened = false;
         photonView.RPC("RPCSwitchReleased", PhotonTargets.All);
     }
+
     [PunRPC]
     public void RPCUpperPlatePressed()
     {
-        floorInitalPos = floorPart.transform.position.z;
+        
         DoorDown.Open();
         StopAllCoroutines();
         StartCoroutine(MoveFloor());
     }
     public void UpperPlatePressed()
     {
-        photonView.RPC("RPCUpperPlatePressed", PhotonTargets.All);
+        photonView.RPC("RPCUpperPlatePressed", PhotonTargets.MasterClient);
     }
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -69,12 +71,9 @@ public class Tutorial2Controller : Photon.PunBehaviour, IPunObservable
         {
             yield return new WaitForSeconds(0.01f);
             timer += 0.01f / movingTime;
-            //transform.localRotation = Quaternion.Euler(Vector3.Lerp(new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z),
-            //    new Vector3(transform.localEulerAngles.x, defaultRotation + openDegrees, transform.localEulerAngles.z),
-            //    timer));
             floorPart.transform.position = Vector3.Lerp(floorPart.transform.position, new Vector3(floorPart.transform.position.x, floorPart.transform.position.y, floorInitalPos + targetOffset), timer);
         }
-        targetOffset = 0.0f;
+        //targetOffset = 0.0f;
         floorPart.transform.position = new Vector3(floorPart.transform.position.x,
             floorPart.transform.position.y,
             floorInitalPos + targetOffset);
