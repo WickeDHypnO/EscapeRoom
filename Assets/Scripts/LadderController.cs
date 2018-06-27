@@ -6,6 +6,7 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
 {
 
     public List<GameObject> LadderSteps;
+    public GameObject LadderText;
     private int iterator = 0;
     private GameObject player;
     private bool movingOnlyDownOrForward = false;
@@ -41,12 +42,23 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
             LadderSteps[iterator].SetActive(true);
             iterator++;
             if (iterator == LadderSteps.Count)
+            {
                 LadderFinished = true;
+                LadderText.GetComponent<TextMesh>().text = "Press \"L\" to start\nclimbing on\nthe ladder";
+            }
         }
-        else if (other.tag == "Player" && LadderFinished && !PlayerOnLadder)
+        else if (other.tag == "Player")
         {
-            movingOnlyDownOrForward = false;
-            player = other.gameObject;
+            if (!LadderFinished)
+            {
+                LadderText.GetComponent<TextMesh>().text = "Hmm, this ladder is\nto short...";
+            }
+            else if (!PlayerOnLadder)
+            {
+                movingOnlyDownOrForward = false;
+                player = other.gameObject;
+            }
+            LadderText.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -61,7 +73,7 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
     }
     private void Update()
     {
-        if (player && Input.GetKeyDown(KeyCode.O))
+        if (player && Input.GetKeyDown(KeyCode.L))
         {
             PlayerOnLadder = !PlayerOnLadder;
             if(!PlayerOnLadder)

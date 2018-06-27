@@ -8,6 +8,8 @@ public class UsableItemPlaceholder : UsableTarget
     public GameObject m_actualGameObject;
     public UnityEvent m_eventToExecute;
 
+    public bool m_canUse;
+
     public string KEY_ITEM_ID;
 
     public override bool CheckItemOnTrace(string itemId)
@@ -46,7 +48,7 @@ public class UsableItemPlaceholder : UsableTarget
 
     public override bool UseItem(string itemId)
     {
-        if (itemId == KEY_ITEM_ID)
+        if (m_canUse && itemId == KEY_ITEM_ID)
         {
             photonView.RPC("RPCUse", PhotonTargets.All);
             return true;

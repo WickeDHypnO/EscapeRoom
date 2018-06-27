@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorController : Photon.PunBehaviour, IPunObservable
+public class ElevatorController : Photon.PunBehaviour//, IPunObservable
 {
     public float FloorHeight = 2.0f;
     public float MoveTime = 3.5f;
@@ -17,17 +17,25 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
     private float height;
     private float totalMoveTime;
     private ElevatorDoorController elevatorDoorComp;
-    private HashSet<GameObject> objectsInside;
+    //private HashSet<GameObject> objectsInside;
+    private PhotonView view;
+    private HashSet<int> objectsInsideViewIDs;
+    private Transform viewTransform;
 
     // Use this for initialization
     void Start()
     {
         elevatorDoorComp = ElevatorDoor.GetComponent<ElevatorDoorController>();
-        objectsInside = new HashSet<GameObject>();
+        //objectsInside = new HashSet<GameObject>();
+        view = GetComponent<PhotonView>();
+        view.TransferOwnership(PhotonNetwork.masterClient);
+        objectsInsideViewIDs = new HashSet<int>();
+        viewTransform = view.transform;
     }
 
     // Update is called once per frame
     void Update() {
+        if (view.ownerId != PhotonNetwork.player.ID) return;
         if (moving)
         {
             float time = elapsedTime + Time.deltaTime;
@@ -49,15 +57,7 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
 
     public void ChangeFloor(int floorNumber)
     {
-        if (moving) return;
-        if ((floorNumber < 1) || (floorNumber > FloorsCount)) return;
-        if (floorNumber == CurrentFloor) return;
-        closeDoor();
-        int floorsDifference = Math.Abs(floorNumber - CurrentFloor);
-        height = floorsDifference * FloorHeight;
-        totalMoveTime = floorsDifference * MoveTime;
-        startMove(floorNumber > CurrentFloor ? 1.0f : -1.0f);
-        CurrentFloor = floorNumber;
+        view.RPC("rpcChangeFloor", PhotonTargets.MasterClient, floorNumber);
     }
 
     private void startMove(float direction)
@@ -109,7 +109,7 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
         wd.Close();
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    /*public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
@@ -129,23 +129,39 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
             height = (float)stream.ReceiveNext();
             totalMoveTime = (float)stream.ReceiveNext();
         }
-    }
+    }*/
 
     void OnTriggerEnter(Collider other)
     {
-        GameObject obj = other.gameObject;
+        /*GameObject obj = other.gameObject;
         obj.transform.parent = transform;
-        objectsInside.Add(obj);
+        objectsInside.Add(obj);*/
+        PhotonView objView = other.gameObject.GetPhotonView();
+        int viewId = objView.viewID;
+        Transform objTransform = objView.transform;
+        if (!objectsInsideViewIDs.Contains(viewId) && (objTransform.parent == null))
+        {
+            objTransform.SetParent(viewTransform);
+            objectsInsideViewIDs.Add(viewId);
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        GameObject obj = other.gameObject;
+        /*GameObject obj = other.gameObject;
         if (obj.transform.parent == transform)
         {
             obj.transform.parent = null;
         }
-        objectsInside.Remove(obj);
+        objectsInside.Remove(obj);*/
+        PhotonView objView = other.gameObject.GetPhotonView();
+        int viewId = objView.viewID;
+        Transform objTransform = objView.transform;
+        if (objTransform.parent == viewTransform)
+        {
+            objTransform.SetParent(null);
+        }
+        objectsInsideViewIDs.Remove(viewId);
     }
 
     private void updateObjectsInside(float yDist)
@@ -156,5 +172,19 @@ public class ElevatorController : Photon.PunBehaviour, IPunObservable
             float y = objPos.y + yDist;
             obj.transform.position = new Vector3(objPos.x, y, objPos.z);
         }*/
+    }
+
+    [PunRPC]
+    private void rpcChangeFloor(int floorNumber)
+    {
+        if (moving) return;
+        if ((floorNumber < 1) || (floorNumber > FloorsCount)) return;
+        if (floorNumber == CurrentFloor) return;
+        closeDoor();
+        int floorsDifference = Math.Abs(floorNumber - CurrentFloor);
+        height = floorsDifference * FloorHeight;
+        totalMoveTime = floorsDifference * MoveTime;
+        startMove(floorNumber > CurrentFloor ? 1.0f : -1.0f);
+        CurrentFloor = floorNumber;
     }
 }

@@ -16,7 +16,7 @@ public class WorkingTableController : UsableTarget {
     public override bool UseItem (string itemId) {
         if ((itemId == "Hammer") && (ladderParts.Count == 3)) {
             foreach (GameObject part in ladderParts) {
-                photonView.RPC ("RpcDestroyPart", PhotonNetwork.masterClient, part.GetPhotonView ().viewID);
+                photonView.RPC ("RpcDestroyPart", part.GetPhotonView ().owner, part.GetPhotonView ().viewID);
             }
             ladderParts.Clear ();
             PhotonNetwork.Instantiate (LadderStep.name, this.transform.position + new Vector3 (0, 1, 0), Quaternion.identity, 0);

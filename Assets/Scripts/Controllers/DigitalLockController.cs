@@ -26,7 +26,8 @@ public class DigitalLockController : Photon.PunBehaviour, IPunObservable
 	
 	private void UpdateDisplay()
     {
-        m_display.text = m_currentText;
+        if(!m_passed)
+            m_display.text = m_currentText;
     }
 
     public void ResetDisplay()
@@ -48,6 +49,7 @@ public class DigitalLockController : Photon.PunBehaviour, IPunObservable
 
     public void RecordChar(string newChar)
     {
+        if(m_currentText.Length < 10)
         m_currentText += newChar;
         UpdateDisplay();
     }

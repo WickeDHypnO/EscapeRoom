@@ -11,11 +11,11 @@ public class UsableDoorController : UsableTarget {
     private bool opened;
 
     public override void OnPhotonSerializeView (PhotonStream stream, PhotonMessageInfo info) {
-        if (stream.isWriting) {
+        /*if (stream.isWriting) {
             stream.SendNext (opened);
         } else {
             opened = (bool) stream.ReceiveNext ();
-        }
+        }*/
     }
     public override void Use () {
         if (Locked) return;
