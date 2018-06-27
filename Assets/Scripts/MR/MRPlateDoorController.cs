@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MRStudyDoorController : UsableDoorController
+public class MRPlateDoorController : UsableDoorController
 {
     public const string KEY_ITEM_ID = "StudyKey";
 
