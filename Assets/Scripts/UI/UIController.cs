@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIController : Photon.PunBehaviour
-{
+public class UIController : Photon.PunBehaviour {
     public GameObject lobby;
     public GameObject mainMenu;
     public GameObject optionsMenu;
@@ -13,73 +12,73 @@ public class UIController : Photon.PunBehaviour
     public List<Text> playerNames;
     public ConnectionManager connectionManager;
     public Text roomNumber;
+    public int roomsCount;
 
     List<string> playerList;
-    void Start()
-    {
-        SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+    void Start () {
+        SceneManager.LoadSceneAsync ("LoadingScreen", LoadSceneMode.Additive);
     }
-    public void ExitGame()
-    {
-        if(PhotonNetwork.connected)
-        PhotonNetwork.Disconnect();
-        Application.Quit();
+    public void ExitGame () {
+        if (PhotonNetwork.connected)
+            PhotonNetwork.Disconnect ();
+        Application.Quit ();
     }
 
-    public void ConnectOrCreate()
-    {
-        StartCoroutine(EstablishState());
+    public void ConnectOrCreate () {
+        StartCoroutine (EstablishState ());
     }
 
-    IEnumerator EstablishState()
-    {
-        yield return connectionManager.ConnectOrCreate();
-        Debug.Log("TESTING");
+    IEnumerator EstablishState () {
+        yield return connectionManager.ConnectOrCreate ();
+        Debug.Log ("TESTING");
     }
 
-    public override void OnJoinedRoom()
-    {
-        lobby.SetActive(true);
-        mainMenu.SetActive(false);
-        StartCoroutine(GetPlayerListDelayed());
-        if (!PhotonNetwork.isMasterClient)
-        {
-            startGameButton.SetActive(false);
+    public override void OnJoinedRoom () {
+        lobby.SetActive (true);
+        mainMenu.SetActive (false);
+        StartCoroutine (GetPlayerListDelayed ());
+        if (!PhotonNetwork.isMasterClient) {
+            startGameButton.SetActive (false);
         }
         PhotonNetwork.automaticallySyncScene = true;
     }
 
-    public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
-    {
-        StartCoroutine(GetPlayerListDelayed());
+    public override void OnPhotonPlayerConnected (PhotonPlayer newPlayer) {
+        StartCoroutine (GetPlayerListDelayed ());
     }
 
-
-    public void LoadRoom()
-    {
-        photonView.RPC("RpcStartLoading", PhotonTargets.All, null);
+    public void LoadRoom () {
+        photonView.RPC ("RpcStartLoading", PhotonTargets.All, null);
     }
 
     [PunRPC]
-    public void RpcStartLoading()
-    {
-        StartCoroutine(LoadRoomCor());
+    public void RpcStartLoading () {
+        StartCoroutine (LoadRoomCor ());
     }
-    public IEnumerator LoadRoomCor()
-    {
-        FindObjectOfType<LoadingScreenCanvas>().StartLoading();
-        yield return new WaitForSeconds(1f);
+    public IEnumerator LoadRoomCor () {
+        FindObjectOfType<LoadingScreenCanvas> ().StartLoading ();
+        yield return new WaitForSeconds (1f);
         if (PhotonNetwork.isMasterClient)
-            PhotonNetwork.LoadLevel(int.Parse(roomNumber.text));
+            PhotonNetwork.LoadLevel (int.Parse (roomNumber.text));
     }
 
-    IEnumerator GetPlayerListDelayed()
-    {
-        yield return new WaitForSeconds(0.2f);
-        playerList = connectionManager.GetPlayerList();
-        for (int i = 0; i < playerList.Count; i++)
-        {
+    IEnumerator GetPlayerListDelayed () {
+        yield return new WaitForSeconds (0.2f);
+        playerList = connectionManager.GetPlayerList ();
+        for (int i = 0; i < playerList.Count; i++) {
             playerNames[i].text = playerList[i];
+        }
+    }
+
+    public void ChangeSelectedRoom (bool up) {
+        if (up) {
+            if (!(int.Parse (roomNumber.text) >= roomsCount)) {
+                roomNumber.text = ((int.Parse (roomNumber.text)) + 1).ToString();
+            }
+        } else {
+            if (int.Parse (roomNumber.text) > 1) {
+                roomNumber.text = ((int.Parse (roomNumber.text)) - 1).ToString();
+            }
         }
     }
 }
