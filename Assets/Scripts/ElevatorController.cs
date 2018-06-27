@@ -35,7 +35,7 @@ public class ElevatorController : Photon.PunBehaviour//, IPunObservable
 
     // Update is called once per frame
     void Update() {
-        if (view.ownerId != PhotonNetwork.player.ID) return;
+        //if (view.ownerId != PhotonNetwork.player.ID) return;
         if (moving)
         {
             float time = elapsedTime + Time.deltaTime;
@@ -57,7 +57,7 @@ public class ElevatorController : Photon.PunBehaviour//, IPunObservable
 
     public void ChangeFloor(int floorNumber)
     {
-        view.RPC("rpcChangeFloor", PhotonTargets.MasterClient, floorNumber);
+        view.RPC("rpcChangeFloor", PhotonTargets.All, floorNumber);
     }
 
     private void startMove(float direction)

@@ -11,6 +11,37 @@ public class ElevatorDoorController : BaseDoorController
     protected bool isOpening;
     protected Animator animatorComponent;
 
+    /*
+    [PunRPC]
+    private void RPCOpen()
+    {
+        if (Opened) return;
+        isOpening = true;
+        animatorComponent.SetBool(OPEN_PARAMETER_NAME, true);
+
+    }
+    public override void Open()
+    {
+        photonView.RPC("RPCOpen", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    private void RPCClose()
+    {
+        if(!Opened && !isOpening) return;
+        if (wholeDoorCollider != null)
+        {
+            wholeDoorCollider.enabled = true;
+        }
+        Opened = false;
+        animatorComponent.SetBool(OPEN_PARAMETER_NAME, false);
+
+    }
+    public override void Close()
+    {
+        photonView.RPC("RPCClose", PhotonTargets.All);
+    }*/
+
     public override void Open()
     {
         if (Opened) return;
