@@ -9,7 +9,8 @@ public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 	private void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player" && other.gameObject.GetPhotonView().owner == PhotonNetwork.player) {
 			count++;
-		}
+            photonView.RPC("RPCSynchronizeCount", PhotonTargets.All, count);
+        }
 		if (count == 2) {
 			LoadRoom ();
 		}
@@ -18,8 +19,15 @@ public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 	private void OnTriggerExit (Collider other) {
 		if (other.tag == "Player") {
 			count--;
-		}
+            photonView.RPC("RPCSynchronizeCount", PhotonTargets.All, count);
+        }
 	}
+
+    [PunRPC]
+    public void RPCSynchronizeCount(int _count)
+    {
+        count = _count;
+    }
 
 	public void LoadRoom () {
 		photonView.RPC ("RpcNextLevel", PhotonTargets.All, null);
