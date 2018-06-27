@@ -67,7 +67,8 @@ public class UsableTargeter : Photon.PunBehaviour
                 if (isPuzzle && (pickedUpItem != null))
                 {
                     DraggableItem di = pickedUpItem.GetComponent<DraggableItem>();
-                    PuzzleElementPlaceholder pep = targetedItem.GetComponent<PuzzleElementPlaceholder>();
+                    PuzzleElementPlaceholder pep = targetedItem.GetComponent<PuzzleElementPlaceholder>();                    
+
                     if (di.IsPuzzleElement)
                     {
                         puzzleElementMatching = pep.CheckElementOnTrace(di.PuzzleElementId);
@@ -140,6 +141,7 @@ public class UsableTargeter : Photon.PunBehaviour
             pep.PlaceElement(pickedUpItem);
         }
         pickedUpItem = null;
+        puzzleElementMatching = false;
     }
 
     private string checkItems(UsableTarget targetObject)
