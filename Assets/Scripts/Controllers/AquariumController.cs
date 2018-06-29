@@ -65,19 +65,19 @@ public class AquariumController : Photon.PunBehaviour, IPunObservable
     [PunRPC]
     void RPCFillWater()
     {
-        if (!m_filled)
-        {
-            StartCoroutine(FillWater());
-            m_filled = true;
+        StartCoroutine(FillWater());
+        m_filled = true;
 
-            Collider col = this.GetComponent<Collider>();
-            if (col)
-                col.enabled = false;
-        }
+        Collider col = this.GetComponent<Collider>();
+        if (col)
+            col.enabled = false;
     }
 
     void OnParticleCollision(GameObject other)
     {
-        photonView.RPC("RPCFillWater", PhotonTargets.All);
+        if (!m_filled)
+        {
+            photonView.RPC("RPCFillWater", PhotonTargets.All);                      
+        }
     }
 }
