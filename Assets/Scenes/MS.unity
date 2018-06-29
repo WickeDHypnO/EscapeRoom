@@ -136,7 +136,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5915369}
-  m_LocalRotation: {x: -0.00000012665986, y: 0.6830125, z: -0.18301281, w: 0.70710707}
+  m_LocalRotation: {x: -0.00000012665984, y: 0.6830124, z: -0.1830128, w: 0.707107}
   m_LocalPosition: {x: 4.139446, y: 0.48456424, z: 1.8110783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7709,6 +7709,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 152922352}
   m_Mesh: {fileID: 4300026, guid: df48ee81a7f8980439985fcbc466d55d, type: 3}
+--- !u!1001 &155837054
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.757
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.0037037306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.21640792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.016706452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.97615314
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_RootOrder
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 114633028640687722, guid: 1775593a33bdfaf4fa4035dc54532d45,
+        type: 2}
+      propertyPath: viewIdField
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114633028640687722, guid: 1775593a33bdfaf4fa4035dc54532d45,
+        type: 2}
+      propertyPath: instantiationId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548339511799586, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+      propertyPath: m_Name
+      value: FlashLight (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &160417599
 Prefab:
   m_ObjectHideFlags: 0
@@ -17789,6 +17849,7 @@ GameObject:
   - component: {fileID: 537040505}
   - component: {fileID: 537040504}
   - component: {fileID: 537040503}
+  - component: {fileID: 537040509}
   m_Layer: 0
   m_Name: DresserDoorR
   m_TagString: Untagged
@@ -17866,6 +17927,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 537040504}
+  - {fileID: 537040509}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 39
   instantiationId: 39
@@ -17927,6 +17989,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537040501}
   m_Mesh: {fileID: 4300004, guid: d79bf72e774798943ad037ed97a18485, type: 3}
+--- !u!114 &537040509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537040501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 0
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsAcceleration: 2
+    InterpolateMoveTowardsDeceleration: 2
+    InterpolateSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: -1
+        value: 0
+        inSlope: 0
+        outSlope: Infinity
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4
+        value: 4
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+    DrawErrorGizmo: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1001 &537782519
 Prefab:
   m_ObjectHideFlags: 0
@@ -28428,12 +28555,12 @@ Prefab:
     - target: {fileID: 114633028640687722, guid: 1775593a33bdfaf4fa4035dc54532d45,
         type: 2}
       propertyPath: viewIdField
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114633028640687722, guid: 1775593a33bdfaf4fa4035dc54532d45,
         type: 2}
       propertyPath: instantiationId
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4508555971832932, guid: 1775593a33bdfaf4fa4035dc54532d45, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -41151,6 +41278,7 @@ GameObject:
   - component: {fileID: 1224369173}
   - component: {fileID: 1224369172}
   - component: {fileID: 1224369171}
+  - component: {fileID: 1224369177}
   m_Layer: 0
   m_Name: DresserDoorL
   m_TagString: Untagged
@@ -41209,6 +41337,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 1224369173}
+  - {fileID: 1224369177}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 38
   instantiationId: 38
@@ -41289,6 +41418,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224369169}
   m_Mesh: {fileID: 4300010, guid: d79bf72e774798943ad037ed97a18485, type: 3}
+--- !u!114 &1224369177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224369169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 0
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsAcceleration: 2
+    InterpolateMoveTowardsDeceleration: 2
+    InterpolateSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: -1
+        value: 0
+        inSlope: 0
+        outSlope: Infinity
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4
+        value: 4
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+    DrawErrorGizmo: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &1227174133
 GameObject:
   m_ObjectHideFlags: 0
@@ -56542,6 +56736,7 @@ GameObject:
   - component: {fileID: 1760555774}
   - component: {fileID: 1760555776}
   - component: {fileID: 1760555775}
+  - component: {fileID: 1760555777}
   m_Layer: 12
   m_Name: Interior
   m_TagString: Untagged
@@ -56592,6 +56787,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 0.2, z: 1.9}
   m_Center: {x: 0, y: 0.74, z: 0}
+--- !u!114 &1760555777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760555773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1760555775}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 12
+  instantiationId: 12
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1766957837
 GameObject:
   m_ObjectHideFlags: 0
