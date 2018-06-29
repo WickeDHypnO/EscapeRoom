@@ -22718,7 +22718,7 @@ MonoBehaviour:
   MoveDistance: 0.006
   Complex: 1
   ActualButtonObject: {fileID: 747520383}
-  synchronizeAction: 1
+  synchronizeAction: 0
   OnButtonPushed:
     m_PersistentCalls:
       m_Calls:
@@ -23889,7 +23889,6 @@ Transform:
   m_Children:
   - {fileID: 1427322182}
   - {fileID: 548950181}
-  - {fileID: 1993166114}
   - {fileID: 1632032233}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -29054,7 +29053,7 @@ Prefab:
     - target: {fileID: 114553615195896196, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
         type: 2}
       propertyPath: m_PositionModel.TeleportIfDistanceGreaterThan
-      value: 0.025
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114553615195896196, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
         type: 2}
@@ -29071,6 +29070,36 @@ Prefab:
       propertyPath: ObservedComponents.Array.data[1]
       value: 
       objectReference: {fileID: 1240178873}
+    - target: {fileID: 114205310560344372, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1240178871}
+    - target: {fileID: 114205310560344372, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365553905389926, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1240178871}
+    - target: {fileID: 114365553905389926, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114123497562592756, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1240178871}
+    - target: {fileID: 114123497562592756, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
+        type: 2}
+      propertyPath: onButtonPushed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFloor
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114790239568145988, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
     - {fileID: 114309661821642372, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
@@ -29078,6 +29107,7 @@ Prefab:
     - {fileID: 114911146524745196, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
     - {fileID: 114121595476986838, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
     - {fileID: 114161912652850838, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
+    - {fileID: 114796378693104392, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d0d33b4ee3ba60f40920b3abf4d5312b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &945500383
@@ -38337,6 +38367,26 @@ GameObject:
   m_PrefabParentObject: {fileID: 1164189586135888, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
     type: 2}
   m_PrefabInternal: {fileID: 944163662}
+--- !u!114 &1240178871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1240178870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9316707645990dd4186cf81f4d4a183f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FloorHeight: 4.3
+  MoveTime: 3.5
+  FloorsCount: 3
+  CurrentFloor: 1
+  FloorsDoors:
+  - {fileID: 392447088}
+  - {fileID: 812116721}
+  - {fileID: 321940904}
+  ElevatorDoor: {fileID: 1662131975}
 --- !u!114 &1240178873 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114553615195896196, guid: d0d33b4ee3ba60f40920b3abf4d5312b,
@@ -49542,7 +49592,7 @@ Transform:
   m_LocalScale: {x: 4.470212, y: 4.7320914, z: 4.2212453}
   m_Children: []
   m_Father: {fileID: 784971104}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1632032234
 MeshRenderer:
@@ -59733,12 +59783,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993166113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 2, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 784971104}
-  m_RootOrder: 2
+  m_Father: {fileID: 19325978}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2000721522
 Prefab:
