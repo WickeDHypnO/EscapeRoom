@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelTrigger : Photon.PunBehaviour, IPunObservable {
 
-	public int count = 0;
-	private void OnTriggerEnter (Collider other) {
+	private int count = 0;
+    public void Start()
+    {
+        count = 0;
+    }
+    private void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player" && other.gameObject.GetPhotonView().owner == PhotonNetwork.player) {
 			count++;
             photonView.RPC("RPCSynchronizeCount", PhotonTargets.All, count);
