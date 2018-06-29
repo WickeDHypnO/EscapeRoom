@@ -44,7 +44,7 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
             if (iterator == LadderSteps.Count)
             {
                 LadderFinished = true;
-                LadderText.GetComponent<TextMesh>().text = "Press \"L\" to start\nclimbing on\nthe ladder";
+                LadderText.GetComponent<TextMesh>().text = "Press \"E\" to start\nclimbing on\nthe ladder";
             }
         }
         else if (other.tag == "Player")
@@ -73,7 +73,7 @@ public class LadderController : Photon.PunBehaviour, IPunObservable
     }
     private void Update()
     {
-        if (player && Input.GetKeyDown(KeyCode.L))
+        if (player && Input.GetKeyDown(KeyCode.E))
         {
             PlayerOnLadder = !PlayerOnLadder;
             if(!PlayerOnLadder)

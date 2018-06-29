@@ -131,6 +131,12 @@ public class ElevatorController : Photon.PunBehaviour//, IPunObservable
         }
     }*/
 
+    [PunRPC]
+    public void RPCObjParent(Transform objTransform, Transform newTransform)
+    {
+        objTransform.SetParent(newTransform, false);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         /*GameObject obj = other.gameObject;
@@ -141,7 +147,8 @@ public class ElevatorController : Photon.PunBehaviour//, IPunObservable
         Transform objTransform = objView.transform;
         if (!objectsInsideViewIDs.Contains(viewId) && (objTransform.parent == null))
         {
-            objTransform.SetParent(viewTransform);
+            //objTransform.SetParent(viewTransform, true);
+            photonView.RPC("RPCObjParent", PhotonTargets.All, objTransform, viewTransform);
             objectsInsideViewIDs.Add(viewId);
         }
     }
@@ -159,7 +166,8 @@ public class ElevatorController : Photon.PunBehaviour//, IPunObservable
         Transform objTransform = objView.transform;
         if (objTransform.parent == viewTransform)
         {
-            objTransform.SetParent(null);
+            //objTransform.SetParent(null);
+            photonView.RPC("RPCObjParent", PhotonTargets.All, objTransform, null);
         }
         objectsInsideViewIDs.Remove(viewId);
     }
