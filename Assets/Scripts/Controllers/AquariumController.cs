@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AquariumController : MonoBehaviour {
+public class AquariumController : Photon.PunBehaviour, IPunObservable
+{
 
     [SerializeField] private GameObject m_waterObject;
     [SerializeField] private GameObject m_targetTransform;
@@ -56,7 +57,13 @@ public class AquariumController : MonoBehaviour {
         
     }
 
-    void OnParticleCollision(GameObject other)
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        return;
+    }
+
+    [PunRPC]
+    void RPCFillWater()
     {
         if (!m_filled)
         {
@@ -67,5 +74,10 @@ public class AquariumController : MonoBehaviour {
             if (col)
                 col.enabled = false;
         }
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        photonView.RPC("RPCFillWater", PhotonTargets.All);
     }
 }
